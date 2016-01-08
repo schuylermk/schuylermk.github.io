@@ -1,0 +1,4 @@
+src: url('../fonts/abolition-regular-webfont.eot');
+src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+src: url('../fonts/abolition-regular-webfont.woff') format('woff'),
+src: url('../fonts/abolition-regular-webfont.ttf') format('truetype');
