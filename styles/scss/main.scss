@@ -1,0 +1,41 @@
+@import "app";
+
+#hero {
+  @include flex ($justify: center);
+  // width: 96%;
+  height: 100%;
+  margin: 2em auto;
+
+  .wrapper {
+    @include flex (column, $align: center);
+    @include size (92vw, 100vh);
+
+    .sk-logo {
+      @include flex (column, $justify: center);
+      @include size (50vw, 50vw);
+      background: url(../../img/sk-logo.svg);
+      background-size: cover;
+
+      text-align: center;
+      margin: 0;
+      @media (max-width: 500px) {
+        @include size (75vw, 75vw);
+      }
+
+    }
+
+    .title {
+      @include flex (column);
+      text-align: center;
+      margin: 5% auto;
+      color: teal;
+
+      font-size: 2em;
+      text-transform: uppercase;
+      .name, .career {
+        // margin-top: 2em;
+
+      }
+    }
+  }
+}
