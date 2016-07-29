@@ -1,41 +1,54 @@
 @import "app";
+@font-face {
+  font-family: 'Cassannet';
+  font-family: 'Geomanist_Webfontkit';
+  font-family: 'Knile_Webfontkit';
+  src: url('../../typefaces/Cassannet/Cassannet Bold.otf') format('otf');
+  src: url('../../typefaces/Cassannet/Cassannet Outline.otf') format('otf');
+  src: url('../../typefaces/Cassannet/Cassannet.otf') format('otf');
+  src: url('../../typefaces/Geomanist-Regular/geomanist-regular-webfont.svg#geomanist_regularregular') format('svg');
+  src: url('../../typefaces/Geomanist-Italic/geomanist-regular-italic-webfont.svg') format('svg');
+}
 
 #hero {
-  @include flex ($justify: center);
-  // width: 96%;
-  height: 100%;
-  margin: 2em auto;
-
-  .wrapper {
-    @include flex (column, $align: center);
-    @include size (92vw, 100vh);
-
-    .sk-logo {
-      @include flex (column, $justify: center);
-      @include size (50vw, 50vw);
-      background: url(../../img/sk-logo.svg);
-      background-size: cover;
-
-      text-align: center;
-      margin: 0;
-      @media (max-width: 500px) {
-        @include size (75vw, 75vw);
+  @include flex ($jc: center);
+  height: 100vh;
+  .sk-logo {
+    height: 100%;
+    svg {
+      @include size (100vw, 100vh);
+      margin-left: -32px;
+      opacity: .8;
+      fill: rgba(190, 192, 50, .5);
+      #M {
+        fill: rgba(190, 192, 50, .4);
       }
-
     }
+  }
+}
+section {
+  .title {
+    @include flex (column);
+    text-align: center;
+    margin: 2em 0;
 
-    .title {
-      @include flex (column);
-      text-align: center;
-      margin: 5% auto;
-      color: teal;
+    h1 {
+      font-size: 1.8em;
+      letter-spacing: 5px;
+      color: black ;
+      font-family: 'Cassannet Outline';
+    }
+    p {
+      margin: 1em;
+      padding: 1em;
+      // border: .5px solid grey;
+      border-radius: 2px 2px 10px 10px;
+      background: #819990;
+      font-size: 1.25em;
+      color: snow;
+      font-family: 'Geomanist-Regular';
+      font-style: italic;
 
-      font-size: 2em;
-      text-transform: uppercase;
-      .name, .career {
-        // margin-top: 2em;
-
-      }
     }
   }
 }

@@ -3,11 +3,12 @@
   height: $height;
 }
 
-@mixin flex($direction:null, $justify:null, $align:null, $wrap:null)
+@mixin flex($dir:null, $jc:null, $al:null, $ac:null, $wrap:null)
 {
   display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $al;
+  align-content: $ac;
   flex-wrap: $wrap;
 }
