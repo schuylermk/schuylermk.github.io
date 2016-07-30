@@ -17,12 +17,16 @@
     height: 100%;
     svg {
       @include size (100vw, 100vh);
-      margin-left: -32px;
-      opacity: .8;
-      fill: rgba(190, 192, 50, .5);
-      #M {
-        fill: rgba(190, 192, 50, .4);
-      }
+      opacity: .5;
+      fill: #23211F;
+    }
+    .thumb {
+      margin: -400px auto 0;
+      @include size (50%, 45%);
+      @include flex (column, center, center);
+      background: url("../../img/thumbp2.svg");
+      background-size: contain;
+      opacity: .3;
     }
   }
 }
@@ -35,7 +39,7 @@ section {
     h1 {
       font-size: 1.8em;
       letter-spacing: 5px;
-      color: black ;
+      color: #668586 ;
       font-family: 'Cassannet Outline';
     }
     p {
@@ -43,7 +47,7 @@ section {
       padding: 1em;
       // border: .5px solid grey;
       border-radius: 2px 2px 10px 10px;
-      background: #819990;
+      background: #98ADA5;
       font-size: 1.25em;
       color: snow;
       font-family: 'Geomanist-Regular';
