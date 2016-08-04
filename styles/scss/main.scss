@@ -1,65 +1,57 @@
 @import "app";
-@font-face {
-  font-family: 'Cassannet';
-  font-family: 'Geomanist_Webfontkit';
-  font-family: 'Knile_Webfontkit';
-  src: url('../../typefaces/Cassannet/Cassannet Bold.otf') format('otf');
-  src: url('../../typefaces/Cassannet/Cassannet Outline.otf') format('otf');
-  src: url('../../typefaces/Cassannet/Cassannet.otf') format('otf');
-  src: url('../../typefaces/Geomanist-Regular/geomanist-regular-webfont.svg#geomanist_regularregular') format('svg');
-  src: url('../../typefaces/Geomanist-Italic/geomanist-regular-italic-webfont.svg') format('svg');
-}
 
-#hero {
-  @include flex ($jc: center);
-  height: 100vh;
+header {
   .sk-logo {
-    height: 100%;
+    img {
+      margin: auto auto -5% -35%;
+      width: 175%;
+      opacity: 0.15;
+    }
     svg {
       @include size (100vw, 100vh);
-      opacity: .5;
+      opacity: 0.4;
+      margin-top: -178%;
       fill: #23211F;
-    }
-    .thumb {
-      margin: -400px auto 0;
-      @include size (50%, 45%);
-      @include flex (column, center, center);
-      background: url("../../img/thumbp2.svg");
-      background-size: contain;
-      opacity: .3;
     }
   }
 }
 
-.category {
+
+.about {
+  @include size (100vw, 100vh);
   @include flex (column);
   flex-wrap: nowrap;
   margin: 2em 0;
-  h1 {
-    font-size: 1.8em;
-    letter-spacing: 4px;
-    color: snow ;
-    font-family: 'Cassannet Outline';
+  text-align: center;
+  .boldy {
+    letter-spacing: 5px;
+    font-family: 'cassannet_boldbold';
+  }
+  .outline {
+    margin-top: -25px;
+    opacity: .5;
+    letter-spacing: 5px;
+    font-family: 'cassannet outline';
   }
   p {
-    @include flex (column, $al: center);
     margin: 1em;
     padding: 1em;
-    font-size: 1em;
-    line-height: 1.5em;
     max-width: 50em;
     border-radius: 4px;
-    background: #98ADA5;
-    color: grey;
-    font-family: 'Geomanist-Regular';
+    // background: #98ADA5;
+    font-family: 'Geomanist';
     font-style: italic;
   }
 }
-
-#projects {
-
-  .blacktower {
-
+  .projects {
+    h2 {
+      text-align: center;
+      font-variant: small-caps;
+      font-family: 'Cassannet';
+      font-weight: bold;
+    }
   }
-
-}
+  a {
+    color: #e1e0e0;
+    text-decoration: none;
+  }
