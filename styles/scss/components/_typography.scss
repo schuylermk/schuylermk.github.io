@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'cassannet_boldbold';
+  src: url('../../typefaces/Cassannet/cassannet_bold-webfont.woff2') format('woff2'),
+       url('../../typefaces/Cassannet/cassannet_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cassannet';
+  src: url('../../typefaces/Cassannet/cassannet_outline-webfont.woff2') format('woff2'),
+       url('../../typefaces/Cassannet/cassannet_outline-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cassannet regular';
+  src: url('../../typefaces/Cassannet/cassannet-webfont.woff2') format('woff2'),
+       url('../../typefaces/Cassannet/cassannet-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url(#geomanist_regularregular);
+  font-family: 'geomanistregular_italic';
+  src: url(#geomanistregular_italic);
+  src: url('../../typefaces/Geomanist/geomanist-regular-italic-webfont.svg#geomanistregular_italic') format('svg');
+}
+
+@font-face {
+  font-family: 'Knile';
+  src: url('../../typefaces/Knile/knile-regular-webfont.svg') format('svg');
+}
