@@ -5,7 +5,7 @@ header {
     img {
       margin: auto auto -5% -35%;
       width: 175%;
-      opacity: 0.15;
+      opacity: 0.1;
     }
     svg {
       @include size (100vw, 100vh);
@@ -21,26 +21,27 @@ header {
   @include size (100vw, 100vh);
   @include flex (column);
   flex-wrap: nowrap;
-  margin: 2em 0;
+  margin: 4em 0;
   text-align: center;
+
   .boldy {
     letter-spacing: 5px;
+    font-size: 2.75em;
     font-family: 'cassannet_boldbold';
   }
   .outline {
-    margin-top: -25px;
-    opacity: .5;
-    letter-spacing: 5px;
-    font-family: 'cassannet outline';
+    @extend .boldy;
+    margin: -.9em auto auto .5em;
+    opacity: .3;
   }
+
   p {
-    margin: 1em;
+    margin: 2em 1em;
     padding: 1em;
     max-width: 50em;
-    border-radius: 4px;
-    // background: #98ADA5;
     font-family: 'Geomanist';
     font-style: italic;
+    font-size: 1.15em;
   }
 }
   .projects {
