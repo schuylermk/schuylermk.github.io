@@ -1,17 +1,22 @@
 @import "app";
 
 header {
+  @include size (100vw, 100vh);
+  @include flex (column);
   .sk-logo {
+    @extend header;
     img {
-      margin: auto auto -5% -35%;
-      width: 175%;
+      @extend .sk-logo;
+      margin: 0 0;
+      width: 100vw;
       opacity: 0.1;
     }
-    svg {
-      @include size (100vw, 100vh);
-      opacity: 0.4;
-      margin-top: -178%;
-      fill: #23211F;
+    .smk-svg {
+      margin-top: -135%;
+      svg {
+        opacity: 0.4;
+        fill: #23211F;
+      }
     }
   }
 }
@@ -19,29 +24,30 @@ header {
 
 .about {
   @include size (100vw, 100vh);
-  @include flex (column);
-  flex-wrap: nowrap;
-  margin: 4em 0;
+  @include flex (column, $jc: center);
+  // flex-wrap: nowrap;
+  margin: 3em 0;
   text-align: center;
-
-  .boldy {
-    letter-spacing: 5px;
-    font-size: 2.75em;
-    font-family: 'cassannet_boldbold';
-  }
-  .outline {
-    @extend .boldy;
-    margin: -.9em auto auto .5em;
-    opacity: .3;
-  }
-
-  p {
-    margin: 2em 1em;
-    padding: 1em;
-    max-width: 50em;
-    font-family: 'Geomanist';
-    font-style: italic;
-    font-size: 1.15em;
+  .pandering{
+    @include flex (column, $ac: space-around);
+    .boldy {
+      letter-spacing: 5px;
+      font-size: 2.75em;
+      font-family: 'cassannet_boldbold';
+    }
+    .outline {
+      @extend .boldy;
+      margin: -.9em auto auto .5em;
+      opacity: .3;
+    }
+    p {
+      margin: 2em 1em;
+      padding: 1em;
+      max-width: 50em;
+      font-family: 'Geomanist';
+      font-style: italic;
+      font-size: 1.15em;
+    }
   }
 }
   .projects {
