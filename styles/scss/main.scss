@@ -21,14 +21,12 @@ header {
   }
 }
 
-
 .about {
   @include size (100vw, 100vh);
   @include flex (column, $jc: center);
-  // flex-wrap: nowrap;
-  margin: 3em 0;
+  margin: 0 auto;
   text-align: center;
-  .pandering{
+  .pandering {
     @include flex (column, $ac: space-around);
     .boldy {
       letter-spacing: 5px;
@@ -41,7 +39,7 @@ header {
       opacity: .3;
     }
     p {
-      margin: 2em 1em;
+      margin: 1em;
       padding: 1em;
       max-width: 50em;
       font-family: 'Geomanist';
@@ -51,14 +49,24 @@ header {
   }
 }
   .projects {
-    h2 {
-      text-align: center;
-      font-variant: small-caps;
-      font-family: 'Cassannet';
-      font-weight: bold;
+    @include size (100vw, 100vh);
+    @include flex (column, $jc: center);
+    margin: 0 auto;
+    text-align: center;
+    .blacktower {
+      h2 {
+        text-align: center;
+        font-variant: small-caps;
+        font-family: 'cassannet';
+      }
+      a {
+        color: floralwhite;
+        font-family: 'kimberley';
+        font-variant: small-caps;
+      }
     }
-  }
-  a {
-    color: #e1e0e0;
-    text-decoration: none;
+    a {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+      letter-spacing: .05em;
+    }
   }
