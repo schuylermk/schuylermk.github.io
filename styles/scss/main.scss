@@ -1,6 +1,7 @@
 @import "app";
 
 header {
+  border: 1px solid yellow;
   @include size (100vw, 100vh);
   @include flex (column);
   .sk-logo {
@@ -22,21 +23,22 @@ header {
 }
 
 .about {
+  border: 1px solid yellow;
   @include size (100vw, 100vh);
   @include flex (column, $jc: center);
   margin: 0 auto;
   text-align: center;
   .pandering {
     @include flex (column, $ac: space-around);
-    .boldy {
-      letter-spacing: 5px;
-      font-size: 2.75em;
-      font-family: 'cassannet_boldbold';
+    h1 {
+      color: papayawhip;
+      text-shadow: 2px 2px black;
     }
     .outline {
       @extend .boldy;
       margin: -.9em auto auto .5em;
-      opacity: .3;
+      color: #C8C2B4;
+      text-shadow: 2px 2px #212A27;
     }
     p {
       margin: 1em;
@@ -48,25 +50,45 @@ header {
     }
   }
 }
-  .projects {
-    @include size (100vw, 100vh);
-    @include flex (column, $jc: center);
-    margin: 0 auto;
-    text-align: center;
-    .blacktower {
-      h2 {
-        text-align: center;
-        font-variant: small-caps;
-        font-family: 'cassannet';
-      }
-      a {
-        color: floralwhite;
-        font-family: 'kimberley';
-        font-variant: small-caps;
-      }
+.projects {
+  border: 1px solid yellow;
+  @include flex (column, $jc: space-between);
+  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
+  h1 {
+    color: black;
+    text-shadow: 2px 2px papayawhip;
+  }
+  .outline {
+    @extend .boldy;
+    margin: -.9em auto auto .3em;
+    color: #212A27;
+    text-shadow: 2px 2px #C8C2B4;
+  }
+
+  .blacktower {
+    @include flex (column, $al: center);
+    h2 {
+      text-decoration: underline;
+      color: floralwhite;
+      font-family: 'kimberley';
+      font-variant: small-caps;
+    }
+    img {
+      margin: 2vh auto;
+      outline: 1px solid #212A27;
+      outline-offset: 2vw;
+      width: 90vw;
+    }
+    p {
+      font-family: 'Geomanist';
+      font-size: 1em;
+      font-style: italic;
     }
     a {
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
-      letter-spacing: .05em;
+      color: #212A27;
     }
   }
+}
