@@ -1,0 +1,43 @@
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "components/typography";
+@import "components/grid";
+@import "components/buttons";
+@import "components/navigation";
+@import "components/sections";
+
+* {
+  box-sizing: border-box;
+  font-size: 12px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: black;
+  line-height: 1.4;
+
+  h1 {
+    font-size: 2em;
+  }        /* = 32px */
+  h2 {
+    font-size: 1.5em;
+  }      /* = 24px */
+  aside {
+    font-size: 0.75em;
+  }
+  p {
+    color: white;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .boldy {
+    letter-spacing: 5px;
+    font-size: 2.75em;
+    font-family: 'cassannet_boldbold';
+  }
+}

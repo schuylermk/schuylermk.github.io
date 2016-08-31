@@ -25,28 +25,51 @@ header {
 .about {
   border: 1px solid yellow;
   @include size (100vw, 100vh);
-  @include flex (column, $jc: center);
-  margin: 0 auto;
-  text-align: center;
-  .pandering {
-    @include flex (column, $ac: space-around);
-    h1 {
-      color: papayawhip;
-      text-shadow: 2px 2px black;
+  @include flex (column, $jc: space-around);
+  // margin: 0 auto;
+
+  .statement {
+    @include flex (column);
+    font-family: 'Lato';
+    font-weight: 100;
+    // h1 {
+    //   color: papayawhip;
+    //   text-shadow: 2px 2px black;
+    // }
+    .name {
+      padding: 1rem 1.5rem;
+      font-size: 1.5em;
+      margin-bottom: 2em;
     }
-    .outline {
-      @extend .boldy;
-      margin: -.9em auto auto .5em;
-      color: #C8C2B4;
-      text-shadow: 2px 2px #212A27;
-    }
-    p {
-      margin: 1em;
-      padding: 1em;
+
+    // .outline {
+    //   @extend .boldy;
+    //   margin: -.9em auto auto .5em;
+    //   color: #C8C2B4;
+    //   text-shadow: 2px 2px #212A27;
+    // }
+
+    .content {
+      font-size: 1.2em;
       max-width: 50em;
-      font-family: 'Geomanist';
-      font-style: italic;
-      font-size: 1.15em;
+      padding: 0 1.5rem;
+      word-spacing: 0.15em;
+    }
+    .gizmos {
+      svg  {
+        @include size (2rem, 2rem);
+        vertical-align: bottom;
+      }
+    }
+    .educ {
+      @extend .content;
+      font-size: 1.1em;
+      line-height: 1.8;
+      word-spacing: initial;
+      a {
+        font-weight: 400;
+        color: maroon;
+      }
     }
   }
 }
