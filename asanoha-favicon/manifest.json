@@ -1,5 +1,5 @@
 {
-	"name": "s_m_k",
+	"name": "asanoha-smk",
 	"icons": [
 		{
 			"src": "\/android-chrome-192x192.png",
@@ -12,6 +12,6 @@
 			"type": "image\/png"
 		}
 	],
-	"theme_color": "#ffffff",
+	"theme_color": "#ffe0ac",
 	"display": "standalone"
 }
