@@ -174,11 +174,10 @@ br {
               margin: 0 2em;
               &:hover {
                 text-decoration: underline;
-                color: transparent;
                 box-shadow: 0px 1px 0px rgba(183, 9, 26, 0.8);
                 transition-timing-function: 500ms ease-out;
                 transition-duration: 200ms;
-              } 
+              }
             }
           }
         }
