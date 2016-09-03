@@ -209,9 +209,10 @@ br {
           .construction {
             @include flex ();
             @include size (100%, 100%);
-            .cone {
+            svg {
               @include flex ();
-              float: left;
+              @include size (2em, 2em);
+              // float: left;
               height: 9em;
               margin-right: 30px;
             }
