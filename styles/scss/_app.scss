@@ -7,10 +7,11 @@
 @import "components/navigation";
 @import "components/sections";
 
+
 * {
-  box-sizing: border-box;
   font-size: 12px;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
