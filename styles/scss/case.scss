@@ -14,7 +14,7 @@ header, footer, nav, section, article, hgroup, figure {
 body {
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
-  overflow: hidden;
+  overflow: auto;
 }
 
 small, del {
@@ -79,7 +79,7 @@ br {
 /* Layout
 -------------------------------------------------------------- */
 .home {
-  overflow: scroll;
+  // overflow: scroll;
 
   .intro {
     margin: 0 auto;
@@ -90,7 +90,7 @@ br {
     height: 100%;
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: -3;
     opacity: 0.4;
     }
    // @media (min-width: 1300px) {
@@ -156,7 +156,7 @@ br {
             margin-left: 2em;
 
             &:hover {
-              box-shadow: 0px 2px 0px 5px rgba(183, 9, 26, 0.8);
+              box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
               transition-timing-function: 500ms ease-out;
               transition-duration: 200ms;
             }
@@ -188,86 +188,91 @@ br {
       @include flex (column);
       // border: 1px solid green;
       padding: 3em 3em 24em;
-      .content {
+      p {
+        color: blanchedalmond;
+      }
+      .first {
         @include flex (column);
-        .first {
-          @include flex (column);
+        .construction {
+          @include flex ();
+          @include size (100%, 100%);
+          z-index: -1;
           .name {
             @include flex (column);
             margin-top: 3em;
-            // &:hover {
-            //   content: "   ...like sky-ler...";
-            // }
-          }
-          h2 {
-            @include flex ();
-            font-size: 4em;
-            margin-bottom: 1em;
-            color: blanchedalmond;
-
-          }
-          .construction {
-            @include flex ();
-            @include size (100%, 100%);
-            svg {
-              @include flex ();
-              @include size (2em, 2em);
-              // float: left;
-              height: 9em;
-              margin-right: 30px;
+            h2 {
+              color: blanchedalmond;
+              font-size: 4em;
+              margin-bottom: 1em;
+              width: 70%;
             }
             h4 {
-              @include flex ();
               color: #FF5D00;
               font-size: 3em;
               line-height: 1em;
               margin-bottom: 1em;
-              width: 70%;
+              padding-left: 2em;
+              width: 80%;
             }
-          }
+            // &:hover {
+            //   content: "   ...like sky-ler...";
+            // }
 
-          p {
+          }
+          .cone-holder {
+            @include flex ($as: flex-end);
+            margin-left: -45em;
+            margin-top: -9em;
+            opacity: 0.6;
+            z-index: -1;
+          }
+        }
+        .story {
+          @include flex ();
+          margin-top: -20em;
+        }
+        // @media (min-width: 470px) {
+        //   width: 90%;
+        // }
+        // @media (min-width: 750px) {
+        //   border: 1px solid red;
+        //   width: 70%;
+        // }
+        // @media (min-width: 1300px) {
+        //   border: 1px solid yellow;
+        //   width: 26%;
+        // }
+      }
+      .second {
+        @include flex ();
+        a {
+          color:#3A7CA5;
+          font-weight: 200;
+          font-size: inherit;
+          &:hover {
+            background-color: lime;
+            opacity: 0.1;
+            transition-duration: 200ms;
+          }
+        }
+      }
+
+      .section-links {
+        @include flex (column);
+        margin: 2em 0;
+        padding: 0 30px;
+        a {
+          color: #3A7CA5;
+          font-size: 1.4em;
+          font-weight: 200;
+          display: table;
+          padding: 0 0.5em;
+          &:hover {
+            border-radius: 3px;
+            background-color: #3A7CA5;
             color: blanchedalmond;
-          }
-          // @media (min-width: 470px) {
-          //   width: 90%;
-          // }
-          // @media (min-width: 750px) {
-          //   border: 1px solid red;
-          //   width: 70%;
-          // }
-          // @media (min-width: 1300px) {
-          //   border: 1px solid yellow;
-          //   width: 26%;
-          // }
-          .story {
-            @include flex ();
-            color: blanchedalmond;
-          }
-          .second {
-            @include flex ();
-            a {
-              color:#3A7CA5;
-              font-weight: 200;
-              font-size: inherit;
-              text-decoration: none;
-            }
-          }
-          .section-links {
-            margin-top: 1em;
-            a {
-              color: #3A7CA5;
-              display: flex;
-              font-size: 1.4em;
-              font-weight: 200;
-              margin: 1em 0;
-              &:hover {
-                text-decoration: underline;
-                box-shadow: 0px 1px 0px rgba(183, 9, 26, 0.8);
-                transition-timing-function: 500ms ease-out;
-                transition-duration: 200ms;
-              }
-            }
+            opacity: 0.6;
+            transition: all 0.3s ease-in-out;
           }
         }
       }
