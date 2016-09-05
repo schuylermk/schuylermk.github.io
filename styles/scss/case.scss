@@ -79,18 +79,16 @@ body {
   /* Layout
   -------------------------------------------------------------- */
   .home {
-    // overflow: scroll;
 
     .intro {
-      // margin: 0 auto;
+      @include flex ();
       &:after {
       content: "";
       background: #090B00 url("../../img/blotty.png") center;
-      height: 100%;
+      @include size (100%, 100%);
       opacity: 0.4;
       position: fixed;
       top: 0;
-      width: 100%;
       z-index: -3;
       }
      // @media (min-width: 1300px) {
@@ -307,11 +305,7 @@ body {
             &:nth-child(odd) {
               margin-right: 8%;
             }
-            &:nth-child(even) {
-              &:nth-child(3) {
 
-              }
-            }
             li {
 
               display: block;
@@ -326,6 +320,14 @@ body {
               }
               &:nth-child(1) {
                 width: 100%;
+              }
+              &:nth-child(even) {
+                &:nth-child(3) {
+
+                }
+              }
+              .seagle {
+                height: 500px;
               }
             }
           }
