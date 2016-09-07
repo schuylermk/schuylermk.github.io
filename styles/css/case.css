@@ -324,22 +324,25 @@ body {
             display: flex;
             justify-content: space-between;
             width: 100vw;
-            height: auto; }
+            height: auto;
+            margin: 0 3em; }
             body .home .intro .border .header-container .site-header nav .nav-logo {
               display: flex;
-              margin-left: 2em;
-              text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4); }
+              align-items: flex-start; }
+              body .home .intro .border .header-container .site-header nav .nav-logo .sk-name-logo {
+                display: flex;
+                align-items: flex-start; }
+                body .home .intro .border .header-container .site-header nav .nav-logo .sk-name-logo svg {
+                  display: flex;
+                  width: 25em;
+                  height: 4em; }
               body .home .intro .border .header-container .site-header nav .nav-logo:hover {
                 box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
                 transition-timing-function: 500ms ease-out;
                 transition-duration: 200ms; }
-              body .home .intro .border .header-container .site-header nav .nav-logo svg {
-                display: flex;
-                width: 4em;
-                height: 4em; }
           body .home .intro .border .header-container .site-header .links {
             display: flex;
-            align-items: center; }
+            align-items: flex-start; }
             body .home .intro .border .header-container .site-header .links a {
               font-size: 1.4em;
               font-weight: 200;
@@ -360,8 +363,6 @@ body {
         flex-direction: column; }
         body .home .intro .container .first .construction {
           display: flex;
-          width: 100%;
-          height: 100%;
           z-index: -1; }
           body .home .intro .container .first .construction .name {
             display: flex;
@@ -382,11 +383,12 @@ body {
               text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
               width: 80%; }
           body .home .intro .container .first .construction .cone-holder {
-            position: absolute;
-            opacity: 0.6;
-            z-index: -1;
-            top: 30px;
-            right: 50px; }
+            display: flex;
+            width: 200px;
+            height: 250px;
+            position: relative;
+            opacity: 0.7;
+            top: -60px; }
         body .home .intro .container .first .story {
           display: flex;
           word-spacing: 1px; }
@@ -420,67 +422,42 @@ body {
   body .tier {
     padding: 1em 0;
     position: relative; }
-    body .tier .container {
-      margin: 0 auto;
+    body .tier .work-container {
+      margin: 0 3em;
       overflow: hidden;
       padding: 0 5px;
       width: 92%; }
-      body .tier .container .infotext {
-        width: 26%;
-        float: left; }
-      body .tier .container .patchwork {
+      body .tier .work-container .infotext {
+        color: blanchedalmond;
+        float: left;
+        width: 26%; }
+      body .tier .work-container .patchwork {
         float: right;
         margin: 3.5% 0;
         width: 68%; }
-        body .tier .container .patchwork ul {
+        body .tier .work-container .patchwork .group-1 {
           float: left;
           list-style: none;
           margin-right: 1%;
           padding-left: 0;
           width: 46%; }
-          body .tier .container .patchwork ul:nth-child(odd) {
-            margin-right: 8%; }
-          body .tier .container .patchwork ul:nth-child(even) {
-            float: right;
-            width: 46%; }
-          body .tier .container .patchwork ul li {
-            display: block;
+          body .tier .work-container .patchwork .group-1 li {
             margin-bottom: 3em;
-            width: 42%; }
-            body .tier .container .patchwork ul li img {
-              border: 1px solid grey; }
-              body .tier .container .patchwork ul li img:hover {
-                opacity: 0.6; }
-            body .tier .container .patchwork ul li h6 {
+            width: 100%;
+            border: 1px solid grey; }
+            body .tier .work-container .patchwork .group-1 li:hover {
+              opacity: 0.6; }
+            body .tier .work-container .patchwork .group-1 li h6 {
               display: inline-block;
               margin: 0em 2em 0 6em; }
-            body .tier .container .patchwork ul li a {
+            body .tier .work-container .patchwork .group-1 li a {
               color: #3A7CA5;
               font-size: 1.4em;
               font-weight: 200; }
-            body .tier .container .patchwork ul li:nth-child(1) {
-              width: 100%; }
-            body .tier .container .patchwork ul li:nth-child(even) a {
-              font-size: 1.2em; }
-            body .tier .container .patchwork ul li .seagle {
-              height: 500px; }
-    body .tier:after {
-      content: "";
-      color: white;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      z-index: -1;
-      opacity: 0.3; }
-    @media (min-width: 750px) {
-      body .tier {
-        padding-top: 2em; } }
-    @media (min-width: 1300px) {
-      body .tier {
-        padding-top: 4em; }
-        body .tier p:first-of-type {
-          float: left; } }
+        body .tier .work-container .patchwork:nth-child(even) a {
+          font-size: 1.2em; }
+        body .tier .work-container .patchwork .seagle {
+          height: 200px; }
   body footer {
     display: flex;
     justify-content: center; }

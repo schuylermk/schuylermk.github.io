@@ -2,10 +2,6 @@
 
 /* Reset
 ----------------------------------------------------- */
-* {
-
-  // border: 1px dashed orange;
-}
 
 header, footer, nav, article, hgroup, figure {
   display: flex;
@@ -149,24 +145,26 @@ body {
           nav  {
             @include flex ($jc: space-between);
             @include size (100vw, auto);
+            margin: 0 3em;
             .nav-logo {
-              @include flex ();
-              margin-left: 2em;
-              text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+              @include flex ($al: flex-start);
+              .sk-name-logo {
+                @include flex ($al: flex-start);
+                svg {
+                  @include flex ();
+                  @include size (25em, 4em);
+                }
+              }
               &:hover {
                 box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
                 transition-timing-function: 500ms ease-out;
                 transition-duration: 200ms;
               }
 
-              svg {
-                @include flex ();
-                @include size (4em, 4em);
-              }
             }
           }
             .links {
-              @include flex ($al: center);
+              @include flex ($al: flex-start);
               a {
                 font-size: 1.4em;
                 font-weight: 200;
@@ -193,7 +191,6 @@ body {
           @include flex (column);
           .construction {
             @include flex ();
-            @include size (100%, 100%);
             z-index: -1;
             .name {
               @include flex (column);
@@ -220,11 +217,11 @@ body {
 
             }
             .cone-holder {
-              position: absolute;
-              opacity: 0.6;
-              z-index: -1;
-              top: 30px;
-              right: 50px;
+              @include flex ();
+              @include size (200px, 250px);
+              position: relative;
+              opacity: 0.7;
+              top: -60px;
             }
           }
           .story {
@@ -285,43 +282,33 @@ body {
     .tier {
       padding: 1em 0;
       position: relative;
-      .container {
-        margin: 0 auto;
+      .work-container {
+        margin: 0 3em;
         overflow: hidden;
         padding: 0 5px;
         width: 92%;
         .infotext {
-          width: 26%;
+          color: blanchedalmond;
           float: left;
+          width: 26%;
         }
         .patchwork {
           float: right;
           margin: 3.5% 0;
           width: 68%;
-          ul {
+          .group-1 {
             float: left;
             list-style: none;
             margin-right: 1%;
             padding-left: 0;
             width: 46%;
-            &:nth-child(odd) {
-              margin-right: 8%;
-            }
-            &:nth-child(even) {
-              float: right;
-              width:46%;
-            }
-
             li {
-
-              display: block;
               margin-bottom: 3em;
-              width: 42%;
-              img {
-                border: 1px solid grey;
-                &:hover {
-                  opacity: 0.6;
-                }
+              width: 100%;
+              border: 1px solid grey;
+
+              &:hover {
+                opacity: 0.6;
               }
               h6 {
                 display: inline-block;
@@ -332,45 +319,21 @@ body {
                 font-size: 1.4em;
                 font-weight: 200;
               }
-              &:nth-child(1) {
-                width: 100%;
-              }
+            }
+          }
               &:nth-child(even) {
                 a {
                   font-size: 1.2em;
                 }
-
-                &:nth-child(3) {
-
-                }
               }
               .seagle {
-                height: 500px;
+                height: 200px;
               }
             }
-          }
+
         }
       }
-      &:after {
-        content: "";
-        color: white;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        opacity: 0.3;
-      }
-      @media (min-width: 750px) {
-        padding-top: 2em;
-      }
-      @media (min-width: 1300px) {
-        padding-top: 4em;
-        p:first-of-type {
-          float: left;
-        }
-      }
-    }
+
 
 
 //   @media (min-width: 1200px) {
