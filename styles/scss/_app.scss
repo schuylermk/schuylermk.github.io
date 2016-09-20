@@ -13,7 +13,7 @@
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -32,11 +32,12 @@ body {
   p {
     color: white;
     font-weight: 200;
+    z-index: 777;
   }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+  // a {
+  //   color: inherit;
+  //   text-decoration: none;
+  // }
   .boldy {
     letter-spacing: 5px;
     font-size: 2.75em;
