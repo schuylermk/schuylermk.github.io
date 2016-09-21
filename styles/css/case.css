@@ -444,37 +444,46 @@ body {
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: auto; }
+            height: auto;
+            position: relative; }
             body .tier .work-container .patchwork .group-1 .project-1 img {
               width: 100%;
               object-fit: scale-down; }
-            body .tier .work-container .patchwork .group-1 .project-1 .overlay-1 {
-              position: relative;
-              width: 80%;
-              height: 80%;
+            body .tier .work-container .patchwork .group-1 .project-1 .overlay {
+              display: flex;
+              position: absolute;
               border-top: 1px solid white;
-              border-bottom: 1px solid white;
               top: 10%;
+              height: 80%;
+              width: 80%;
               left: 10%;
+              border-bottom: 1px solid white;
               text-align: center;
               opacity: 0;
-              -webkit-transition: opacity .25s ease;
-              transition: opacity .25s ease; }
-            body .tier .work-container .patchwork .group-1 .project-1:hover {
-              filter: brightness(0.4);
-              -webkit-filter: brightness(0.4); }
-            body .tier .work-container .patchwork .group-1 .project-1:hover .overlay-1 {
+              -webkit-transition: opacity .25s ease; }
+              body .tier .work-container .patchwork .group-1 .project-1 .overlay #plus {
+                margin: 0 auto; }
+                body .tier .work-container .patchwork .group-1 .project-1 .overlay #plus h2 {
+                  color: white;
+                  font-family: cassannet;
+                  font-weight: 100;
+                  line-height: 0;
+                  top: -30%; }
+            body .tier .work-container .patchwork .group-1 .project-1:hover img {
+              filter: brightness(0.3);
+              -webkit-filter: brightness(0.3); }
+            body .tier .work-container .patchwork .group-1 .project-1:hover .overlay {
               background: transparent;
               opacity: 1; }
             @media screen and (min-width: 960px) {
               body .tier .work-container .patchwork .group-1 .project-1 {
                 display: flex;
-                padding-right: 1em;
-                width: 100%; } }
+                padding-right: 1em; } }
           body .tier .work-container .patchwork .group-1 .project-2 {
             border: 1px solid yellow;
             display: flex;
-            flex-direction: column; }
+            flex-direction: column;
+            position: relative; }
         body .tier .work-container .patchwork .group-2 {
           display: flex;
           margin: 0 1em; }

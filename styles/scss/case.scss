@@ -304,40 +304,54 @@ body {
           .project-1 {
             @include flex (column);
             @include size (100%, auto);
+            position: relative;
             img {
               width: 100%;
               object-fit: scale-down;
             }
-            .overlay-1 {
-              position: relative;
-              @include size (80%, 80%);
+            .overlay    {
+              @include flex ();
+              position: absolute;
               border-top: 1px solid white;
-              border-bottom: 1px solid white;
               top: 10%;
+              height: 80%;
+              width: 80%;
               left: 10%;
+              border-bottom: 1px solid white;
               text-align: center;
               opacity: 0;
               -webkit-transition: opacity .25s ease;
-              transition: opacity .25s ease;
+              #plus {
+                margin: 0 auto;
+                h2 {
+                color: white;
+                font-family: cassannet;
+                font-weight: 100;
+                line-height: 0;
+                top: -30%;
+                }
+              }
             }
-            &:hover {
-              filter: brightness(0.4);
-              -webkit-filter: brightness(0.4);
+            &:hover img {
+              filter: brightness(0.3);
+              -webkit-filter: brightness(0.3);
             }
-            &:hover .overlay-1 {
+            &:hover .overlay {
               background: transparent;
-              opacity: 1;
+              opacity:1;
             }
-
             @media screen and (min-width: 960px) {
               @include flex ();
               padding-right: 1em;
-              width: 100%;
             }
           }
+
+
+
           .project-2 {
             border: 1px solid yellow;
             @include flex (column);
+            position: relative;
             @media screen and (min-width: 960px) {
               // img {
               //   height: 100%;
