@@ -327,27 +327,19 @@ body {
             body .home #border .site-header nav .nav-logo object {
               width: 25em;
               height: auto; }
-              body .home #border .site-header nav .nav-logo object svg {
-                display: flex; }
-                body .home #border .site-header nav .nav-logo object svg g {
-                  stroke: lime; }
-            body .home #border .site-header nav .nav-logo:hover {
-              box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
-              transition-timing-function: 500ms ease-out;
-              transition-duration: 200ms; }
         body .home #border .site-header .links {
           display: flex;
           align-items: flex-start; }
           body .home #border .site-header .links a {
-            color: #3A7CA5;
+            color: #ECECE6;
             font-size: 1.4em;
             font-weight: 200;
             margin: 0 2em;
-            text-decoration: underline wavy red; }
+            text-decoration: none; }
             body .home #border .site-header .links a:hover {
-              box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
-              transition-timing-function: 500ms ease-out;
-              transition-duration: 200ms; }
+              color: #007e00;
+              transition-timing-function: ease-in-out;
+              transition-duration: 400ms; }
       body .home #border #work {
         display: flex;
         flex-direction: column;
@@ -365,7 +357,6 @@ body {
             height: 100%;
             margin: 1em auto; }
             body .home #border #work .work-container .patchwork .group {
-              border: 1px dotted grey;
               display: flex;
               flex-direction: row;
               justify-content: space-between;

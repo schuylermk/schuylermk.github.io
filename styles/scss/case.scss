@@ -111,32 +111,21 @@ body {
             @include flex ($al: flex-start);
             object {
               @include size (25em, auto);
-              svg {
-                @include flex ();
-                g {
-                  stroke: lime;
-                }
-              }
-            }
-            &:hover {
-              box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
-              transition-timing-function: 500ms ease-out;
-              transition-duration: 200ms;
             }
           }
         }
           .links {
             @include flex ($al: flex-start);
             a {
-              color: #3A7CA5;
+              color: #ECECE6;
               font-size: 1.4em;
               font-weight: 200;
               margin: 0 2em;
-              text-decoration: underline wavy red;
+              text-decoration: none;
               &:hover {
-                box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
-                transition-timing-function: 500ms ease-out;
-                transition-duration: 200ms;
+                color: darken(green, .30);
+                transition-timing-function: ease-in-out;
+                transition-duration: 400ms;
               }
             }
           }
@@ -157,7 +146,7 @@ body {
             // border: 1px solid lime;
             margin: 1em auto;
             .group {
-              border: 1px dotted grey;
+              // border: 1px dotted grey;
               @include flex (row, $jc: space-between, $al: center);
               padding: 1em;
               .project {
