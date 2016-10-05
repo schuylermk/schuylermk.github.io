@@ -6,7 +6,7 @@
       <use xlink:href="#a"/>
     </mask>
   </defs>
-  <use fill="none" fill-rule="evenodd" stroke="#03E765" stroke-width="2"  xlink:href="#a"/>
+  <use fill="transparent" fill-rule="evenodd" stroke="#ECECE6" stroke-width="2"  xlink:href="#a"/>
 </svg>
 
 <!-- this attribute goes in the <use> tag:
