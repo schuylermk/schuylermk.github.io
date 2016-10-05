@@ -271,9 +271,10 @@ body {
       font-size: 6em;
       margin-top: 1.5em; } }
   body h3 {
-    color: #212A27;
+    color: blanchedalmond;
     font-size: 1.5em;
-    line-height: 2em; }
+    line-height: 2em;
+    margin-bottom: .25em; }
     @media (min-width: 750px) {
       body h3 {
         font-size: 2.5em; } }
@@ -386,12 +387,15 @@ body {
                   -webkit-transition: opacity .25s ease; }
                   body .home #border #work .work-container .patchwork .group .project .overlay #plus {
                     margin: 0 auto; }
-                    body .home #border #work .work-container .patchwork .group .project .overlay #plus h2 {
+                    body .home #border #work .work-container .patchwork .group .project .overlay #plus h2, body .home #border #work .work-container .patchwork .group .project .overlay #plus h3, body .home #border #work .work-container .patchwork .group .project .overlay #plus h4 {
                       color: white;
                       font-family: cassannet;
                       font-weight: 100;
                       line-height: 0;
                       top: -30%; }
+                    body .home #border #work .work-container .patchwork .group .project .overlay #plus a {
+                      color: #007e00;
+                      margin: 0 auto; }
                 body .home #border #work .work-container .patchwork .group .project:hover img {
                   filter: brightness(0.1);
                   -webkit-filter: brightness(0.1); }
