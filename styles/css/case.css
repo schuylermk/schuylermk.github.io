@@ -300,87 +300,87 @@ body {
       position: fixed;
       top: 0;
       z-index: -3; }
-    body .home .border {
+    body .home #border {
       display: flex;
       flex-direction: column;
       border: 1px solid #ECECE6;
       height: 100vh;
       margin: 20px; }
-      body .home .border .site-header {
+      body .home #border .site-header {
         display: flex;
         padding: 1.5em 0 1em 0; }
-        body .home .border .site-header h1 {
+        body .home #border .site-header h1 {
           color: ECECE6;
           display: inline-block; }
         @media (min-width: 500px) {
-          body .home .border .site-header {
+          body .home #border .site-header {
             padding-top: 2em; } }
-        body .home .border .site-header nav {
+        body .home #border .site-header nav {
           display: flex;
           justify-content: space-between;
           width: 100vw;
           height: auto;
           margin: 0 3em; }
-          body .home .border .site-header nav .nav-logo {
+          body .home #border .site-header nav .nav-logo {
             display: flex;
             align-items: flex-start; }
-            body .home .border .site-header nav .nav-logo object {
+            body .home #border .site-header nav .nav-logo object {
               width: 25em;
               height: auto; }
-              body .home .border .site-header nav .nav-logo object svg {
+              body .home #border .site-header nav .nav-logo object svg {
                 display: flex; }
-                body .home .border .site-header nav .nav-logo object svg g {
+                body .home #border .site-header nav .nav-logo object svg g {
                   stroke: lime; }
-            body .home .border .site-header nav .nav-logo:hover {
+            body .home #border .site-header nav .nav-logo:hover {
               box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
               transition-timing-function: 500ms ease-out;
               transition-duration: 200ms; }
-        body .home .border .site-header .links {
+        body .home #border .site-header .links {
           display: flex;
           align-items: flex-start; }
-          body .home .border .site-header .links a {
+          body .home #border .site-header .links a {
             color: #3A7CA5;
             font-size: 1.4em;
             font-weight: 200;
             margin: 0 2em;
             text-decoration: underline wavy red; }
-            body .home .border .site-header .links a:hover {
+            body .home #border .site-header .links a:hover {
               box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
               transition-timing-function: 500ms ease-out;
               transition-duration: 200ms; }
-      body .home .border #work {
+      body .home #border #work {
         display: flex;
         flex-direction: column;
         align-items: center; }
-        body .home .border #work .work-container {
+        body .home #border #work .work-container {
           display: flex;
           width: 100%;
           padding: 20% 5%; }
-          body .home .border #work .work-container h3 {
+          body .home #border #work .work-container h3 {
             text-align: center; }
-          body .home .border #work .work-container .patchwork {
+          body .home #border #work .work-container .patchwork {
             display: flex;
             flex-direction: column;
             width: 100%;
             height: 100%;
             margin: 1em auto; }
-            body .home .border #work .work-container .patchwork .group {
+            body .home #border #work .work-container .patchwork .group {
               border: 1px dotted grey;
               display: flex;
               flex-direction: row;
               justify-content: space-between;
               align-items: center;
               padding: 1em; }
-              body .home .border #work .work-container .patchwork .group .project {
+              body .home #border #work .work-container .patchwork .group .project {
                 display: flex;
                 flex-direction: column;
                 width: auto;
                 height: 40%;
                 position: relative; }
-                body .home .border #work .work-container .patchwork .group .project img {
+                body .home #border #work .work-container .patchwork .group .project img {
                   max-width: 25vw;
                   object-fit: scale-down; }
-                body .home .border #work .work-container .patchwork .group .project .overlay {
+                body .home #border #work .work-container .patchwork .group .project .overlay {
                   display: flex;
                   flex-direction: column;
                   position: absolute;
@@ -393,60 +393,60 @@ body {
                   text-align: center;
                   opacity: 0;
                   -webkit-transition: opacity .25s ease; }
-                  body .home .border #work .work-container .patchwork .group .project .overlay #plus {
+                  body .home #border #work .work-container .patchwork .group .project .overlay #plus {
                     margin: 0 auto; }
-                    body .home .border #work .work-container .patchwork .group .project .overlay #plus h2 {
+                    body .home #border #work .work-container .patchwork .group .project .overlay #plus h2 {
                       color: white;
                       font-family: cassannet;
                       font-weight: 100;
                       line-height: 0;
                       top: -30%; }
-                body .home .border #work .work-container .patchwork .group .project:hover img {
+                body .home #border #work .work-container .patchwork .group .project:hover img {
                   filter: brightness(0.1);
                   -webkit-filter: brightness(0.1); }
-                body .home .border #work .work-container .patchwork .group .project:hover .overlay {
+                body .home #border #work .work-container .patchwork .group .project:hover .overlay {
                   background: transparent;
                   opacity: 1; }
-            body .home .border #work .work-container .patchwork .group-2 {
+            body .home #border #work .work-container .patchwork .group-2 {
               display: flex;
               flex-direction: column;
               width: 100%;
               padding-right: 1em; }
-              body .home .border #work .work-container .patchwork .group-2 .project-1 {
+              body .home #border #work .work-container .patchwork .group-2 .project-1 {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
                 height: auto;
                 position: relative; }
-                body .home .border #work .work-container .patchwork .group-2 .project-1 img {
+                body .home #border #work .work-container .patchwork .group-2 .project-1 img {
                   max-height: 400px;
                   width: 100%;
                   object-fit: scale-down; }
-    body .home .container {
+    body .home #about-container {
       display: flex;
       flex-direction: column;
       border: 1px solid green;
       margin: 0 20px;
       padding: 3em 5em 24em; }
-      body .home .container p {
+      body .home #about-container p {
         color: blanchedalmond; }
-      body .home .container .first {
+      body .home #about-container .first {
         display: flex;
         flex-direction: column; }
-        body .home .container .first .construction {
+        body .home #about-container .first .construction {
           display: flex;
           z-index: -1; }
-          body .home .container .first .construction .name {
+          body .home #about-container .first .construction .name {
             display: flex;
             flex-direction: column;
             margin-top: 3em; }
-            body .home .container .first .construction .name h2 {
+            body .home #about-container .first .construction .name h2 {
               color: blanchedalmond;
               font-size: 4em;
               font-weight: 200;
               margin-bottom: 1em;
               width: 100%; }
-            body .home .container .first .construction .name h4 {
+            body .home #about-container .first .construction .name h4 {
               color: #FF5D00;
               font-size: 3em;
               line-height: 1em;
@@ -454,32 +454,32 @@ body {
               padding-left: 2em;
               text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
               width: 80%; }
-        body .home .container .first .story {
+        body .home #about-container .first .story {
           display: flex;
           word-spacing: 1px; }
-      body .home .container .second {
+      body .home #about-container .second {
         display: flex;
         word-spacing: 1px;
         width: 55%; }
-        body .home .container .second a {
+        body .home #about-container .second a {
           color: #3A7CA5;
           font-size: inherit;
           font-weight: 200; }
-          body .home .container .second a:hover {
+          body .home #about-container .second a:hover {
             border-radius: 1px;
             background-color: rgba(91, 146, 121, 0.2);
             transition: all 0.1s ease-in-out; }
-      body .home .container .section-links {
+      body .home #about-container .section-links {
         display: flex;
         flex-direction: column;
         margin: 2em 0;
         padding: 0 30px; }
-        body .home .container .section-links a {
+        body .home #about-container .section-links a {
           color: #3A7CA5;
           font-size: 1.4em;
           font-weight: 200;
           display: table; }
-          body .home .container .section-links a:hover {
+          body .home #about-container .section-links a:hover {
             border-radius: 1px;
             background-color: rgba(91, 146, 121, 0.2);
             color: #3A7CA5;
