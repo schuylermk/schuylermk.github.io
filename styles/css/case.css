@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, span, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0; }
 
@@ -12,6 +12,11 @@ ol, ul {
 * {
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Stellar';
+  src: url("../../typefaces/Stellar-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: 'cassannet_boldbold';
   src: url("../../typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff");
@@ -35,7 +40,7 @@ ol, ul {
   src: url("../../typefaces/Geomanist/geomanist-regular-italic-webfont.svg#geomanistregular_italic") format("svg"); }
 @font-face {
   font-family: 'kimberley';
-  src: url("../../typefaces/kimberley/kimberley bl.ttf") format("ttf"); }
+  src: url("../../typefaces/kimberley/kimberley.ttf") format("ttf"); }
 @font-face {
   font-family: 'Unica One';
   src: url("../../typefaces/unica/UnicaOne-Regular.ttf") format("ttf"); }
@@ -273,8 +278,7 @@ body {
   body h3 {
     color: blanchedalmond;
     font-size: 1.5em;
-    line-height: 2em;
-    margin-bottom: .25em; }
+    line-height: 2em; }
     @media (min-width: 750px) {
       body h3 {
         font-size: 2.5em; } }
@@ -286,8 +290,6 @@ body {
   body p {
     font-size: 1.4em;
     line-height: 1.4em; }
-  body br {
-    padding-bottom: 10em; }
   body .home {
     display: flex;
     flex-direction: column;
@@ -332,15 +334,15 @@ body {
           display: flex;
           align-items: flex-start; }
           body .home #border .site-header .links a {
-            color: #ECECE6;
-            font-size: 1.4em;
-            font-weight: 200;
+            color: white;
+            font-size: 1.5em;
+            font-weight: 100;
             margin: 0 2em;
             text-decoration: none; }
             body .home #border .site-header .links a:hover {
-              color: #007e00;
-              transition-timing-function: ease-in-out;
-              transition-duration: 400ms; }
+              color: #00fe00;
+              transition-timing-function: ease-in;
+              transition-duration: 200ms; }
       body .home #border #work {
         display: flex;
         flex-direction: column;
@@ -360,7 +362,7 @@ body {
             body .home #border #work .work-container .patchwork .group {
               display: flex;
               flex-direction: row;
-              justify-content: space-between;
+              justify-content: space-around;
               align-items: center;
               padding: 1em; }
               body .home #border #work .work-container .patchwork .group .project {
@@ -368,6 +370,7 @@ body {
                 flex-direction: column;
                 width: auto;
                 height: 40%;
+                padding: 1em;
                 position: relative; }
                 body .home #border #work .work-container .patchwork .group .project img {
                   max-width: 25vw;
@@ -385,17 +388,17 @@ body {
                   text-align: center;
                   opacity: 0;
                   -webkit-transition: opacity .25s ease; }
-                  body .home #border #work .work-container .patchwork .group .project .overlay #plus {
+                  body .home #border #work .work-container .patchwork .group .project .overlay .plus {
                     margin: 0 auto; }
-                    body .home #border #work .work-container .patchwork .group .project .overlay #plus h2, body .home #border #work .work-container .patchwork .group .project .overlay #plus h3, body .home #border #work .work-container .patchwork .group .project .overlay #plus h4 {
+                    body .home #border #work .work-container .patchwork .group .project .overlay .plus h2, body .home #border #work .work-container .patchwork .group .project .overlay .plus h3, body .home #border #work .work-container .patchwork .group .project .overlay .plus h4 {
                       color: white;
-                      font-family: cassannet;
                       font-weight: 100;
                       line-height: 0;
                       top: -30%; }
-                    body .home #border #work .work-container .patchwork .group .project .overlay #plus a {
+                    body .home #border #work .work-container .patchwork .group .project .overlay .plus a {
                       color: #007e00;
-                      margin: 0 auto; }
+                      display: inline-block;
+                      margin-top: 2em; }
                 body .home #border #work .work-container .patchwork .group .project:hover img {
                   filter: brightness(0.1);
                   -webkit-filter: brightness(0.1); }
@@ -457,9 +460,11 @@ body {
         word-spacing: 1px;
         width: 55%; }
         body .home #about-container .second a {
-          color: #3A7CA5;
-          font-size: inherit;
-          font-weight: 200; }
+          color: cornflowerblue;
+          font-size: 1.2em;
+          font-weight: 100;
+          margin: 0 .1em;
+          text-decoration: none; }
           body .home #about-container .second a:hover {
             border-radius: 1px;
             background-color: rgba(91, 146, 121, 0.2);
@@ -472,8 +477,9 @@ body {
         body .home #about-container .section-links a {
           color: #3A7CA5;
           font-size: 1.4em;
-          font-weight: 200;
-          display: table; }
+          font-weight: 100;
+          display: table;
+          text-decoration: none; }
           body .home #about-container .section-links a:hover {
             border-radius: 1px;
             background-color: rgba(91, 146, 121, 0.2);
