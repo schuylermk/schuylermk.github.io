@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0; }
 
@@ -12,6 +12,11 @@ ol, ul {
 * {
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Stellar';
+  src: url("../../typefaces/Stellar-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: 'cassannet_boldbold';
   src: url("../../typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff");
@@ -35,7 +40,7 @@ ol, ul {
   src: url("../../typefaces/Geomanist/geomanist-regular-italic-webfont.svg#geomanistregular_italic") format("svg"); }
 @font-face {
   font-family: 'kimberley';
-  src: url("../../typefaces/kimberley/kimberley bl.ttf") format("ttf"); }
+  src: url("../../typefaces/kimberley/kimberley.ttf") format("ttf"); }
 @font-face {
   font-family: 'Unica One';
   src: url("../../typefaces/unica/UnicaOne-Regular.ttf") format("ttf"); }
@@ -208,7 +213,7 @@ ol, ul {
   font-size: 12px; }
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -224,10 +229,8 @@ body {
     font-size: 0.75em; }
   body p {
     color: white;
-    font-weight: 200; }
-  body a {
-    color: inherit;
-    text-decoration: none; }
+    font-weight: 200;
+    z-index: 777; }
   body .boldy {
     letter-spacing: 5px;
     font-size: 2.75em;
@@ -242,6 +245,7 @@ body {
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
   overflow: auto;
+  overflow-x: hidden;
   /* Layout
   -------------------------------------------------------------- */ }
   body small, body del {
@@ -272,7 +276,7 @@ body {
       font-size: 6em;
       margin-top: 1.5em; } }
   body h3 {
-    color: #212A27;
+    color: blanchedalmond;
     font-size: 1.5em;
     line-height: 2em; }
     @media (min-width: 750px) {
@@ -286,95 +290,161 @@ body {
   body p {
     font-size: 1.4em;
     line-height: 1.4em; }
-  body img {
-    max-width: 100%;
-    width: auto; }
-  body br {
-    padding-bottom: 10em; }
-  body .home .intro {
-    display: flex; }
-    body .home .intro:after {
+  body .home {
+    display: flex;
+    flex-direction: column;
+    /* BELOW is site's bg texture  */ }
+    body .home:after {
       content: "";
       background: #090B00 url("../../img/blotty.png") center;
       width: 100%;
       height: 100%;
-      opacity: 0.4;
+      opacity: 0.6;
       position: fixed;
       top: 0;
       z-index: -3; }
-    body .home .intro .border {
+    body .home #border {
       display: flex;
       flex-direction: column;
-      width: 100%;
       border: 1px solid #ECECE6;
-      margin: 1.25em;
-      position: relative; }
-      body .home .intro .border .header-container {
-        max-width: 96vw; }
-        body .home .intro .border .header-container .site-header {
+      height: 100vh;
+      margin: 20px; }
+      body .home #border .site-header {
+        display: flex;
+        padding: 1.5em 0 1em 0; }
+        body .home #border .site-header h1 {
+          color: ECECE6;
+          display: inline-block; }
+        @media (min-width: 500px) {
+          body .home #border .site-header {
+            padding-top: 2em; } }
+        body .home #border .site-header nav {
           display: flex;
-          padding: 1.5em 0 1em 0; }
-          body .home .intro .border .header-container .site-header h1 {
-            color: ECECE6;
-            display: inline-block; }
-          @media (min-width: 500px) {
-            body .home .intro .border .header-container .site-header {
-              padding-top: 2em; } }
-          body .home .intro .border .header-container .site-header nav {
-            display: flex;
-            justify-content: space-between;
-            width: 100vw;
-            height: auto;
-            margin: 0 3em; }
-            body .home .intro .border .header-container .site-header nav .nav-logo {
-              display: flex;
-              align-items: flex-start; }
-              body .home .intro .border .header-container .site-header nav .nav-logo .sk-name-logo {
-                display: flex;
-                align-items: flex-start; }
-                body .home .intro .border .header-container .site-header nav .nav-logo .sk-name-logo svg {
-                  display: flex;
-                  width: 25em;
-                  height: 4em; }
-              body .home .intro .border .header-container .site-header nav .nav-logo:hover {
-                box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
-                transition-timing-function: 500ms ease-out;
-                transition-duration: 200ms; }
-          body .home .intro .border .header-container .site-header .links {
+          justify-content: space-between;
+          width: 100vw;
+          height: auto;
+          margin: 0 3em; }
+          body .home #border .site-header nav .nav-logo {
             display: flex;
             align-items: flex-start; }
-            body .home .intro .border .header-container .site-header .links a {
-              font-size: 1.4em;
-              font-weight: 200;
-              color: #3A7CA5;
-              margin: 0 2em; }
-              body .home .intro .border .header-container .site-header .links a:hover {
-                box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
-                transition-timing-function: 500ms ease-out;
-                transition-duration: 200ms; }
-    body .home .intro .container {
+            body .home #border .site-header nav .nav-logo object {
+              width: 25em;
+              height: auto; }
+        body .home #border .site-header .links {
+          display: flex;
+          align-items: flex-start; }
+          body .home #border .site-header .links a {
+            color: white;
+            font-size: 1.5em;
+            font-weight: 100;
+            margin: 0 2em;
+            text-decoration: none; }
+            body .home #border .site-header .links a:hover {
+              color: #00fe00;
+              transition-timing-function: ease-in;
+              transition-duration: 200ms; }
+      body .home #border #work {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        body .home #border #work .work-container {
+          display: flex;
+          width: 100%;
+          padding: 20% 5%; }
+          body .home #border #work .work-container h3 {
+            text-align: center; }
+          body .home #border #work .work-container .patchwork {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            margin: 1em auto; }
+            body .home #border #work .work-container .patchwork .group {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              padding: 1em; }
+              body .home #border #work .work-container .patchwork .group .project {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                height: 40%;
+                padding: 1em;
+                position: relative; }
+                body .home #border #work .work-container .patchwork .group .project img {
+                  max-width: 25vw;
+                  object-fit: scale-down; }
+                body .home #border #work .work-container .patchwork .group .project .overlay {
+                  display: flex;
+                  flex-direction: column;
+                  position: absolute;
+                  border-top: 1px solid white;
+                  top: 10%;
+                  height: 80%;
+                  width: 80%;
+                  left: 10%;
+                  border-bottom: 1px solid white;
+                  text-align: center;
+                  opacity: 0;
+                  -webkit-transition: opacity .25s ease; }
+                  body .home #border #work .work-container .patchwork .group .project .overlay .plus {
+                    margin: 0 auto; }
+                    body .home #border #work .work-container .patchwork .group .project .overlay .plus h2, body .home #border #work .work-container .patchwork .group .project .overlay .plus h3, body .home #border #work .work-container .patchwork .group .project .overlay .plus h4 {
+                      color: white;
+                      font-weight: 100;
+                      line-height: 0;
+                      top: -30%; }
+                    body .home #border #work .work-container .patchwork .group .project .overlay .plus a {
+                      color: #007e00;
+                      display: inline-block;
+                      margin-top: 2em; }
+                body .home #border #work .work-container .patchwork .group .project:hover img {
+                  filter: brightness(0.1);
+                  -webkit-filter: brightness(0.1); }
+                body .home #border #work .work-container .patchwork .group .project:hover .overlay {
+                  background: transparent;
+                  opacity: 1; }
+            body .home #border #work .work-container .patchwork .group-2 {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              padding-right: 1em; }
+              body .home #border #work .work-container .patchwork .group-2 .project-1 {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                position: relative; }
+                body .home #border #work .work-container .patchwork .group-2 .project-1 img {
+                  max-height: 400px;
+                  width: 100%;
+                  object-fit: scale-down; }
+    body .home #about-container {
       display: flex;
       flex-direction: column;
+      border: 1px solid green;
+      margin: 0 20px;
       padding: 3em 5em 24em; }
-      body .home .intro .container p {
+      body .home #about-container p {
         color: blanchedalmond; }
-      body .home .intro .container .first {
+      body .home #about-container .first {
         display: flex;
         flex-direction: column; }
-        body .home .intro .container .first .construction {
+        body .home #about-container .first .construction {
           display: flex;
           z-index: -1; }
-          body .home .intro .container .first .construction .name {
+          body .home #about-container .first .construction .name {
             display: flex;
             flex-direction: column;
             margin-top: 3em; }
-            body .home .intro .container .first .construction .name h2 {
+            body .home #about-container .first .construction .name h2 {
               color: blanchedalmond;
               font-size: 4em;
               font-weight: 200;
               margin-bottom: 1em;
               width: 100%; }
-            body .home .intro .container .first .construction .name h4 {
+            body .home #about-container .first .construction .name h4 {
               color: #FF5D00;
               font-size: 3em;
               line-height: 1em;
@@ -382,93 +452,50 @@ body {
               padding-left: 2em;
               text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
               width: 80%; }
-          body .home .intro .container .first .construction .cone-holder {
-            display: flex;
-            width: 200px;
-            height: 250px;
-            position: relative;
-            opacity: 0.7;
-            top: -60px; }
-        body .home .intro .container .first .story {
+        body .home #about-container .first .story {
           display: flex;
           word-spacing: 1px; }
-      body .home .intro .container .second {
+      body .home #about-container .second {
         display: flex;
         word-spacing: 1px;
         width: 55%; }
-        body .home .intro .container .second a {
-          color: #3A7CA5;
-          font-size: inherit;
-          font-weight: 200; }
-          body .home .intro .container .second a:hover {
+        body .home #about-container .second a {
+          color: cornflowerblue;
+          font-size: 1.2em;
+          font-weight: 100;
+          margin: 0 .1em;
+          text-decoration: none; }
+          body .home #about-container .second a:hover {
             border-radius: 1px;
             background-color: rgba(91, 146, 121, 0.2);
             transition: all 0.1s ease-in-out; }
-      body .home .intro .container .section-links {
+      body .home #about-container .section-links {
         display: flex;
         flex-direction: column;
         margin: 2em 0;
         padding: 0 30px; }
-        body .home .intro .container .section-links a {
+        body .home #about-container .section-links a {
           color: #3A7CA5;
           font-size: 1.4em;
-          font-weight: 200;
-          display: table; }
-          body .home .intro .container .section-links a:hover {
+          font-weight: 100;
+          display: table;
+          text-decoration: none; }
+          body .home #about-container .section-links a:hover {
             border-radius: 1px;
             background-color: rgba(91, 146, 121, 0.2);
             color: #3A7CA5;
             transition: all 0.3s ease-in-out; }
-  body .tier {
-    padding: 1em 0;
-    position: relative; }
-    body .tier .work-container {
-      margin: 0 3em;
-      overflow: hidden;
-      padding: 0 5px;
-      width: 92%; }
-      body .tier .work-container .infotext {
-        color: blanchedalmond;
-        float: left;
-        width: 26%; }
-      body .tier .work-container .patchwork {
-        float: right;
-        margin: 3.5% 0;
-        width: 68%; }
-        body .tier .work-container .patchwork .group-1 {
-          float: left;
-          list-style: none;
-          margin-right: 1%;
-          padding-left: 0;
-          width: 46%; }
-          body .tier .work-container .patchwork .group-1 li {
-            margin-bottom: 3em;
-            width: 100%;
-            border: 1px solid grey; }
-            body .tier .work-container .patchwork .group-1 li:hover {
-              opacity: 0.6; }
-            body .tier .work-container .patchwork .group-1 li h6 {
-              display: inline-block;
-              margin: 0em 2em 0 6em; }
-            body .tier .work-container .patchwork .group-1 li a {
-              color: #3A7CA5;
-              font-size: 1.4em;
-              font-weight: 200; }
-        body .tier .work-container .patchwork:nth-child(even) a {
-          font-size: 1.2em; }
-        body .tier .work-container .patchwork .seagle {
-          height: 200px; }
-  body footer {
-    display: flex;
-    justify-content: center; }
-    body footer .site-footer {
+    body .home footer {
       display: flex;
-      justify-content: center;
-      color: grey;
-      margin: 0 auto; }
-      body footer .site-footer p {
-        font-size: 1em; }
-        body footer .site-footer p a {
-          color: #0072BB; }
+      justify-content: center; }
+      body .home footer .site-footer {
+        display: flex;
+        justify-content: center;
+        color: grey;
+        margin: 0 auto; }
+        body .home footer .site-footer p {
+          font-size: 1em; }
+          body .home footer .site-footer p a {
+            color: #0072BB; }
 
 /*# sourceMappingURL=case.css.map */

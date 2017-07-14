@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0; }
 
@@ -12,6 +12,11 @@ ol, ul {
 * {
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Stellar';
+  src: url("../../typefaces/Stellar-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: 'cassannet_boldbold';
   src: url("../../typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff");
@@ -35,7 +40,7 @@ ol, ul {
   src: url("../../typefaces/Geomanist/geomanist-regular-italic-webfont.svg#geomanistregular_italic") format("svg"); }
 @font-face {
   font-family: 'kimberley';
-  src: url("../../typefaces/kimberley/kimberley bl.ttf") format("ttf"); }
+  src: url("../../typefaces/kimberley/kimberley.ttf") format("ttf"); }
 @font-face {
   font-family: 'Unica One';
   src: url("../../typefaces/unica/UnicaOne-Regular.ttf") format("ttf"); }
@@ -208,7 +213,7 @@ ol, ul {
   font-size: 12px; }
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -224,10 +229,8 @@ body {
     font-size: 0.75em; }
   body p {
     color: white;
-    font-weight: 200; }
-  body a {
-    color: inherit;
-    text-decoration: none; }
+    font-weight: 200;
+    z-index: 777; }
   body .boldy {
     letter-spacing: 5px;
     font-size: 2.75em;
@@ -265,7 +268,7 @@ body {
           height: auto; }
           .intro .border .header-container .site-header nav .nav-logo {
             display: flex;
-            margin-left: 2em;
+            margin-left: 5em;
             text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4); }
             .intro .border .header-container .site-header nav .nav-logo:hover {
               box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
@@ -294,12 +297,12 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 10%;
+      margin: 5%;
       padding-bottom: 3%;
       text-align: center;
       width: 98%; }
       .intro .border .wrapper h2 {
-        margin-bottom: .25em;
+        margin: 2em 0 1em;
         font-family: 'Lato', sans-serif;
         font-size: 2.5em;
         font-weight: 200;
@@ -321,16 +324,16 @@ body {
       .intro .border .wrapper img {
         margin-top: 2em; }
 
-.site-footer {
+footer {
   display: flex;
   justify-content: center;
-  color: grey;
+  color: black;
   font-family: 'Lato', sans-serif;
   font-weight: 200;
-  margin: 1em auto; }
-  .site-footer p {
+  margin: -1.25em auto; }
+  footer p {
     font-size: 2em; }
-    .site-footer p a {
+    footer p a {
       margin: 0 2em;
       color: #0072BB; }
 
