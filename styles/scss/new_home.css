@@ -55,6 +55,14 @@ body {
     color: #287ACC;
     -moz-background-color: lime;
     -moz-color: red; }
+  body h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.2em; }
+  body h3 {
+    font-size: 2.5rem; }
+  body p {
+    line-height: 1.5rem; }
   body a {
     text-decoration: none;
     color: #4c4c4c; }
@@ -77,16 +85,13 @@ body {
     color: #A9A9A9; }
   body main {
     display: grid; }
-    body main .intro {
+    body main header {
       display: grid;
       grid-template-columns: 1fr; }
-      body main .intro h1 {
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 4.5rem;
-        font-weight: 700;
-        line-height: 1.1em; }
-      body main .intro .chevron {
-        margin: 6rem auto;
+      body main header h1 {
+        font-family: 'Josefin Sans', sans-serif; }
+      body main header .chevron {
+        margin: 10rem auto;
         width: 45px;
         height: 60px;
         color: #287ACC;
@@ -103,22 +108,18 @@ body {
           max-width: 100%;
           border-radius: 5px;
           transition: all .2s; }
-        body main .work .project .desc {
+        body main .work .project div {
           background-size: 100%;
           padding-top: 0.3rem; }
-          body main .work .project .desc h3 {
+          body main .work .project div h3 {
             display: inline-block;
             font-family: 'Cassannet Regular', 'Lato';
-            font-size: 2.5rem;
             transition: all .2s; }
         body main .work .project:hover img {
           transition: all .2s;
-          box-shadow: 0 0 8px 4px rgba(97, 128, 70, 0.4); }
+          box-shadow: 0 2px 30px rgba(132, 153, 115, 0.8); }
         body main .work .project:hover h3 {
           font-family: 'Cassannet Outline', 'Lato'; }
-    body main ::selection, body main ::-moz-selection {
-      background-color: yellow;
-      color: red; }
     body main .cred {
       font-family: 'Josefin Sans', serif;
       margin-top: 4rem;
@@ -129,5 +130,18 @@ body {
         color: #82ad5f; }
       body main .cred:nth-child(even) {
         text-align: right; }
+    @media (max-width: 600px) {
+      body main header h1 {
+        margin: 2rem 0;
+        font-size: 2.5rem;
+        line-height: 1.3em; }
+      body main header .chevron {
+        margin: 6rem auto; } }
+    @media (max-height: 500px) {
+      body main header .chevron {
+        margin: 2rem auto; } }
+  @media (max-width: 600px) {
+    body {
+      margin: 2.5rem; } }
 
 /*# sourceMappingURL=new_home.css.map */
