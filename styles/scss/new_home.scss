@@ -64,9 +64,9 @@ body {
 	padding: 0;
 	border: none;
 	color: #4C4C4C;
-	background: #eee;
+	background: #fefefe;
 	font-family: 'Josefin Sans', serif;
-	font-size: 17px;
+	font-size: 18px;
 	::selection {
 		background-color: yellow;
 		color: #287ACC;
@@ -76,8 +76,8 @@ body {
 
 	h1 {
 		font-size: 4.5rem;
-		font-weight: 700;
-		line-height: 1.2em;
+		font-weight: 600;
+		line-height: 5rem;
 	}
 
 	h3 {
@@ -85,7 +85,7 @@ body {
 	}
 
 	p {	
-		line-height: 1.5rem;
+		line-height: 1.4rem;
 	}
 
 	a {
@@ -124,12 +124,14 @@ body {
 			}
 			
 			.chevron {
-				margin: 10rem auto;
-				width: 45px;
-				height: 60px;
-				color: #287ACC;
 				background-image: url(../../img/Arrow.svg);
 				background-size: cover;
+				color: #287ACC;
+				display: flex;
+				height: 60px;
+				justify-content: center;
+				margin: 11rem auto;
+				width: 45px;
 
 			}
 			// .hop {
@@ -140,8 +142,9 @@ body {
 
 		.work {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 			grid-gap: 3rem;
+			margin: -2rem -2rem;
 
 			.project {
 				display: grid;
