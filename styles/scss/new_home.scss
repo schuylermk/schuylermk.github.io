@@ -3,6 +3,7 @@
 	0. Typography
 	1. CSS Reset & Clearfix	
 	2. Document Setup
+	3. Page Layout
 */
 
 /* ------------------------------------------- */
@@ -54,6 +55,16 @@ html, body {
 /*	2. Document setup
 /* ------------------------------------------- */
 
+//               CSS Variables
+/////////////////            /////////////////////////////
+
+:root {
+		--impact-color: #287ACC;
+		--disp-type: 'Josefin Sans', sans-serif;
+		--para-type: 'Lato';
+	}
+
+///////////////////////////////////////////////////////////	
 
 body {
 	* { 
@@ -65,27 +76,32 @@ body {
 	border: none;
 	color: #4C4C4C;
 	background: #fefefe;
-	font-family: 'Josefin Sans', serif;
-	font-size: 18px;
+	font-size: 17px;
 	::selection {
 		background-color: yellow;
-		color: #287ACC;
+		color: var(--impact-color);
 		-moz-background-color: lime;
 		-moz-color: red;
 	}
 
 	h1 {
+		font-family: var(--disp-type), sans-serif;
 		font-size: 4.5rem;
 		font-weight: 600;
 		line-height: 5rem;
 	}
 
 	h3 {
+		font-family: var(--disp-type), sans-serif;
 		font-size: 2.5rem;
+		font-weight: 600;
 	}
 
 	p {	
+		font-family: var(--para-type), serif;
+		// font-size: 17px;
 		line-height: 1.4rem;
+
 	}
 
 	a {
@@ -102,31 +118,28 @@ body {
 		height: auto;
 	}
 
-	.hidden { display: none; }
-	.clear { clear: both; }
-	.left { float: left; }
-	.right { float: right; }
+	
 
-	::-webkit-input-placeholder { color: #A9A9A9; }
-	:-ms-input-placeholder { color: #A9A9A9; }
-
-	/* ------------------------------------------- */
+  
+  /* ------------------------------------------- */
+  /*	3. Page Layout
+  /* ------------------------------------------- */
 
 	main {
 		display: grid;
 
-		header {
+		.intro {
 			display: grid;
 			grid-template-columns: 1fr;
 
 			h1 {
-				font-family: 'Josefin Sans', sans-serif; 
+				font-family: var(--disp-type); 
 			}
 			
 			.chevron {
 				background-image: url(../../img/Arrow.svg);
 				background-size: cover;
-				color: #287ACC;
+				color: var(--impact-color);
 				display: flex;
 				height: 60px;
 				justify-content: center;
@@ -165,6 +178,7 @@ body {
 						font-family: 'Cassannet Regular', 'Lato';
 						transition: all .2s; 
 					}
+
 				}
 
 				&:hover img {
@@ -178,6 +192,21 @@ body {
 			}
 		}
 
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 3rem;
+			margin: 9rem;
+
+			p span {
+				color: var(--impact-color);
+				font-family: 'roboto';
+				font-size: 1.5rem;
+				letter-spacing: .05px;
+				word-spacing: -0.1rem;
+			}
+
+		}
 			
 
 		.cred {
@@ -196,9 +225,12 @@ body {
 				
 			}
 		}
-
-		// //// MEDIA QUERIES //// //
+	
+	////////////////////- Media Queries -//////////////////
+	///////////////////////////////////////////////////////
+		
 		// main
+		
 		@media (max-width: 600px) {
 			header {
 				h1 {
