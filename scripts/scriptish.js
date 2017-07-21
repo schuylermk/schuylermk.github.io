@@ -1,10 +1,9 @@
-jQuery(document).ready(function($) {
-
+$(document).ready(function($) {
+    // alert( "ready!" );
 // Smooth scroll to header
-    $('.tothetop').click(function(){
-        $('html,body').animate({scrollTop: 0}, 500);
-        $(this).unbind("mouseenter mouseleave");
-        return false;
+    $('#tothetop').click(function(topFunction){
+        document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+        document.documentElement.scrollTop = 0;
     });
 
 });
