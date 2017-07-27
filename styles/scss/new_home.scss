@@ -79,10 +79,11 @@ html, body {
 }
 
 body {
-	border: none;
 	color: #4C4C4C;
 	background: #fefefe;
 	font-size: 17px;
+	max-width: 99vw;
+	position: absolute;
 	
 	h1 {
 		font-family: var(--disp-type), sans-serif;
@@ -99,7 +100,6 @@ body {
 
 	p {	
 		font-family: var(--para-type), serif;
-		// font-size: 17px;
 		line-height: 1.4rem;
 
 	}
@@ -123,22 +123,23 @@ body {
 
 	main {
 		display: grid;
-		grid-template-rows: 19vh 1fr;
+		grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
 		justify-content: center;
-		margin: 0 4rem;
+		grid-template-columns: 8% 1fr 8% ;
 
 //  HELLO Section  //
 
 		#intro {
-			grid-row: 2;
-			grid-template-columns: 1fr;
-			margin: 0 6rem;
+			display: grid;
+			grid-row: 2; 
+			grid-column: 2;
+			padding: 15% 5%;
 			
 			.chevron {
-				background: url(../../img/Arrow.svg);
+				background: no-repeat url(../../img/Arrow.svg);
 				color: var(--impact-color);
-				height: 60px;
-				width: 45px;
+				height: 4rem;
+				width: 3rem;
 				margin: 24vh auto;
 
 			}
@@ -153,15 +154,17 @@ body {
 		#work {
 			display: grid;
 			grid-row: 3;
-			grid-template-columns: repeat(3, minmax(320px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 			grid-gap: 3rem;
-			margin: 0rem 4rem 8rem;
+			// margin-bottom: 8rem;
+			grid-column: 2;
 
 			.project {
-				margin-bottom: 2rem;
+				padding-bottom: 5%;
 
 				a {
 					display: block;
+					
 					img {
 						border-radius: 5px;	
 						max-width: 100%;
@@ -197,43 +200,71 @@ body {
 
 		#about {
 			display: grid;
+			grid-column: 2;
 			grid-row: 4;
 			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 			grid-gap: 3rem;
-			margin: 4rem;
+			// margin: 6rem;
 			border: 1px solid forestgreen;
+			
 			.statement p {
 				
 			}
 		}
 
 		#info {
+			background-color: #222;
 			grid-row: 5;
-			margin: 4rem;
-			border: 1px solid rebeccapurple;
+			height: 40vw;
+			width: 100vw;
+			
+			.info__container {
+				display: grid;
+				border: 1px solid white;
+				grid-template-columns: 1fr 1fr 1fr;
+				margin: 6rem;
+
+				.social {
+					display: grid;
+					grid-column: 1;
+					
+					.medium {		
+						display: block;
+						background: no-repeat url(../../img/medium-wordmark-light-500px.png);
+						background-size: contain; 
+						height: 2rem;
+					}
+					.medium {		
+						display: block;
+						background: no-repeat url(../../img/medium-wordmark-light-500px.png);
+						background-size: contain; 
+						height: 2rem;
+					}
+				}
+			}
 		}
 
 //  FOOTER  //
 		footer {
 			display: grid;
 			grid-row: 6;
-			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-column: 2;
+			align-items: flex-end;
+			font-family: var(--para-type), serif;
+			
 			a:first-of-type {
 				grid-row: 6;
-				grid-column: 1;
-				margin: 2rem;
+				padding: 5px 0;
 			}
+			
 			a:nth-of-type(2) {
 				grid-row: 6;
-				grid-column: 2;
-				margin: 2rem;
+				padding: 5px 0;
 				text-align: right;				
 			}
 		}
 
 					// <social icons>
-					// writing-mode: vertical-lr;
-					// text-align: left;
 			
 
 		
@@ -246,13 +277,21 @@ body {
 		
 		@media (max-width: 600px) {
 			#intro {
+				padding: 8% 16%;
+
 				h1 {
-					margin: 2rem 0;
-					font-size: 2.5rem;
+					font-size: 3rem;
 					line-height: 1.3em;
 				}
 				.chevron {
-					margin: 6rem auto;
+					margin-top: 8rem auto;
+				}
+			}
+
+			#work { 
+			// mobile size becomes carousel or similar?	
+				.project {
+					padding: 11%;
 				}
 			}	
 		}
@@ -260,7 +299,7 @@ body {
 		@media (max-height: 500px) {
 			#intro {
 				.chevron {
-					margin: 2rem auto;
+					margin-top: 2rem auto;
 				}
 			}
 		}	
@@ -269,7 +308,7 @@ body {
  // within body
 
 	@media (max-width: 600px) {
-		margin: 2.5rem;
+		// margin: 2.5rem;
 
 	}
 }
