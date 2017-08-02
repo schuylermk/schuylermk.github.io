@@ -261,8 +261,10 @@ body {
 						background: no-repeat url(../../img/Twitter_Logo_Blue.svg);
 					}
 					.github {
-						@extend .medium;
+						background-size: contain;
 						background: no-repeat url(../../img/Github_Logo_White.svg);
+						height: 2rem;
+						width: 2rem;
 					}
 				}
 			}
