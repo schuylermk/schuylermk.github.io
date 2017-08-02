@@ -148,6 +148,7 @@ body {
       body main #about .statement {
         grid-column: 2; }
     body main #info {
+      display: grid;
       grid-row: 5;
       background-color: #222;
       height: 40vw;
@@ -155,23 +156,29 @@ body {
       padding: 10vw 5vw; }
       body main #info .info__container {
         display: grid;
-        border: 1px solid white;
         grid-template-columns: 1fr 1fr 1fr;
         margin: 6rem; }
         body main #info .info__container .social {
           display: grid;
           grid-column: 1; }
-          body main #info .info__container .social .medium, body main #info .info__container .social .twitter {
+          body main #info .info__container .social .icon {
+            padding: 1.5em; }
+          body main #info .info__container .social .medium {
             background: no-repeat url(../../img/Medium_Logo_Green.svg);
             background-size: contain;
-            height: 2rem; }
+            height: 3rem; }
           body main #info .info__container .social .twitter {
-            background: no-repeat url(../../img/Twitter_Logo_Blue.svg); }
-          body main #info .info__container .social .github {
+            background: no-repeat url(../../img/Twitter_Logo_Blue.svg);
             background-size: contain;
+            height: 3rem; }
+          body main #info .info__container .social .github {
             background: no-repeat url(../../img/Github_Logo_White.svg);
-            height: 2rem;
-            width: 2rem; }
+            background-size: contain;
+            height: 3rem; }
+          body main #info .info__container .social .linkedin {
+            background: no-repeat url(../../img/Linkedin_Logo_Blue.svg);
+            background-size: contain;
+            height: 3rem; }
     body main footer {
       align-items: flex-end;
       display: grid;
