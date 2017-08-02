@@ -235,6 +235,7 @@ body {
 		}
 
 		#info {
+			display: grid;
 			grid-row: 5;
 			background-color: #222;
 			height: 40vw;
@@ -243,28 +244,33 @@ body {
 			
 			.info__container {
 				display: grid;
-				border: 1px solid white;
 				grid-template-columns: 1fr 1fr 1fr;
 				margin: 6rem;
 
 				.social {
 					display: grid;
 					grid-column: 1;
+					.icon { padding: 1.5em;}
 					
 					.medium {		
 						background: no-repeat url(../../img/Medium_Logo_Green.svg);
 						background-size: contain; 
-						height: 2rem;
+						height: 3rem;
 					}
 					.twitter {		
-						@extend .medium;
 						background: no-repeat url(../../img/Twitter_Logo_Blue.svg);
+						background-size: contain;
+						height: 3rem;
 					}
 					.github {
-						background-size: contain;
 						background: no-repeat url(../../img/Github_Logo_White.svg);
-						height: 2rem;
-						width: 2rem;
+						background-size: contain;
+						height: 3rem;
+					}
+					.linkedin {
+						background: no-repeat url(../../img/Linkedin_Logo_Blue.svg);
+						background-size: contain;
+						height: 3rem;
 					}
 				}
 			}
