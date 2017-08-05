@@ -42,6 +42,7 @@ html, body {
 /*	2. Document setup
 /* ------------------------------------------- */
 :root {
+  --body-bg-color: #fefefe;
   --body-text-color: #4C4C4C;
   --impact-color: #287ACC;
   --disp-type: 'Josefin Sans', sans-serif;
@@ -52,7 +53,7 @@ html, body {
 
 body {
   color: var(--body-text-color);
-  background: #fefefe;
+  background: var(--body-bg-color);
   font-size: 17px;
   max-width: 100vw;
   position: absolute;
@@ -148,37 +149,52 @@ body {
       body main #about .statement {
         grid-column: 2; }
     body main #info {
+      background-color: #222;
       display: grid;
       grid-row: 5;
-      background-color: #222;
+      grid-template-columns: repeat(4, min-content);
       height: 40vw;
       width: 100vw;
-      padding: 10vw 5vw; }
-      body main #info .info__container {
+      padding: 10vw; }
+      body main #info a, body main #info h1, body main #info h2, body main #info h3, body main #info h4, body main #info p {
+        color: var(--body-bg-color); }
+      body main #info .contact_info {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 6rem; }
-        body main #info .info__container .social {
+        grid-template-columns: repeat(4, min-content);
+        grid-template-rows: min-content; }
+        body main #info .contact_info .social {
+          grid-row: 3; }
+          body main #info .contact_info .social .medium {
+            background: no-repeat url(../../img/Medium_Logo_Green.svg); }
+          body main #info .contact_info .social .twitter {
+            background: no-repeat url(../../img/Twitter_Logo_Blue.svg); }
+          body main #info .contact_info .social .github {
+            background: no-repeat url(../../img/Github_Logo_White.svg); }
+          body main #info .contact_info .social .linkedin {
+            background: no-repeat url(../../img/Linkedin_Logo_Blue.svg); }
+          body main #info .contact_info .social .logo {
+            background-size: 100%;
+            height: 3.5rem;
+            width: 3.5rem;
+            margin: 0 0.25rem;
+            transition: .3s; }
+            body main #info .contact_info .social .logo:hover .logo {
+              visibility: collapse; }
+            body main #info .contact_info .social .logo .link {
+              display: none;
+              transition: .3s; }
+        body main #info .contact_info .personal {
           display: grid;
-          grid-column: 1; }
-          body main #info .info__container .social .icon {
-            padding: 1.5em; }
-          body main #info .info__container .social .medium {
-            background: no-repeat url(../../img/Medium_Logo_Green.svg);
-            background-size: contain;
-            height: 3rem; }
-          body main #info .info__container .social .twitter {
-            background: no-repeat url(../../img/Twitter_Logo_Blue.svg);
-            background-size: contain;
-            height: 3rem; }
-          body main #info .info__container .social .github {
-            background: no-repeat url(../../img/Github_Logo_White.svg);
-            background-size: contain;
-            height: 3rem; }
-          body main #info .info__container .social .linkedin {
-            background: no-repeat url(../../img/Linkedin_Logo_Blue.svg);
-            background-size: contain;
-            height: 3rem; }
+          font-family: 'Josefin Slab', serif;
+          padding: 1rem; }
+          body main #info .contact_info .personal .email {
+            display: grid;
+            grid-column: 1 / span 2;
+            grid-row: 1; }
+          body main #info .contact_info .personal .resume {
+            display: grid;
+            grid-column: 3;
+            grid-row: 1; }
     body main footer {
       align-items: flex-end;
       display: grid;
@@ -201,7 +217,7 @@ body {
           font-size: 3rem;
           line-height: 1.1em; }
           body main #intro h1 div {
-            color: #fefefe;
+            color: var(--body-bg-color);
             line-height: 0.2em; }
         body main #intro .chevron {
           height: 11vh;
