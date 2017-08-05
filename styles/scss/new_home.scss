@@ -65,6 +65,7 @@ html, body {
 ////////////////             ////////////////////////////				
 
 :root {
+		--body-bg-color: #fefefe;
 		--body-text-color: #4C4C4C;
 		--impact-color: #287ACC;
 		--disp-type: 'Josefin Sans', sans-serif;
@@ -81,7 +82,7 @@ html, body {
 
 body {
 	color: var(--body-text-color);
-	background: #fefefe;
+	background: var(--body-bg-color);
 	font-size: 17px;
 	max-width: 100vw;
 	position: absolute;
@@ -235,42 +236,60 @@ body {
 		}
 
 		#info {
+			background-color: #222;
 			display: grid;
 			grid-row: 5;
-			background-color: #222;
-			height: 40vw;
-			width: 100vw;
-			padding: 10vw 5vw;
+			grid-template-columns: repeat(4, min-content);
+			height: 40vw; width: 100vw;
+			padding: 10vw;
+			a, h1, h2, h3, h4, p { color: var(--body-bg-color); }
 			
-			.info__container {
+			.contact_info {
 				display: grid;
-				grid-template-columns: 1fr 1fr 1fr;
-				margin: 6rem;
+				grid-template-columns: repeat(4, min-content);
+				grid-template-rows: min-content;
 
-				.social {
-					display: grid;
-					grid-column: 1;
-					.icon { padding: 1.5em;}
+					.social { grid-row: 3;
 					
-					.medium {		
-						background: no-repeat url(../../img/Medium_Logo_Green.svg);
-						background-size: contain; 
-						height: 3rem;
-					}
-					.twitter {		
-						background: no-repeat url(../../img/Twitter_Logo_Blue.svg);
-						background-size: contain;
-						height: 3rem;
-					}
-					.github {
-						background: no-repeat url(../../img/Github_Logo_White.svg);
-						background-size: contain;
-						height: 3rem;
-					}
-					.linkedin {
-						background: no-repeat url(../../img/Linkedin_Logo_Blue.svg);
-						background-size: contain;
-						height: 3rem;
+						.medium { background: no-repeat url(../../img/Medium_Logo_Green.svg); }
+						.twitter { background: no-repeat url(../../img/Twitter_Logo_Blue.svg); }
+						.github { background: no-repeat url(../../img/Github_Logo_White.svg); }
+						.linkedin { background: no-repeat url(../../img/Linkedin_Logo_Blue.svg); }
+						
+						.logo {
+							background-size: 100%;
+							height: 3.5rem; width: 3.5rem;
+							margin: 0 0.25rem;
+							transition: .3s;
+						}
+
+						.link {
+							display: none;
+							transition: .3s;
+						}
+
+						&:hover {
+							.logo { display: none;}
+							a { 
+								display: inline-flex;
+							}
+						}
+					}	
+				.personal {
+					display: grid;
+					font-family: 'Josefin Slab', serif;
+					padding: 1rem;
+
+					.email { 
+						display: grid;
+						grid-column: 1 / span 2; 
+						grid-row: 1;
+					}	
+					
+					.resume { 
+						display: grid;
+						grid-column: 3; 
+						grid-row: 1;
 					}
 				}
 			}
@@ -319,7 +338,7 @@ body {
 					line-height: 1.1em;
 					
 					div {
-						color: #fefefe;
+						color: var(--body-bg-color);
 						line-height: 0.2em;
 					}
 				}
