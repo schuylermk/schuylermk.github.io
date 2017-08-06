@@ -44,10 +44,10 @@ html, body {
 :root {
   --body-bg-color: #fefefe;
   --body-text-color: #4C4C4C;
-  --impact-color: 40, 122, 204;
+  --impact-color: rgba(40, 122, 204, 0.7);
   /* hex #287acc */
   --disp-type: 'Josefin Sans', sans-serif;
-  --para-type: 'Lato'; }
+  --para-type: 'Josefin Slab', serif; }
 
 * {
   box-sizing: border-box; }
@@ -140,61 +140,42 @@ body {
       grid-gap: 10vw;
       padding: 10vw 5vw;
       align-items: center; }
-      body main #about .self {
-        grid-column: 1;
-        background-size: cover;
-        background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
-        border-radius: 5px;
-        height: 272px;
-        width: auto; }
-      body main #about .statement {
-        grid-column: 2; }
     body main #info {
       background-color: #222;
       display: grid;
       grid-row: 5;
-      grid-template-columns: repeat(3, max-content);
-      grid-gap: 2rem;
-      height: 40vw;
+      grid-template-columns: repeat(3, 1fr);
+      height: 550px;
       width: 100vw;
-      padding: 10vw; }
+      margin-top: 10vh;
+      padding: 3rem 10vw; }
       body main #info a, body main #info h1, body main #info h2, body main #info h3, body main #info h4, body main #info p {
         color: var(--body-bg-color); }
       body main #info .contact_info {
-        align-items: flex-end;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr); }
-        body main #info .contact_info .personal {
-          align-items: flex-end;
+        grid-column: 1;
+        grid-template-columns: repeat(4, 1fr); }
+        body main #info .contact_info .self {
+          background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          border-radius: 5px;
           display: grid;
-          font-family: 'Josefin Slab', serif;
-          grid-row: 2;
-          height: 1.5rem;
-          width: min-content;
-          width: -moz-min-content; }
-          body main #info .contact_info .personal.email {
-            display: grid;
-            grid-column: 1 / span 2;
-            transition: ease-out; }
-            body main #info .contact_info .personal.email:hover {
-              background-color: rgba(130, 173, 95, 0.1); }
-          body main #info .contact_info .personal.resume {
-            display: grid;
-            grid-column: 4; }
-            body main #info .contact_info .personal.resume:hover {
-              background-color: rgba(130, 173, 95, 0.1);
-              transition: cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+          grid-column: 1 / span 4;
+          grid-row: 1;
+          height: 260px;
+          width: 320px;
+          margin-bottom: 6rem; }
         body main #info .contact_info .social {
           cursor: pointer;
           display: grid;
-          grid-row: 3;
-          height: 4rem;
-          width: 4rem;
-          padding: 0.6rem; }
+          grid-row: 2;
+          height: 3rem;
+          width: 3rem;
+          margin: 0rem 0.2rem 1.5rem; }
           body main #info .contact_info .social:hover {
             background-color: rgba(130, 173, 95, 0.1);
-            border-radius: 100%;
+            background-size: 120%;
             transition: cubic-bezier(0.785, 0.135, 0.15, 0.86); }
           body main #info .contact_info .social .medium {
             background: no-repeat url(../../img/Medium_Logo_Green.svg); }
@@ -206,7 +187,34 @@ body {
             background: no-repeat url(../../img/Linkedin_Logo_Blue.svg); }
           body main #info .contact_info .social .logo {
             background-size: 100%;
+            margin-left: 0.5rem;
             width: 2.5rem; }
+        body main #info .contact_info .personal {
+          align-items: end;
+          display: grid;
+          height: 1.5rem;
+          width: min-content;
+          width: -moz-min-content;
+          font-family: 'Josefin Slab', serif;
+          font-size: 1.1rem;
+          grid-row: 3;
+          margin: 1rem 0.2rem; }
+          body main #info .contact_info .personal.email {
+            display: grid;
+            grid-column: 1 / span 2;
+            transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+            body main #info .contact_info .personal.email:hover {
+              background-color: rgba(130, 173, 95, 0.1);
+              transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+          body main #info .contact_info .personal.resume {
+            display: grid;
+            grid-column: 4; }
+            body main #info .contact_info .personal.resume:hover {
+              background-color: rgba(130, 173, 95, 0.1);
+              transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+      body main #info .statement {
+        grid-column: 2 / span 3;
+        padding: 3rem; }
     body main footer {
       align-items: flex-end;
       display: grid;
@@ -222,6 +230,8 @@ body {
         grid-row: 6;
         padding: 5px 0;
         text-align: end; }
+      body main footer a:hover {
+        color: var(--impact-color); }
     @media (min-width: 300px) and (max-width: 374px) {
       body main #intro {
         padding: 9vh 0; }
