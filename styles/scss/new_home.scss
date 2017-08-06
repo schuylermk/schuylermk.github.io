@@ -67,7 +67,7 @@ html, body {
 :root {
 		--body-bg-color: #fefefe;
 		--body-text-color: #4C4C4C;
-		--impact-color: #287ACC;
+		--impact-color: 40, 122, 204;  /* hex #287acc */
 		--disp-type: 'Josefin Sans', sans-serif;
 		--para-type: 'Lato';
 	}
@@ -239,59 +239,68 @@ body {
 			background-color: #222;
 			display: grid;
 			grid-row: 5;
-			grid-template-columns: repeat(4, min-content);
+			grid-template-columns: repeat(3, max-content);
+			grid-gap: 2rem;
 			height: 40vw; width: 100vw;
 			padding: 10vw;
+			
 			a, h1, h2, h3, h4, p { color: var(--body-bg-color); }
 			
 			.contact_info {
+				align-items: flex-end;
 				display: grid;
-				grid-template-columns: repeat(4, min-content);
-				grid-template-rows: min-content;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(3, 1fr);
 
-					.social { grid-row: 3;
-					
-						.medium { background: no-repeat url(../../img/Medium_Logo_Green.svg); }
-						.twitter { background: no-repeat url(../../img/Twitter_Logo_Blue.svg); }
-						.github { background: no-repeat url(../../img/Github_Logo_White.svg); }
-						.linkedin { background: no-repeat url(../../img/Linkedin_Logo_Blue.svg); }
-						
-						.logo {
-							background-size: 100%;
-							height: 3.5rem; width: 3.5rem;
-							margin: 0 0.25rem;
-							transition: .3s;
-						}
-
-						.link {
-							display: none;
-							transition: .3s;
-						}
-
-						&:hover {
-							.logo { display: none;}
-							a { 
-								display: inline-flex;
-							}
-						}
-					}	
 				.personal {
+					align-items: flex-end;
 					display: grid;
 					font-family: 'Josefin Slab', serif;
-					padding: 1rem;
+					grid-row: 2;
+					height: 1.5rem; width: min-content; width: -moz-min-content;
 
-					.email { 
+					&.email { 
 						display: grid;
-						grid-column: 1 / span 2; 
-						grid-row: 1;
+						grid-column: 1 / span 2;
+						transition: ease-out;
+						&:hover {
+							background-color: rgba(130,173,95, .1);
+						}
 					}	
 					
-					.resume { 
+					&.resume { 
 						display: grid;
-						grid-column: 3; 
-						grid-row: 1;
+						grid-column: 4; 
+						&:hover {
+							background-color: rgba(130, 173, 95, .1);
+							transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+						}
 					}
 				}
+
+				.social { 
+					cursor: pointer;
+					display: grid;
+					grid-row: 3;
+					height: 4rem; width: 4rem;
+					padding: 0.6rem;
+					&:hover {
+						background-color: rgba(130, 173, 95, .1);
+						border-radius: 100%;
+						transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+					}
+
+					.medium { background: no-repeat url(../../img/Medium_Logo_Green.svg); }
+					.twitter { background: no-repeat url(../../img/Twitter_Logo_Blue.svg); }
+					.github { background: no-repeat url(../../img/Github_Logo_White.svg); }
+					.linkedin { background: no-repeat url(../../img/Linkedin_Logo_Blue.svg); }
+					
+					.logo {
+						background-size: 100%;
+						width: 2.5rem;
+						
+					}
+				}	
 			}
 		}
 
@@ -316,8 +325,6 @@ body {
 				text-align: end;				
 			}
 		}
-
-					// <social icons>
 			
 
 		
