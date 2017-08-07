@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 50 60" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="b" d="M2.7169298,36.9064278 L41.9639213,10.4339978"/>
+    <filter id="a" width="148.4%" height="171.8%" x="-24.2%" y="-35.9%" filterUnits="objectBoundingBox">
+      <feGaussianBlur stdDeviation="5.5" in="SourceAlpha" result="shadowBlurInner1"/>
+      <feOffset dy="4" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+      <feColorMatrix values="0 0 0 0 1 0 0 0 0 0.650980392 0 0 0 0 0.650980392 0 0 0 0.7 0" in="shadowInnerInner1"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(2.66 5)" stroke-linecap="round">
+    <path stroke="#287ACC" stroke-width="4" d="M22.3404255,50 C28.3687943,46.7471289 34.0425532,41.9598948 39.3617021,35.6382979"/>
+    <g transform="rotate(-56 22.34 23.67)">
+      <use fill="black" filter="url(#a)" xlink:href="#b"/>
+      <use stroke="#287ACC" stroke-width="4" xlink:href="#b"/>
+    </g>
+    <path stroke="#287ACC" stroke-width="4" d="M5.31914894,50 C11.3475177,46.7471289 17.0212766,41.9598948 22.3404255,35.6382979" transform="matrix(-1 0 0 1 27.66 0)"/>
+  </g>
+</svg>
