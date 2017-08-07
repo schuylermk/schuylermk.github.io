@@ -1,0 +1,332 @@
+/* ------------------------------------------- */
+/*
+	0. Typography
+	1. CSS Reset & Clearfix	
+	2. Document Setup
+	3. Page Layout
+*/
+/* ------------------------------------------- */
+/*	0. Typography */
+/* ------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Lato|Unica+One");
+@font-face {
+  font-family: 'Cassannet Outline';
+  src: url("../typefaces/Cassannet/cassannet_outline-webfont.woff2") format("woff2"), url("../typefaces/Cassannet/cassannet_outline-webfont.woff") format("woff");
+  font-family: 'Cassannet Regular';
+  src: url("../typefaces/Cassannet/cassannet-webfont.woff") format("woff"), url("../typefaces/Cassannet/cassannet-webfont.woff2") format("woff2");
+  font-family: 'Cassannet Bold';
+  src: url("../typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff"), url("../typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"); }
+/* ------------------------------------------- */
+/*	1. CSS Reset
+/* ------------------------------------------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+  html h1,
+  html h2,
+  html h3,
+  html h4,
+  html h5,
+  html h6,
+  html p,
+  html blockquote,
+  html address,
+  html big,
+  html cite,
+  html code,
+  html em,
+  html font,
+  html img,
+  html small,
+  html strike,
+  html sub,
+  html sup,
+  html li,
+  html ol,
+  html ul,
+  html fieldset,
+  html form,
+  html label,
+  html legend,
+  html button,
+  html table,
+  html caption,
+  html tr,
+  html th,
+  html td,
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6,
+  body p,
+  body blockquote,
+  body address,
+  body big,
+  body cite,
+  body code,
+  body em,
+  body font,
+  body img,
+  body small,
+  body strike,
+  body sub,
+  body sup,
+  body li,
+  body ol,
+  body ul,
+  body fieldset,
+  body form,
+  body label,
+  body legend,
+  body button,
+  body table,
+  body caption,
+  body tr,
+  body th,
+  body td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left; }
+  html ol,
+  html ul,
+  body ol,
+  body ul {
+    list-style: none; }
+  html a,
+  body a {
+    outline: none; }
+  html input[type=search],
+  body input[type=search] {
+    -moz-appearance: none;
+    -webkit-appearance: none; }
+
+/* ------------------------------------------- */
+/*	2. Document setup
+/* ------------------------------------------- */
+:root {
+  --body-bg-color: #fefefe;
+  --body-text-color: #4C4C4C;
+  --impact-color: rgba(40, 122, 204, 0.7);
+  /* hex #287acc */
+  --disp-type: 'Josefin Sans', sans-serif;
+  --para-type: 'Josefin Slab', serif; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  color: var(--body-text-color);
+  background: var(--body-bg-color);
+  font-size: 17px;
+  max-width: 100vw;
+  position: absolute;
+  /* ------------------------------------------- */
+  	/*	3. Page Layout
+    /* ------------------------------------------- */ }
+  body h1 {
+    font-family: var(--disp-type), sans-serif;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 5rem; }
+  body h3 {
+    font-family: var(--disp-type), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600; }
+  body p {
+    font-family: var(--para-type), serif;
+    line-height: 1.4rem; }
+  body a {
+    cursor: pointer;
+    color: var(--body-text-color);
+    text-decoration: none; }
+  body img {
+    max-width: 100%;
+    height: auto; }
+  body main {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: 7vw 1fr 7vw;
+    overflow-x: hidden; }
+    body main #intro {
+      display: grid;
+      grid-row: 2;
+      grid-column: 2;
+      margin: 0 auto;
+      max-height: 97vh;
+      padding: 10vw 5vw; }
+      body main #intro h1 {
+        justify-content: center; }
+        body main #intro h1 div {
+          display: none; }
+      body main #intro .chevron {
+        background: no-repeat url(../../img/Arrow.svg);
+        color: var(--impact-color);
+        height: 11vh;
+        width: 9vh;
+        margin: 15vw auto auto; }
+    body main #work {
+      display: grid;
+      grid-row: 3;
+      grid-column: 2; }
+      body main #work .project-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-gap: 10vh 4vw; }
+        body main #work .project-container .project {
+          display: grid; }
+          body main #work .project-container .project a {
+            display: block; }
+            body main #work .project-container .project a img {
+              border-radius: 5px;
+              max-width: 100%;
+              transition: all .2s; }
+            body main #work .project-container .project a div {
+              background-size: 100%;
+              padding-top: 0.3rem; }
+              body main #work .project-container .project a div h3 {
+                display: inline-block;
+                font-family: 'Cassannet Regular', 'Lato';
+                transition: all .2s; }
+            body main #work .project-container .project a:hover img {
+              box-shadow: 0 0.3rem 1.5rem 0rem rgba(132, 153, 115, 0.8);
+              transform: translateY(-0.3rem);
+              transition: all .2s; }
+            body main #work .project-container .project a:hover h3 {
+              font-family: 'Cassannet Outline', 'Lato'; }
+    body main #about {
+      grid-row: 4;
+      display: grid;
+      grid-column: 2;
+      grid-template-columns: 2fr 3fr;
+      grid-gap: 10vw;
+      padding: 10vw 5vw;
+      align-items: center; }
+    body main #info {
+      background-color: #222;
+      display: grid;
+      grid-row: 5;
+      grid-template-columns: repeat(3, 1fr);
+      height: 550px;
+      width: 100vw;
+      margin-top: 10vh;
+      padding: 3rem 10vw; }
+      body main #info a,
+      body main #info h1,
+      body main #info h2,
+      body main #info h3,
+      body main #info h4,
+      body main #info p {
+        color: var(--body-bg-color); }
+      body main #info .contact_info {
+        display: grid;
+        grid-column: 1;
+        grid-template-columns: repeat(4, 1fr); }
+        body main #info .contact_info .self {
+          background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          border-radius: 5px;
+          display: grid;
+          grid-column: 1 / span 4;
+          grid-row: 1;
+          height: 260px;
+          width: 320px;
+          margin-bottom: 6rem; }
+        body main #info .contact_info .social {
+          cursor: pointer;
+          display: grid;
+          grid-row: 2;
+          height: 3rem;
+          width: 3rem;
+          margin: 0rem 0.2rem 1.5rem; }
+          body main #info .contact_info .social:hover {
+            background-color: rgba(130, 173, 95, 0.1);
+            background-size: 120%;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+          body main #info .contact_info .social .medium {
+            background: no-repeat url(../../img/Medium_Logo_Green.svg); }
+          body main #info .contact_info .social .twitter {
+            background: no-repeat url(../../img/Twitter_Logo_Blue.svg); }
+          body main #info .contact_info .social .github {
+            background: no-repeat url(../../img/Github_Logo_White.svg); }
+          body main #info .contact_info .social .linkedin {
+            background: no-repeat url(../../img/Linkedin_Logo_Blue.svg); }
+          body main #info .contact_info .social .logo {
+            background-size: 100%;
+            margin-left: 0.5rem;
+            width: 2.5rem; }
+        body main #info .contact_info .personal {
+          align-items: end;
+          display: grid;
+          height: 1.5rem;
+          width: min-content;
+          width: -moz-min-content;
+          font-family: 'Josefin Slab', serif;
+          font-size: 1.1rem;
+          grid-row: 3;
+          margin: 1rem 0.2rem; }
+          body main #info .contact_info .personal.email {
+            display: grid;
+            grid-column: 1 / span 2;
+            transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+            body main #info .contact_info .personal.email:hover {
+              background-color: rgba(130, 173, 95, 0.1);
+              transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+          body main #info .contact_info .personal.resume {
+            display: grid;
+            grid-column: 4; }
+            body main #info .contact_info .personal.resume:hover {
+              background-color: rgba(130, 173, 95, 0.1);
+              transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+      body main #info .statement {
+        grid-column: 2 / span 3;
+        padding: 3rem; }
+    body main footer {
+      align-items: flex-end;
+      display: grid;
+      grid-column: 2;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-row: 6;
+      font-family: var(--para-type), serif; }
+      body main footer a:first-of-type {
+        grid-row: 6;
+        padding: 5px 0;
+        text-align: start; }
+      body main footer a:nth-of-type(2) {
+        grid-row: 6;
+        padding: 5px 0;
+        text-align: end; }
+      body main footer a:hover {
+        color: var(--impact-color); }
+    @media (min-width: 300px) and (max-width: 374px) {
+      body main #intro {
+        padding: 9vh 0; }
+        body main #intro h1 {
+          font-size: 3rem;
+          line-height: 1.1em; }
+          body main #intro h1 div {
+            color: var(--body-bg-color);
+            line-height: 0.2em; }
+        body main #intro .chevron {
+          height: 11vh;
+          width: 9vh;
+          background-size: cover; }
+      body main #work .project-container {
+        grid-template-columns: minmax(280px, 1fr);
+        grid-column: 2; }
+        body main #work .project-container .project {
+          margin-top: 10vh; } }
+    @media (min-width: 375px) and (max-width: 640px) {
+      body main #intro h1 {
+        font-size: 3.5rem;
+        line-height: 1.1em; } }
+
+/*# sourceMappingURL=new_home.css.map */

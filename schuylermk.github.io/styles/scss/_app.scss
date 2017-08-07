@@ -1,0 +1,142 @@
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "components/typography";
+@import "components/grid";
+@import "components/buttons";
+@import "components/navigation";
+@import "components/sections";
+
+// 0.	CSS Reset & Clearfix
+// 1.	Document Setup
+
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+/*	0. CSS Reset
+/* ------------------------------------------- */
+
+html, body { margin:0; padding:0;}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight:normal;
+	font-style:normal;
+	font-size:100%;
+	line-height:1;
+	font-family:inherit;
+	text-align:left;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+ol, ul { list-style:none; }
+
+blockquote:before, 
+blockquote:after { content:""; }
+
+a { outline:none; }
+
+input[type=search] {
+   -moz-appearance:none;
+   -webkit-appearance:none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+
+/* ------------------------------------------- */
+/*	1. Document setup
+/* ------------------------------------------- */
+
+
+body {
+	margin: 0;
+	padding: 0;
+	border: none;
+	color: #4C4C4C;
+	background: #fff;
+	font-family: 'Josefin Sans', serif;
+	font-size: 18px;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+body a {
+	color: #517ACC;
+	text-decoration: none;
+}
+
+body a:hover {
+	color: #A4B359;
+	text-decoration: none;
+}
+
+* { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.hidden { display: none; }
+.clear { clear: both; }
+.left { float: left; }
+.right { float: right; }
+
+::selection {
+	background: #333;
+	color: #FFF;
+}
+
+::-webkit-input-placeholder { color: #A9A9A9; }
+:-ms-input-placeholder { color: #A9A9A9; }
+
+/* ------------------------------------------ 
+* {
+  font-size: 12px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: black;
+  line-height: 1.4;
+
+  h1 {
+    font-size: 2em;
+  }       
+  h2 {
+    font-size: 1.5em;
+  }      
+  aside {
+    font-size: 0.75em;
+  }
+  p {
+    color: white;
+    font-weight: 200;
+    z-index: 777;
+  }
+  
+  .boldy {
+    letter-spacing: 5px;
+    font-size: 2.75em;
+    font-family: 'cassannet_boldbold';
+  }
+}
+*/

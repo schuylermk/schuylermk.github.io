@@ -1,0 +1,323 @@
+@import "app";
+
+/* Reset
+----------------------------------------------------- */
+
+header, footer, nav, article, hgroup, figure {
+  display: flex;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  overflow: auto;
+  overflow-x: hidden;
+
+
+  small, del {
+    color: darken(grey, 20%);
+  }
+
+  h1 {
+    font-size: 1.3em;
+    font-weight: 500; }
+    @media (min-width: 500px) {
+      h1 {
+        font-size: 1.1em; } }
+
+  h2 {
+    color: blanchedalmond;
+    margin-bottom: .25em;
+    font-size: 2.5em;
+    line-height: 1.25em; }
+    @media (min-width: 470px) {
+      h2 {
+        font-size: 3em; } }
+    @media (min-width: 750px) {
+      h2 {
+        font-size: 4em; } }
+    @media (min-width: 1300px) {
+      h2 {
+        font-size: 5em;
+        margin-top: 1em; } }
+    @media (min-width: 1550px) {
+      h2 {
+        font-size: 6em;
+        margin-top: 1.5em; } }
+
+  h3 {
+    color: blanchedalmond;
+    font-size: 1.5em;
+    line-height: 2em;
+    @media (min-width: 750px) {
+      font-size: 2.5em;
+    }
+  }
+
+  h6 {
+    color: white;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin-bottom: -.75em; }
+
+  p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+
+  /* Layout
+  -------------------------------------------------------------- */
+  .home {
+    @include flex (column);
+
+
+    /* BELOW is site's bg texture  */
+    &:after {
+      content: "";
+      background: #090B00 url("../../img/blotty.png") center;
+      @include size (100%, 100%);
+      opacity: 0.6;
+      position: fixed;
+      top: 0;
+      z-index: -3;
+    }
+
+    #border {
+      @include flex (column);
+      border: 1px solid #ECECE6;
+      height: 100vh;
+      margin: 20px;
+
+
+      .site-header {
+        @include flex ();
+        padding: 1.5em 0 1em 0;
+        h1 {
+          color: ECECE6;
+          display: inline-block;
+        }
+        @media (min-width: 500px) {
+          padding-top: 2em;
+        }
+
+        nav {
+          @include flex ($jc: space-between);
+          @include size (100vw, auto);
+          margin: 0 3em;
+          .nav-logo {
+            @include flex ($al: flex-start);
+            object {
+              @include size (25em, auto);
+            }
+          }
+        }
+          .links {
+            @include flex ($al: flex-start);
+            a {
+              color: white;
+              font-size: 1.5em;
+              font-weight: 100;
+              margin: 0 2em;
+              text-decoration: none;
+              &:hover {
+                color: darken(lime, .10);
+                transition-timing-function: ease-in;
+                transition-duration: 200ms;
+              }
+            }
+          }
+      }
+
+      #work {
+        @include flex (column, $al: center);
+        .work-container {
+          @include flex ();
+          width: 100%;
+          padding: 20% 5%;
+          h3 {
+            text-align: center;
+          }
+          .patchwork {
+            @include flex (column);
+            @include size (100%, 100%);
+            margin: 1em auto;
+
+            .group {
+              @include flex (row, $jc: space-around, $al: center);
+              padding: 1em;
+              .project {
+                @include flex (column);
+                @include size (auto, 40%);
+                padding: 1em;
+                position: relative;
+                &:nth-of-type(2) {
+                  // border-left: 1px dotted grey;
+                  // border-right: 1px dotted grey;
+                }
+                img {
+                  max-width: 25vw;
+                  object-fit: scale-down;
+                }
+                .overlay {
+                  @include flex (column);
+                  position: absolute;
+                  border-top: 1px solid white;
+                  top: 10%;
+                  height: 80%;
+                  width: 80%;
+                  left: 10%;
+                  border-bottom: 1px solid white;
+                  text-align: center;
+                  opacity: 0;
+                  -webkit-transition: opacity .25s ease;
+                  .plus {
+                    margin: 0 auto;
+                    h2, h3, h4 {
+                      color: white;
+                      font-weight: 100;
+                      line-height: 0;
+                      top: -30%;
+                    }
+                    a {
+                      color: darken(green, .30);
+                      display: inline-block;
+                      margin-top: 2em;
+                    }
+                  }
+                }
+
+                &:hover img {
+                  filter: brightness(0.1);
+                  -webkit-filter: brightness(0.1);
+                }
+                &:hover .overlay {
+                  background: transparent;
+                  opacity: 1;
+                }
+              }
+            }
+
+            .group-2 {
+              @include flex(column);
+              width: 100%;
+              padding-right: 1em;
+              .project-1 {
+                @include flex (column);
+                @include size (100%, auto);
+                position: relative;
+                img {
+                  max-height: 400px;
+                  width: 100%;
+                  object-fit: scale-down;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+      #about-container {
+        @include flex (column);
+        border: 1px solid green;
+        margin: 0 20px;
+        padding: 3em 5em 24em;
+        p {
+          color: blanchedalmond;
+        }
+        .first {
+          @include flex (column);
+          .construction {
+            @include flex ();
+            z-index: -1;
+            .name {
+              @include flex (column);
+              margin-top: 3em;
+              h2 {
+                color: blanchedalmond;
+                font-size: 4em;
+                font-weight: 200;
+                margin-bottom: 1em;
+                width: 100%;
+              }
+              h4 {
+                color: #FF5D00;
+                font-size: 3em;
+                line-height: 1em;
+                margin-bottom: 1em;
+                padding-left: 2em;
+                text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+                width: 80%;
+              }
+              // &:hover {
+              //   content: "   ...like sky-ler...";
+              // }
+
+            }
+          }
+          .story {
+            @include flex ();
+            word-spacing: 1px;
+          }
+          // @media (min-width: 470px) {
+          //   width: 90%;
+          // }
+        }
+        .second {
+          @include flex ();
+          word-spacing: 1px;
+          width: 55%;
+          a {
+            color: cornflowerblue;
+            font-size: 1.2em;
+            font-weight: 100;
+            margin: 0 .1em;
+            text-decoration: none;
+            &:hover {
+              border-radius: 1px;
+              background-color: rgba(91,146,121,0.2);
+              transition: all 0.1s ease-in-out;
+            }
+          }
+        }
+
+        .section-links {
+          @include flex (column);
+          margin: 2em 0;
+          padding: 0 30px;
+          a {
+            color: #3A7CA5;
+            font-size: 1.4em;
+            font-weight: 100;
+            display: table;
+            text-decoration: none;
+            &:hover {
+              border-radius: 1px;
+              background-color: rgba(91,146,121,0.2);
+              color: #3A7CA5;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+
+    footer {
+      @include flex ($jc: center);
+      .site-footer {
+        @include flex ($jc: center);
+        color: grey;
+        margin: 0 auto;
+        p {
+          font-size: 1em;
+          a {
+            color: #0072BB;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// huyw4DT9m3VdlSqGR\/FXA\/GLxrtB7hB1B3zsOexGKvsp8O4C3PtjoGcAwh2RlPrfoioTbbWU0p+GSqKNbZbVrlI9XMcbusHUkR\/faMz48DrGtNUiDQV37LCdkqx05fLrt7pjKohN+dyR9cwnpneRWbTSv9poT66h8Io6wXlWuNYbO3I2xWku9TBBBq\/9fwzr6FKsWpqZxWs6f5dclhYcToBX4UJoQ+r776KvpACyQctpdARjuplQMt9z8BUtjT0Y3vnweO4goFfIT1UZzVHqt\/Fih4CmXgSauYlDo7VzWCvDnGXRbTeB1uidGELU9nC699H42wVWCTro+k78VfwRBw
+
+// 1476994972

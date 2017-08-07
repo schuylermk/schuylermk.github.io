@@ -1,0 +1,340 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'Stellar';
+  src: url("../../typefaces/Stellar-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'cassannet_boldbold';
+  src: url("../../typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Cassannet';
+  src: url("../../typefaces/Cassannet/cassannet_outline-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet_outline-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'cassannet regular';
+  src: url("../../typefaces/Cassannet/cassannet-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Geomanist';
+  src: url(#geomanist_regularregular);
+  font-family: 'geomanistregular_italic';
+  src: url(#geomanistregular_italic);
+  src: url("../../typefaces/Geomanist/geomanist-regular-italic-webfont.svg#geomanistregular_italic") format("svg"); }
+@font-face {
+  font-family: 'kimberley';
+  src: url("../../typefaces/kimberley/kimberley.ttf") format("ttf"); }
+@font-face {
+  font-family: 'Unica One';
+  src: url("../../typefaces/unica/UnicaOne-Regular.ttf") format("ttf"); }
+@font-face {
+  font-family: 'bariolregular_italic';
+  src: url("bariol_regular_italic-webfont.eot"); }
+/* Webfont: Lato-Black */
+@font-face {
+  font-family: 'LatoWebBlack';
+  src: url("../../typefaces/Lato-Black.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Black.woff2") format("woff2"), url("../../typefaces/Lato-Black.woff") format("woff"), url("../../typefaces/Lato-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-BlackItalic */
+@font-face {
+  font-family: 'LatoWebBlack';
+  src: url("../../typefaces/Lato-BlackItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-BlackItalic.woff2") format("woff2"), url("../../typefaces/Lato-BlackItalic.woff") format("woff"), url("../../typefaces/Lato-BlackItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Bold */
+@font-face {
+  font-family: 'LatoWebBold';
+  src: url("../../typefaces/Lato-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Bold.woff2") format("woff2"), url("../../typefaces/Lato-Bold.woff") format("woff"), url("../../typefaces/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-BoldItalic */
+@font-face {
+  font-family: 'LatoWebBold';
+  src: url("../../typefaces/Lato-BoldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-BoldItalic.woff2") format("woff2"), url("../../typefaces/Lato-BoldItalic.woff") format("woff"), url("../../typefaces/Lato-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Hairline */
+@font-face {
+  font-family: 'LatoWebHairline';
+  src: url("../../typefaces/Lato-Hairline.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Hairline.woff2") format("woff2"), url("../../typefaces/Lato-Hairline.woff") format("woff"), url("../../typefaces/Lato-Hairline.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-HairlineItalic */
+@font-face {
+  font-family: 'LatoWebHairline';
+  src: url("../../typefaces/Lato-HairlineItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-HairlineItalic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-HairlineItalic.woff2") format("woff2"), url("../../typefaces/Lato-HairlineItalic.woff") format("woff"), url("../../typefaces/Lato-HairlineItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Heavy */
+@font-face {
+  font-family: 'LatoWebHeavy';
+  src: url("../../typefaces/Lato-Heavy.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Heavy.woff2") format("woff2"), url("../../typefaces/Lato-Heavy.woff") format("woff"), url("../../typefaces/Lato-Heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-HeavyItalic */
+@font-face {
+  font-family: 'LatoWebHeavy';
+  src: url("../../typefaces/Lato-HeavyItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-HeavyItalic.woff2") format("woff2"), url("../../typefaces/Lato-HeavyItalic.woff") format("woff"), url("../../typefaces/Lato-HeavyItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Italic */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("../../typefaces/Lato-Italic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Italic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Italic.woff2") format("woff2"), url("../../typefaces/Lato-Italic.woff") format("woff"), url("../../typefaces/Lato-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Light */
+@font-face {
+  font-family: 'LatoWebLight';
+  src: url("../../typefaces/Lato-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Light.woff2") format("woff2"), url("../../typefaces/Lato-Light.woff") format("woff"), url("../../typefaces/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-LightItalic */
+@font-face {
+  font-family: 'LatoWebLight';
+  src: url("../../typefaces/Lato-LightItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-LightItalic.woff2") format("woff2"), url("../../typefaces/Lato-LightItalic.woff") format("woff"), url("../../typefaces/Lato-LightItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Medium */
+@font-face {
+  font-family: 'LatoWebMedium';
+  src: url("../../typefaces/Lato-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Medium.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Medium.woff2") format("woff2"), url("../../typefaces/Lato-Medium.woff") format("woff"), url("../../typefaces/Lato-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-MediumItalic */
+@font-face {
+  font-family: 'LatoWebMedium';
+  src: url("../../typefaces/Lato-MediumItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-MediumItalic.woff2") format("woff2"), url("../../typefaces/Lato-MediumItalic.woff") format("woff"), url("../../typefaces/Lato-MediumItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Regular */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("../../typefaces/Lato-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Regular.woff2") format("woff2"), url("../../typefaces/Lato-Regular.woff") format("woff"), url("../../typefaces/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Semibold */
+@font-face {
+  font-family: 'LatoWebSemibold';
+  src: url("../../typefaces/Lato-Semibold.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Semibold.woff2") format("woff2"), url("../../typefaces/Lato-Semibold.woff") format("woff"), url("../../typefaces/Lato-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-SemiboldItalic */
+@font-face {
+  font-family: 'LatoWebSemibold';
+  src: url("../../typefaces/Lato-SemiboldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-SemiboldItalic.woff2") format("woff2"), url("../../typefaces/Lato-SemiboldItalic.woff") format("woff"), url("../../typefaces/Lato-SemiboldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-Thin */
+@font-face {
+  font-family: 'LatoWebThin';
+  src: url("../../typefaces/Lato-Thin.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-Thin.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-Thin.woff2") format("woff2"), url("../../typefaces/Lato-Thin.woff") format("woff"), url("../../typefaces/Lato-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+/* Webfont: Lato-ThinItalic */
+@font-face {
+  font-family: 'LatoWebThin';
+  src: url("../../typefaces/Lato-ThinItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../typefaces/Lato-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../typefaces/Lato-ThinItalic.woff2") format("woff2"), url("../../typefaces/Lato-ThinItalic.woff") format("woff"), url("../../typefaces/Lato-ThinItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+* {
+  font-size: 12px; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: black;
+  line-height: 1.4;
+  /* = 32px */
+  /* = 24px */ }
+  body h1 {
+    font-size: 2em; }
+  body h2 {
+    font-size: 1.5em; }
+  body aside {
+    font-size: 0.75em; }
+  body p {
+    color: white;
+    font-weight: 200;
+    z-index: 777; }
+  body .boldy {
+    letter-spacing: 5px;
+    font-size: 2.75em;
+    font-family: 'cassannet_boldbold'; }
+
+.intro {
+  display: flex;
+  background-color: #FFF;
+  width: 100%; }
+  .intro .border {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ECECE6;
+    margin: 1.25em; }
+    .intro .border .header-container {
+      position: fixed;
+      display: flex;
+      justify-content: space-around;
+      max-width: 96vw; }
+      .intro .border .header-container .site-header {
+        display: flex;
+        padding: 1.5em 0 1em 0; }
+        .intro .border .header-container .site-header h1 {
+          color: ECECE6;
+          display: inline-block; }
+        @media (min-width: 500px) {
+          .intro .border .header-container .site-header {
+            padding-top: 2em; } }
+        .intro .border .header-container .site-header nav {
+          display: flex;
+          justify-content: space-between;
+          width: 100vw;
+          height: auto; }
+          .intro .border .header-container .site-header nav .nav-logo {
+            display: flex;
+            margin-left: 5em;
+            text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4); }
+            .intro .border .header-container .site-header nav .nav-logo:hover {
+              box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
+              transition-timing-function: 500ms ease-out;
+              transition-duration: 200ms; }
+            .intro .border .header-container .site-header nav .nav-logo svg {
+              display: flex;
+              width: 4em;
+              height: 4em; }
+        .intro .border .header-container .site-header .links {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          margin-right: 2em; }
+          .intro .border .header-container .site-header .links a {
+            font-size: 1.4em;
+            font-family: 'Lato', sans-serif;
+            font-weight: 200;
+            margin-right: 2em;
+            text-shadow: 0 1px 1px #FFF; }
+            .intro .border .header-container .site-header .links a:hover {
+              box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
+              transition-timing-function: 500ms ease-out;
+              transition-duration: 200ms; }
+    .intro .border .wrapper, .intro .border .wrapper img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5%;
+      padding-bottom: 3%;
+      text-align: center;
+      width: 98%; }
+      .intro .border .wrapper h2 {
+        margin: 2em 0 1em;
+        font-family: 'Lato', sans-serif;
+        font-size: 2.5em;
+        font-weight: 200;
+        line-height: 1.25em; }
+      @media (min-width: 470px) {
+        .intro .border .wrapper h2 {
+          font-size: 3em; } }
+      @media (min-width: 750px) {
+        .intro .border .wrapper h2 {
+          font-size: 4em; } }
+      @media (min-width: 1300px) {
+        .intro .border .wrapper h2 {
+          font-size: 5em;
+          margin-top: 1em; } }
+      @media (min-width: 1550px) {
+        .intro .border .wrapper h2 {
+          font-size: 6em;
+          margin-top: 1.5em; } }
+      .intro .border .wrapper img {
+        margin-top: 2em; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  margin: -1.25em auto; }
+  footer p {
+    font-size: 2em; }
+    footer p a {
+      margin: 0 2em;
+      color: #0072BB; }
+
+/*# sourceMappingURL=beerocrat.css.map */
