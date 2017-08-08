@@ -5,27 +5,24 @@
   background-color: #FFF;
   width: 100%;
 
-  .border {
+  .border { 
     @include flex (column, $al: center);
-    width: 100%;
+    width: 98%;
     border: 1px solid #ECECE6;
-    margin: 1.25em;
+    margin: 2em 8em;
 
     .header-container {
       position: fixed;
-      @include flex ($jc: space-around);
-      max-width: 96vw;
+      @include flex ($jc: flex-start);
 
       .site-header {
         @include flex ();
-        // overflow: hidden;
-        padding: 1.5em 0 1em 0;
         h1 {
           color: ECECE6;
           display: inline-block;
         }
         @media (min-width: 500px) {
-          padding-top: 2em;
+          // padding-top: 2em;
         }
 
         nav  {
@@ -33,7 +30,7 @@
           @include size (100vw, auto);
           .nav-logo {
             @include flex ();
-            margin-left: 5em;
+            margin-left: 2em;
             text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
             &:hover {
               box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
@@ -72,7 +69,7 @@
       text-align: center;
       width: 98%;
       h2 {
-        margin: 2em 0 1em;
+        margin: 1em 0 0.5em;
         font-family: 'Lato', sans-serif;
         font-size: 2.5em;
         font-weight: 200;

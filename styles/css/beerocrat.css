@@ -14,14 +14,14 @@ ol, ul {
 
 @font-face {
   font-family: 'Stellar';
-  src: url("../../typefaces/Stellar-Regular.otf") format("otf");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  src: url("../../typefaces/Stellar-Regular.otf") format("otf"); }
 @font-face {
   font-family: 'cassannet_boldbold';
-  src: url("../../typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  src: url("../../typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff"); }
 @font-face {
   font-family: 'Cassannet';
   src: url("../../typefaces/Cassannet/cassannet_outline-webfont.woff2") format("woff2"), url("../../typefaces/Cassannet/cassannet_outline-webfont.woff") format("woff");
@@ -209,33 +209,169 @@ ol, ul {
   font-style: italic;
   font-weight: normal;
   text-rendering: optimizeLegibility; }
-* {
-  font-size: 12px; }
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/*	0. CSS Reset
+/* ------------------------------------------- */
+html,
+body {
+  margin: 0;
+  padding: 0; }
 
-*, *:before, *:after {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+  line-height: 1;
+  font-family: inherit;
+  text-align: left; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote:before,
+blockquote:after {
+  content: ""; }
+
+a {
+  outline: none; }
+
+input[type=search] {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
+
+/* ------------------------------------------- */
+/*	1. Document setup
+/* ------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #4C4C4C;
+  background: #fff;
+  font-family: 'Josefin Sans', serif;
+  font-size: 18px;
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+body a {
+  color: #517ACC;
+  text-decoration: none; }
+
+body a:hover {
+  color: #A4B359;
+  text-decoration: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
+.hidden {
+  display: none; }
+
+.clear {
+  clear: both; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+::selection {
+  background: #333;
+  color: #FFF; }
+
+::-webkit-input-placeholder {
+  color: #A9A9A9; }
+
+:-ms-input-placeholder {
+  color: #A9A9A9; }
+
+/* ------------------------------------------ 
+* {
+  font-size: 12px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   background-color: black;
   line-height: 1.4;
-  /* = 32px */
-  /* = 24px */ }
-  body h1 {
-    font-size: 2em; }
-  body h2 {
-    font-size: 1.5em; }
-  body aside {
-    font-size: 0.75em; }
-  body p {
+
+  h1 {
+    font-size: 2em;
+  }       
+  h2 {
+    font-size: 1.5em;
+  }      
+  aside {
+    font-size: 0.75em;
+  }
+  p {
     color: white;
     font-weight: 200;
-    z-index: 777; }
-  body .boldy {
+    z-index: 777;
+  }
+  
+  .boldy {
     letter-spacing: 5px;
     font-size: 2.75em;
-    font-family: 'cassannet_boldbold'; }
-
+    font-family: 'cassannet_boldbold';
+  }
+}
+*/
 .intro {
   display: flex;
   background-color: #FFF;
@@ -244,23 +380,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 98%;
     border: 1px solid #ECECE6;
-    margin: 1.25em; }
+    margin: 2em 8em; }
     .intro .border .header-container {
       position: fixed;
       display: flex;
-      justify-content: space-around;
-      max-width: 96vw; }
+      justify-content: flex-start; }
       .intro .border .header-container .site-header {
-        display: flex;
-        padding: 1.5em 0 1em 0; }
+        display: flex; }
         .intro .border .header-container .site-header h1 {
           color: ECECE6;
           display: inline-block; }
-        @media (min-width: 500px) {
-          .intro .border .header-container .site-header {
-            padding-top: 2em; } }
         .intro .border .header-container .site-header nav {
           display: flex;
           justify-content: space-between;
@@ -268,7 +399,7 @@ body {
           height: auto; }
           .intro .border .header-container .site-header nav .nav-logo {
             display: flex;
-            margin-left: 5em;
+            margin-left: 2em;
             text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4); }
             .intro .border .header-container .site-header nav .nav-logo:hover {
               box-shadow: 0px 2px 0px rgba(183, 9, 26, 0.8);
@@ -302,7 +433,7 @@ body {
       text-align: center;
       width: 98%; }
       .intro .border .wrapper h2 {
-        margin: 2em 0 1em;
+        margin: 1em 0 0.5em;
         font-family: 'Lato', sans-serif;
         font-size: 2.5em;
         font-weight: 200;
