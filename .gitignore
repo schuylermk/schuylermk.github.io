@@ -1,4 +1,6 @@
 .DS_Store
-*.vscode/
-*.sass-cache/
-*.css.map
+**.vscode/
+**.sass-cache/
+**.css.map
+styles/.sass-cache
+styles/.sass-cache/*
