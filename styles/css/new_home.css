@@ -11,11 +11,14 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Lato|Unica+One");
 @font-face {
   font-family: 'Cassannet Outline';
-  src: url("../typefaces/Cassannet/cassannet_outline-webfont.woff2") format("woff2"), url("../typefaces/Cassannet/cassannet_outline-webfont.woff") format("woff");
+  src: url("typefaces/Cassannet/cassannet_outline-webfont.woff2") format("woff2"), url("typefaces/Cassannet/cassannet_outline-webfont.woff") format("woff");
   font-family: 'Cassannet Regular';
-  src: url("../typefaces/Cassannet/cassannet-webfont.woff") format("woff"), url("../typefaces/Cassannet/cassannet-webfont.woff2") format("woff2");
+  src: url("typefaces/Cassannet/cassannet-webfont.woff") format("woff"), url("typefaces/Cassannet/cassannet-webfont.woff2") format("woff2");
   font-family: 'Cassannet Bold';
-  src: url("../typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff"), url("../typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"); }
+  src: url("typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff"), url("typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"); }
+@font-face {
+  font-family: 'Knile';
+  src: url("typefaces/Knile/knile-regular-webfont.woff") format("woff"); }
 /* ------------------------------------------- */
 /*	1. CSS Reset
 /* ------------------------------------------- */
@@ -112,26 +115,32 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         grid-gap: 10vh 4vw; }
         body main #work .project-container .project {
-          display: grid; }
+          display: grid;
+          min-height: 390px; }
           body main #work .project-container .project a {
             display: block; }
-            body main #work .project-container .project a img {
-              border-radius: 5px;
-              max-width: 100%;
-              transition: all .2s; }
-            body main #work .project-container .project a div {
+            body main #work .project-container .project a .pic {
+              height: 62%; }
+              body main #work .project-container .project a .pic img {
+                border-radius: 5px;
+                min-height: 100%;
+                opacity: .9;
+                transition: all .4s; }
+            body main #work .project-container .project a .desc {
               background-size: 100%;
               padding-top: 0.3rem; }
-              body main #work .project-container .project a div h3 {
+              body main #work .project-container .project a .desc h3 {
                 display: inline-block;
                 font-family: 'Cassannet Regular', 'Lato';
                 transition: all .2s; }
             body main #work .project-container .project a:hover img {
               box-shadow: 0 0.3rem 1.5rem 0rem rgba(132, 153, 115, 0.8);
+              opacity: 1;
               transform: translateY(-0.3rem);
-              transition: all .2s; }
-            body main #work .project-container .project a:hover h3 {
-              font-family: 'Cassannet Outline', 'Lato'; }
+              transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
+            body main #work .project-container .project a:hover .beer {
+              font-family: 'Cassannet Outline', 'Lato';
+              transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
     body main #about {
       grid-row: 4;
       display: grid;

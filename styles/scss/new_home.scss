@@ -11,17 +11,22 @@
 /* ------------------------------------------- */
 
 @font-face {
-  font-family: 'Cassannet Outline';
-  src: url('../typefaces/Cassannet/cassannet_outline-webfont.woff2') format('woff2'),
-  url('../typefaces/Cassannet/cassannet_outline-webfont.woff') format('woff');
+	font-family: 'Cassannet Outline';
+	src: url('typefaces/Cassannet/cassannet_outline-webfont.woff2') format('woff2'),
+	url('typefaces/Cassannet/cassannet_outline-webfont.woff') format('woff');
 
-  font-family: 'Cassannet Regular';
-  src: url('../typefaces/Cassannet/cassannet-webfont.woff') format('woff'),
-  url('../typefaces/Cassannet/cassannet-webfont.woff2') format('woff2');
-  
-  font-family: 'Cassannet Bold';
-  src: url('../typefaces/Cassannet/cassannet_bold-webfont.woff') format('woff'),
-  url('../typefaces/Cassannet/cassannet_bold-webfont.woff2') format('woff2');
+	font-family: 'Cassannet Regular';
+	src: url('typefaces/Cassannet/cassannet-webfont.woff') format('woff'),
+	url('typefaces/Cassannet/cassannet-webfont.woff2') format('woff2');
+		
+	font-family: 'Cassannet Bold';
+	src: url('typefaces/Cassannet/cassannet_bold-webfont.woff') format('woff'),
+	url('typefaces/Cassannet/cassannet_bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Knile';
+	src: url('typefaces/Knile/knile-regular-webfont.woff') format('woff');
 }
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Lato|Unica+One');
@@ -177,16 +182,21 @@ body {
 
 				.project {
 					display: grid;
+					min-height: 390px;
+
 					a {
 						display: block;
-						
-						img {
-							border-radius: 5px;	
-							max-width: 100%;
-							transition: all .2s;
-						}
+						.pic {
+							height: 62%;
+							img {
+								border-radius: 5px;	
+								min-height: 100%;
+								opacity: .9;
+								transition: all .4s;
+							}
+						}	
 
-						div {
+						.desc {
 							background-size: 100%;
 							padding-top: 0.3rem;
 							
@@ -199,15 +209,17 @@ body {
 
 						&:hover img {
 							box-shadow: 0 0.3rem 1.5rem 0rem rgba(132, 153, 115, 0.8);
+							opacity: 1;
 							transform: translateY(-0.3rem);
-							transition: all .2s;
+							transition: all cubic-bezier(.96, .15, .83, .67);
 						}
 						
-						&:hover h3 {
+						&:hover .beer {
 							font-family: 'Cassannet Outline', 'Lato';
+							transition: all cubic-bezier(.96, .15, .83, .67);
 						}
-					}	
-				}	
+					}
+				} 
 			}
 		}
 
