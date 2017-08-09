@@ -187,18 +187,19 @@ body {
 					a {
 						display: block;
 						.pic {
-							height: 62%;
+							height: 60%;
 							img {
 								border-radius: 5px;	
 								min-height: 100%;
-								opacity: .9;
+								opacity: .8;
 								transition: all .4s;
 							}
 						}	
 
 						.desc {
-							background-size: 100%;
-							padding-top: 0.3rem;
+							display: grid;
+							height: 25%;
+							align-content: flex-end;
 							
 							h3 {
 								display: inline-block;
@@ -211,7 +212,7 @@ body {
 							box-shadow: 0 0.3rem 1.5rem 0rem rgba(132, 153, 115, 0.8);
 							opacity: 1;
 							transform: translateY(-0.3rem);
-							transition: all cubic-bezier(.96, .15, .83, .67);
+							transition: all ease-in-out .3s;
 						}
 						
 						&:hover .beer {

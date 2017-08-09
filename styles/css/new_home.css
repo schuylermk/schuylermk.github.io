@@ -120,15 +120,16 @@ body {
           body main #work .project-container .project a {
             display: block; }
             body main #work .project-container .project a .pic {
-              height: 62%; }
+              height: 60%; }
               body main #work .project-container .project a .pic img {
                 border-radius: 5px;
                 min-height: 100%;
-                opacity: .9;
+                opacity: .8;
                 transition: all .4s; }
             body main #work .project-container .project a .desc {
-              background-size: 100%;
-              padding-top: 0.3rem; }
+              display: grid;
+              height: 25%;
+              align-content: flex-end; }
               body main #work .project-container .project a .desc h3 {
                 display: inline-block;
                 font-family: 'Cassannet Regular', 'Lato';
@@ -137,7 +138,7 @@ body {
               box-shadow: 0 0.3rem 1.5rem 0rem rgba(132, 153, 115, 0.8);
               opacity: 1;
               transform: translateY(-0.3rem);
-              transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
+              transition: all ease-in-out .3s; }
             body main #work .project-container .project a:hover .beer {
               font-family: 'Cassannet Outline', 'Lato';
               transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
