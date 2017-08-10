@@ -428,32 +428,9 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 5%;
       padding-bottom: 3%;
       text-align: center;
-      width: 98%; }
-      .intro .border .wrapper h2 {
-        margin: 1em 0 0.5em;
-        font-family: 'Lato', sans-serif;
-        font-size: 2.5em;
-        font-weight: 200;
-        line-height: 1.25em; }
-      @media (min-width: 470px) {
-        .intro .border .wrapper h2 {
-          font-size: 3em; } }
-      @media (min-width: 750px) {
-        .intro .border .wrapper h2 {
-          font-size: 4em; } }
-      @media (min-width: 1300px) {
-        .intro .border .wrapper h2 {
-          font-size: 5em;
-          margin-top: 1em; } }
-      @media (min-width: 1550px) {
-        .intro .border .wrapper h2 {
-          font-size: 6em;
-          margin-top: 1.5em; } }
-      .intro .border .wrapper img {
-        margin-top: 2em; }
+      width: 100%; }
 
 footer {
   display: flex;
