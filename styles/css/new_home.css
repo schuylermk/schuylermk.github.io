@@ -101,7 +101,6 @@ body {
         body main #intro h1 div {
           display: none; }
       body main #intro .chevron {
-        background: no-repeat url(../../img/Arrow.svg);
         color: var(--impact-color);
         height: 11vh;
         width: 9vh;
@@ -139,7 +138,7 @@ body {
               opacity: 1;
               transform: translateY(-0.3rem);
               transition: all ease-in-out .3s; }
-            body main #work .project-container .project a:hover .beer {
+            body main #work .project-container .project a:hover h3 {
               font-family: 'Cassannet Outline', 'Lato';
               transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
     body main #about {
