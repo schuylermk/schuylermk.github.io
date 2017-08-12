@@ -96,7 +96,7 @@ body {
 	
 	h1 {
 		font-family: var(--disp-sans), sans-serif;
-		font-size: 4.5rem;
+		font-size: 6vw;
 		font-weight: 600;
 		line-height: 5rem;
 	}
@@ -274,20 +274,18 @@ body {
 					grid-row: 1;
 					height: 260px;
 					width: 320px;
-					margin-bottom: 4rem;
-					position: relative;
+					margin-bottom: 5rem;
+					// position: relative;
 				}
 				
 				.social { 
 					cursor: pointer;
 					display: grid;
 					grid-row: 3;
-					height: 3rem;  width: 3rem;
-					
+					height: 3.5rem;
 					
 					&:hover {
 						background-color: rgba(130, 173, 95, .1);
-						// border-radius: ;
 						background-size: 120%;
 						transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 					}
@@ -299,7 +297,7 @@ body {
 					
 					.logo {
 						background-size: 100%;
-						width: 3rem;
+						width: 3.2rem;
 						
 					}
 				}	
@@ -346,9 +344,9 @@ body {
 				display: grid;
 				grid-column: 2 / span 3;
 				height: auto;
-				padding: 3rem;
+				padding: 0rem 2vw;
 				p:first-of-type {
-					margin-bottom: 1rem 3vw;
+					margin-bottom: 1rem;
 				}
 			}
 		}
