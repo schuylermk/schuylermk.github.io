@@ -96,7 +96,7 @@ body {
 	position: absolute;
 	
 	h1 {
-		font-family: var(--disp-sans), sans-serif;
+		font-family: var(--disp-sans);
 		font-size: 6vw;
 		font-weight: 600;
 		line-height: 5rem;
@@ -134,7 +134,7 @@ body {
 	main {
 		display: grid;
 		justify-content: center;
-		grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(0px, 1fr));
 		grid-template-columns: 7vw 1fr 7vw ;
 		overflow-x: hidden;
 
@@ -177,15 +177,17 @@ body {
 			display: grid;
 			grid-row: 3;
 			grid-column: 2;
+			height: 400px;
 
 			.project-container {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 				grid-gap: 10vh 4vw;
+				height: min-content;
 
 				.project {
 					display: grid;
-					min-height: 390px;
+					height: 390px;
 					position: relative;
 
 					a {
@@ -210,13 +212,13 @@ body {
 								font-family: 'Cassannet Regular',
 								'Lato';
 								position: absolute;
-								top: 65%;
+								top: 63%;
 								transition: all .2s;
 							}
 
 							p {
 								position: absolute;
-								top: 76%;
+								top: 75%;
 							}
 						}
 
@@ -239,25 +241,14 @@ body {
 
 //  ABOUT Section  //
 
-		#about {
-			grid-row: 4;
-			display: grid;
-			grid-column: 2;
-			grid-template-columns: 2fr 3fr;
-			grid-gap: 10vw;
-			padding: 10vw 5vw;
-			align-items: center;
-			
-		}
-
 		#info {
 			background-color: #222;
 			display: grid;
 			grid-row: 5;
-			grid-template-columns: repeat(3, minmax(350px, 1fr));
+			grid-template-columns: repeat(3, minmax(370px, 1fr));
 			height: 550px; width: 100vw;
-			margin-top: 15vh;
-			padding: 3rem 10vw;
+			margin-top: 20vw;
+			padding: 3rem 7vw;
 			position: relative;
 			align-items: flex-start;
 			
@@ -352,7 +343,7 @@ body {
 			.statement {
 				align-items: flex-start;
 				display: grid;
-				grid-column: 2 / span 3;
+				grid-column: 2/4;
 				height: auto;
 				padding: 0rem 2vw;
 				p:first-of-type {
