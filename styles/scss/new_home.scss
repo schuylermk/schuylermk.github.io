@@ -71,6 +71,7 @@ html, body {
 
 :root {
 		--body-bg-color: #fefefe;
+		--body-bg-text-color: #E1E7DC;
 		--body-text-color: #4C4C4C;
 		--impact-color: rgba(40, 122, 204, 0.7);  /* hex #287acc */
 		--disp-sans: 'Josefin Sans', sans-serif;
@@ -185,28 +186,37 @@ body {
 				.project {
 					display: grid;
 					min-height: 390px;
+					position: relative;
 
 					a {
-						display: block;
+						display: grid;
+
 						.pic {
-							height: 60%;
+							display: grid;
+							height: 50%;
+
 							img {
 								border-radius: 5px;	
-								min-height: 100%;
-								opacity: .8;
-								transition: all .4s;
+								opacity: 0.9;
+								transition: ease-in-out .4s;
 							}
 						}	
 
 						.desc {
 							display: grid;
-							max-height: 30%;
-							align-content: flex-end;
 							
-							h3 {
+							h3{
 								display: inline-block;
-								font-family: 'Cassannet Regular', 'Lato';
-								transition: all .2s; 
+								font-family: 'Cassannet Regular',
+								'Lato';
+								position: absolute;
+								top: 65%;
+								transition: all .2s;
+							}
+
+							p {
+								position: absolute;
+								top: 76%;
 							}
 						}
 
@@ -246,12 +256,12 @@ body {
 			grid-row: 5;
 			grid-template-columns: repeat(3, minmax(350px, 1fr));
 			height: 550px; width: 100vw;
-			margin-top: 10vh;
+			margin-top: 15vh;
 			padding: 3rem 10vw;
 			position: relative;
 			align-items: flex-start;
 			
-			a, h1, h2, h3, h4, p { color: var(--body-bg-color); }
+			a, h1, h2, h3, h4, p { color: var(--body-bg-text-color); }
 			
 			.contact_info {
 				display: grid;

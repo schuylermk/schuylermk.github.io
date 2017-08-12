@@ -46,6 +46,7 @@ html, body {
 /* ------------------------------------------- */
 :root {
   --body-bg-color: #fefefe;
+  --body-bg-text-color: #E1E7DC;
   --body-text-color: #4C4C4C;
   --impact-color: rgba(40, 122, 204, 0.7);
   /* hex #287acc */
@@ -116,24 +117,28 @@ body {
         grid-gap: 10vh 4vw; }
         body main #work .project-container .project {
           display: grid;
-          min-height: 390px; }
+          min-height: 390px;
+          position: relative; }
           body main #work .project-container .project a {
-            display: block; }
+            display: grid; }
             body main #work .project-container .project a .pic {
-              height: 60%; }
+              display: grid;
+              height: 50%; }
               body main #work .project-container .project a .pic img {
                 border-radius: 5px;
-                min-height: 100%;
-                opacity: .8;
-                transition: all .4s; }
+                opacity: 0.9;
+                transition: ease-in-out .4s; }
             body main #work .project-container .project a .desc {
-              display: grid;
-              max-height: 30%;
-              align-content: flex-end; }
+              display: grid; }
               body main #work .project-container .project a .desc h3 {
                 display: inline-block;
                 font-family: 'Cassannet Regular', 'Lato';
+                position: absolute;
+                top: 65%;
                 transition: all .2s; }
+              body main #work .project-container .project a .desc p {
+                position: absolute;
+                top: 76%; }
             body main #work .project-container .project a:hover img {
               box-shadow: 0 0.3rem 1.5rem 0rem rgba(132, 153, 115, 0.8);
               opacity: 1;
@@ -157,12 +162,12 @@ body {
       grid-template-columns: repeat(3, minmax(350px, 1fr));
       height: 550px;
       width: 100vw;
-      margin-top: 10vh;
+      margin-top: 15vh;
       padding: 3rem 10vw;
       position: relative;
       align-items: flex-start; }
       body main #info a, body main #info h1, body main #info h2, body main #info h3, body main #info h4, body main #info p {
-        color: var(--body-bg-color); }
+        color: var(--body-bg-text-color); }
       body main #info .contact_info {
         display: grid;
         grid-column: 1;
