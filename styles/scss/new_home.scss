@@ -218,7 +218,7 @@ body {
 
 							p {
 								position: absolute;
-								top: 75%;
+								top: 77%;
 							}
 						}
 
@@ -245,7 +245,7 @@ body {
 			background-color: #222;
 			display: grid;
 			grid-row: 5;
-			grid-template-columns: repeat(3, minmax(370px, 1fr));
+			grid-template-columns: repeat(auto, minmax(370px, 1fr));
 			height: 550px; width: 100vw;
 			margin-top: 20vw;
 			padding: 3rem 7vw;
@@ -351,6 +351,7 @@ body {
 				}
 			}
 		}
+
 
 //  FOOTER  //
 		footer {
