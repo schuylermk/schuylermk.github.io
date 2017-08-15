@@ -177,13 +177,13 @@ body {
 			display: grid;
 			grid-row: 3;
 			grid-column: 2;
-			height: 400px;
+			height: auto;
 
 			.project-container {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 				grid-gap: 10vh 4vw;
-				height: min-content;
+				// height: min-content;
 
 				.project {
 					display: grid;
@@ -192,10 +192,11 @@ body {
 
 					a {
 						display: grid;
+						// position: relative;
 
 						.pic {
 							display: grid;
-							height: 50%;
+							// height: 50%;
 
 							img {
 								border-radius: 5px;	
@@ -206,19 +207,21 @@ body {
 
 						.desc {
 							display: grid;
+							position: absolute;
+							top: 65%;
 							
-							h3{
+							h3 {
 								display: inline-block;
 								font-family: 'Cassannet Regular',
 								'Lato';
-								position: absolute;
-								top: 63%;
+								// position: absolute;
+								// top: 63%;
 								transition: all .2s;
 							}
 
 							p {
-								position: absolute;
-								top: 77%;
+								// position: absolute;
+								// top: 77%;
 							}
 						}
 
@@ -233,6 +236,9 @@ body {
 							font-family: 'Cassannet Outline', 'Lato';
 							transition: all cubic-bezier(.96, .15, .83, .67);
 						}
+					}
+					h4 {
+						position: relative;
 					}
 				} 
 			}

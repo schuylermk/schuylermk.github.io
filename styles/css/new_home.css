@@ -105,18 +105,17 @@ body {
       body main #intro .chevron {
         color: var(--impact-color);
         height: 11vh;
-        width: 9vh;
-        margin: 15vw auto auto; }
+        width: 7vh;
+        margin: 15vw auto; }
     body main #work {
       display: grid;
       grid-row: 3;
       grid-column: 2;
-      height: 400px; }
+      height: auto; }
       body main #work .project-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        grid-gap: 10vh 4vw;
-        height: min-content; }
+        grid-gap: 10vh 4vw; }
         body main #work .project-container .project {
           display: grid;
           height: 390px;
@@ -124,23 +123,19 @@ body {
           body main #work .project-container .project a {
             display: grid; }
             body main #work .project-container .project a .pic {
-              display: grid;
-              height: 50%; }
+              display: grid; }
               body main #work .project-container .project a .pic img {
                 border-radius: 5px;
                 opacity: 0.9;
                 transition: ease-in-out .4s; }
             body main #work .project-container .project a .desc {
-              display: grid; }
+              display: grid;
+              position: absolute;
+              top: 65%; }
               body main #work .project-container .project a .desc h3 {
                 display: inline-block;
                 font-family: 'Cassannet Regular', 'Lato';
-                position: absolute;
-                top: 63%;
                 transition: all .2s; }
-              body main #work .project-container .project a .desc p {
-                position: absolute;
-                top: 75%; }
             body main #work .project-container .project a:hover img {
               box-shadow: 0 0.3rem 1.5rem 0rem rgba(132, 153, 115, 0.8);
               opacity: 1;
@@ -149,11 +144,13 @@ body {
             body main #work .project-container .project a:hover h3 {
               font-family: 'Cassannet Outline', 'Lato';
               transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
+          body main #work .project-container .project h4 {
+            position: relative; }
     body main #info {
       background-color: #222;
       display: grid;
       grid-row: 5;
-      grid-template-columns: repeat(3, minmax(370px, 1fr));
+      grid-template-columns: repeat(auto, minmax(370px, 1fr));
       height: 550px;
       width: 100vw;
       margin-top: 20vw;
