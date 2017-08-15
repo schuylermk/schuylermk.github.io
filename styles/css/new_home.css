@@ -145,7 +145,8 @@ body {
               font-family: 'Cassannet Outline', 'Lato';
               transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
           body main #work .project-container .project h4 {
-            position: relative; }
+            position: absolute;
+            top: 100%; }
     body main #info {
       background-color: #222;
       display: grid;
