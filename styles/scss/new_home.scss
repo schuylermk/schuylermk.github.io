@@ -73,6 +73,7 @@ html, body {
 		--body-bg-color: #fefefe;
 		--body-bg-text-color: #E1E7DC;
 		--body-text-color: #4C4C4C;
+		--link-text-color: #37ABB8;
 		--impact-color: rgba(40, 122, 204, 0.7);  /* hex #287acc */
 		--disp-sans: 'Josefin Sans', sans-serif;
 		--disp-serif: 'Josefin Slab', 
@@ -159,7 +160,6 @@ body {
 			
 			.chevron {
 				// background: no-repeat url(../../img/Arrow.svg);
-				color: var(--impact-color);
 				height: 11vh;
 				width: 7vh;
 				margin: 15vw auto;
@@ -237,10 +237,17 @@ body {
 							transition: all cubic-bezier(.96, .15, .83, .67);
 						}
 					}
-					h4 {
+					h4 a { 
+						color: #287ACC;
+						cursor: pointer;
+						font-family: var(--disp-sans);
 						position: absolute;
 						top: 100%;
+						transition: ease-in-out .2s;
 						
+						&:hover {
+							box-shadow: 0px 2px 0px #666;
+						}
 					}
 				} 
 			}
@@ -253,7 +260,7 @@ body {
 			background-color: #222;
 			display: grid;
 			grid-row: 5;
-			grid-template-columns: repeat(auto, minmax(370px, 1fr));
+			grid-template-columns: repeat(3, minmax(350px, 1fr));
 			height: 550px; width: 100vw;
 			margin-top: 20vw;
 			padding: 3rem 7vw;
@@ -351,7 +358,7 @@ body {
 			.statement {
 				align-items: flex-start;
 				display: grid;
-				grid-column: 2/4;
+				grid-column: 2 / 4;
 				height: auto;
 				padding: 0rem 2vw;
 				p:first-of-type {
@@ -362,6 +369,7 @@ body {
 
 
 //  FOOTER  //
+
 		footer {
 			align-items: flex-end;
 			display: grid;
@@ -387,15 +395,13 @@ body {
 				}
 			}
 		}
-			
-
 		
 	
 ////////////////             ////////////////////////////
        //       Media Queries        //
 ////////////////             ////////////////////////////	
 		
- // within main
+ /* within main */
 		
 		@media (min-width: 300px) and (max-width: 374px) {
 

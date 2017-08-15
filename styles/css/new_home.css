@@ -48,6 +48,7 @@ html, body {
   --body-bg-color: #fefefe;
   --body-bg-text-color: #E1E7DC;
   --body-text-color: #4C4C4C;
+  --link-text-color: #37ABB8;
   --impact-color: rgba(40, 122, 204, 0.7);
   /* hex #287acc */
   --disp-sans: 'Josefin Sans', sans-serif;
@@ -90,7 +91,8 @@ body {
     justify-content: center;
     grid-template-rows: repeat(auto-fill, minmax(0px, 1fr));
     grid-template-columns: 7vw 1fr 7vw;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    /* within main */ }
     body main #intro {
       display: grid;
       grid-row: 2;
@@ -103,7 +105,6 @@ body {
         body main #intro h1 div {
           display: none; }
       body main #intro .chevron {
-        color: var(--impact-color);
         height: 11vh;
         width: 7vh;
         margin: 15vw auto; }
@@ -144,14 +145,20 @@ body {
             body main #work .project-container .project a:hover h3 {
               font-family: 'Cassannet Outline', 'Lato';
               transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
-          body main #work .project-container .project h4 {
+          body main #work .project-container .project h4 a {
+            color: #287ACC;
+            cursor: pointer;
+            font-family: var(--disp-sans);
             position: absolute;
-            top: 100%; }
+            top: 100%;
+            transition: ease-in-out .2s; }
+            body main #work .project-container .project h4 a:hover {
+              box-shadow: 0px 2px 0px #666; }
     body main #info {
       background-color: #222;
       display: grid;
       grid-row: 5;
-      grid-template-columns: repeat(auto, minmax(370px, 1fr));
+      grid-template-columns: repeat(3, minmax(350px, 1fr));
       height: 550px;
       width: 100vw;
       margin-top: 20vw;
@@ -231,7 +238,7 @@ body {
       body main #info .statement {
         align-items: flex-start;
         display: grid;
-        grid-column: 2/4;
+        grid-column: 2 / 4;
         height: auto;
         padding: 0rem 2vw; }
         body main #info .statement p:first-of-type {
