@@ -80,7 +80,7 @@ html, body {
 		/* hex #287acc */
 		--impact-color: rgba(40, 122, 204, 1);  
 		/* hex #287acc */
-		--dim-green: rgba(130, 145, 95, .8);
+		--dark-green: rgba(70, 76, 53, 1);
 		--soft-green: rgba(130, 145, 95, 1);
 		/* hex #708C54 */
 		--oliver: rgba(87, 94, 51, 1);
@@ -230,14 +230,14 @@ body {
 						}
 
 						&:hover img {
-							box-shadow: 0 0.3rem 1.5rem 0rem var(--dim-green);
+							box-shadow: 0 0.3rem 1.5rem 0rem var(--dark-green);
 							opacity: 1;
 							transform: translateY(-0.3rem);
 							transition: opacity linear .05s box-shadow ease-in-out .2s;
 						}
 						
 						&:hover h3 {
-							color: var(--dim-green);
+							color: black;
 							font-family: 'Cassannet Outline', 'Lato';
 							transition: all ease-in-out .4s;
 						}
