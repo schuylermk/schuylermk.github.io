@@ -49,8 +49,17 @@ html, body {
   --body-bg-text-color: #E1E7DC;
   --body-text-color: #4C4C4C;
   --link-text-color: #37ABB8;
-  --impact-color: rgba(40, 122, 204, 0.7);
+  --dark-impact-color: rgba(20, 61, 102, 0.8);
+  /* hex #143D66 */
+  --dim-impact-color: rgba(40, 122, 204, 0.8);
   /* hex #287acc */
+  --impact-color: #287acc;
+  /* hex #287acc */
+  --dim-green: rgba(130, 145, 95, 0.8);
+  --soft-green: #82915f;
+  /* hex #708C54 */
+  --oliver: #575e33;
+  /* hex #575E33 */
   --disp-sans: 'Josefin Sans', sans-serif;
   --disp-serif: 'Josefin Slab',  sans-serif;
   --para-type: 'Josefin Slab', serif; }
@@ -102,6 +111,8 @@ body {
       padding: 10vw 5vw; }
       body main #intro h1 {
         justify-content: center; }
+        body main #intro h1 a {
+          color: var(--soft-green); }
         body main #intro h1 div {
           display: none; }
       body main #intro .chevron {
@@ -128,7 +139,7 @@ body {
               body main #work .project-container .project a .pic img {
                 border-radius: 5px;
                 opacity: 0.9;
-                transition: ease-in-out .4s; }
+                transition: all ease-out .3s; }
             body main #work .project-container .project a .desc {
               display: grid;
               position: absolute;
@@ -136,24 +147,37 @@ body {
               body main #work .project-container .project a .desc h3 {
                 display: inline-block;
                 font-family: 'Cassannet Regular', 'Lato';
-                transition: all .2s; }
+                transition: ease-out .1s; }
             body main #work .project-container .project a:hover img {
-              box-shadow: 0 0.3rem 1.5rem 0rem rgba(132, 153, 115, 0.8);
+              box-shadow: 0 0.3rem 1.5rem 0rem var(--dim-green);
               opacity: 1;
               transform: translateY(-0.3rem);
-              transition: all ease-in-out .3s; }
+              transition: opacity linear .05s box-shadow ease-in-out .2s; }
             body main #work .project-container .project a:hover h3 {
+              color: var(--dim-green);
               font-family: 'Cassannet Outline', 'Lato';
-              transition: all cubic-bezier(0.96, 0.15, 0.83, 0.67); }
-          body main #work .project-container .project h4 a {
-            color: #287ACC;
-            cursor: pointer;
+              transition: all ease-in-out .4s; }
+          body main #work .project-container .project #link {
+            border-bottom: 1px solid var(--dim-impact-color);
+            color: var(--dim-impact-color);
+            display: inline-block;
             font-family: var(--disp-sans);
             position: absolute;
             top: 100%;
-            transition: ease-in-out .2s; }
-            body main #work .project-container .project h4 a:hover {
-              box-shadow: 0px 2px 0px #666; }
+            transition: ease-in .2s; }
+            body main #work .project-container .project #link:hover {
+              color: var(--impact-color);
+              transition: linear .2s; }
+            body main #work .project-container .project #link::after {
+              background: var(--impact-color);
+              content: '';
+              display: block;
+              height: 1.5px;
+              width: 0;
+              transition: width ease-out .2s; }
+            body main #work .project-container .project #link:hover::after {
+              transition: width ease-out .2s;
+              width: 100%; }
     body main #info {
       background-color: #222;
       display: grid;
@@ -250,16 +274,18 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       grid-row: 6;
       font-family: var(--para-type), serif; }
-      body main footer a:first-of-type {
-        grid-row: 6;
-        padding: 5px 0;
-        text-align: start; }
-      body main footer a:nth-of-type(2) {
-        grid-row: 6;
-        padding: 5px 0;
-        text-align: end; }
-      body main footer a:hover {
-        color: var(--impact-color); }
+      body main footer a {
+        color: var(--dark-impact-color); }
+        body main footer a:first-of-type {
+          grid-row: 6;
+          padding: 5px 0;
+          text-align: start; }
+        body main footer a:nth-of-type(2) {
+          grid-row: 6;
+          padding: 5px 0;
+          text-align: end; }
+        body main footer a:hover {
+          color: var(--impact-color); }
     @media (min-width: 300px) and (max-width: 374px) {
       body main #intro {
         padding: 9vh 0; }
