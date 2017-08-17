@@ -73,6 +73,7 @@ body {
   font-size: 20px;
   max-width: 100vw;
   position: absolute;
+  overflow-x: hidden;
   /* ------------------------------------------- */
   /*	3. Page Layout
   /* ------------------------------------------- */ }
@@ -81,7 +82,7 @@ body {
     font-size: 6vw;
     font-weight: 600;
     line-height: 5rem; }
-  body h3 {
+  body h3, body h4 {
     font-family: var(--disp-sans), sans-serif;
     font-size: 2.5rem;
     font-weight: 600; }
@@ -97,126 +98,142 @@ body {
     height: auto; }
   body main {
     display: grid;
-    justify-content: center;
-    grid-template-rows: repeat(auto-fill, minmax(0px, 1fr));
-    grid-template-columns: 7vw 1fr 7vw;
-    overflow-x: hidden;
+    grid-template-columns: 7vw 86vw 7vw;
+    grid-template-rows: repeat(auto-fill, minmax(15vh, 1fr));
     /* within main */ }
     body main #intro {
       display: grid;
       grid-row: 2;
-      grid-column: 2;
-      margin: 0 auto;
-      max-height: 97vh;
-      padding: 10vw 5vw; }
-      body main #intro h1 {
-        justify-content: center; }
-        body main #intro h1 a {
-          color: var(--soft-green); }
-        body main #intro h1 div {
-          display: none; }
+      grid-column: 2; }
+      body main #intro a {
+        color: var(--soft-green); }
+      body main #intro div {
+        display: none; }
       body main #intro .chevron {
-        height: 11vh;
-        width: 7vh;
-        margin: 15vw auto; }
+        display: grid;
+        height: auto;
+        width: 10vh;
+        margin: 12vw auto; }
     body main #work {
       display: grid;
-      grid-row: 3;
       grid-column: 2;
+      grid-row: 3;
+      grid-gap: 4vw;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       height: auto; }
-      body main #work .project-container {
+      body main #work .project {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        grid-gap: 10vh 4vw; }
-        body main #work .project-container .project {
-          display: grid;
-          height: 390px;
-          position: relative; }
-          body main #work .project-container .project a {
+        height: 390px;
+        position: relative; }
+        body main #work .project a {
+          display: grid; }
+          body main #work .project a .pic {
             display: grid; }
-            body main #work .project-container .project a .pic {
-              display: grid; }
-              body main #work .project-container .project a .pic img {
-                border-radius: 5px;
-                opacity: 0.9;
-                transition: all ease-out .3s; }
-            body main #work .project-container .project a .desc {
-              display: grid;
-              position: absolute;
-              top: 65%; }
-              body main #work .project-container .project a .desc h3 {
-                display: inline-block;
-                font-family: 'Cassannet Regular', 'Lato';
-                transition: ease-out .1s; }
-            body main #work .project-container .project a:hover img {
-              box-shadow: 0 0.3rem 1.5rem 0rem var(--dark-green);
-              opacity: 1;
-              transform: translateY(-0.3rem);
-              transition: opacity linear .05s box-shadow ease-in-out .2s; }
-            body main #work .project-container .project a:hover h3 {
-              color: black;
-              font-family: 'Cassannet Outline', 'Lato';
-              transition: all ease-in-out .4s; }
-          body main #work .project-container .project #link {
-            border-bottom: 1px solid var(--dim-impact-color);
-            color: var(--dim-impact-color);
-            display: inline-block;
-            font-family: var(--disp-sans);
+            body main #work .project a .pic img {
+              border-radius: 5px;
+              opacity: 0.9;
+              transition: all ease-out .3s; }
+          body main #work .project a .desc {
+            display: grid;
             position: absolute;
-            top: 100%;
-            transition: ease-in .2s; }
-            body main #work .project-container .project #link:hover {
-              color: var(--impact-color);
-              transition: linear .2s; }
-            body main #work .project-container .project #link::after {
-              background: var(--impact-color);
-              content: '';
-              display: block;
-              height: 1.5px;
-              width: 0;
-              transition: width ease-out .2s; }
-            body main #work .project-container .project #link:hover::after {
-              transition: width ease-out .2s;
-              width: 100%; }
+            top: 65%; }
+            body main #work .project a .desc h3 {
+              display: inline-block;
+              font-family: 'Cassannet Regular', 'Lato';
+              transition: ease-out .1s; }
+          body main #work .project a:hover img {
+            box-shadow: 0 0.3rem 1.5rem 0rem var(--dark-green);
+            opacity: 1;
+            transform: translateY(-0.3rem);
+            transition: opacity linear .05s box-shadow ease-in-out .2s; }
+          body main #work .project a:hover h3 {
+            color: black;
+            font-family: 'Cassannet Outline', 'Lato';
+            transition: all ease-in-out .4s; }
+        body main #work .project #link {
+          border-bottom: 1px solid var(--dim-impact-color);
+          color: var(--dim-impact-color);
+          display: inline-block;
+          font-family: var(--disp-sans);
+          position: absolute;
+          top: 100%;
+          transition: ease-in .2s; }
+          body main #work .project #link:hover {
+            color: var(--impact-color);
+            transition: linear .2s; }
+          body main #work .project #link::after {
+            background: var(--impact-color);
+            content: '';
+            display: block;
+            height: 1.5px;
+            width: 0;
+            transition: width ease-out .2s; }
+          body main #work .project #link:hover::after {
+            transition: width ease-out .2s;
+            width: 100%; }
     body main #info {
       background-color: #222;
       display: grid;
+      grid-column: 2;
       grid-row: 5;
-      grid-template-columns: repeat(3, minmax(350px, 1fr));
-      height: 550px;
+      grid-gap: 4rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       width: 100vw;
       margin-top: 20vw;
-      padding: 3rem 7vw;
-      position: relative;
-      align-items: flex-start; }
+      padding: 8rem 0; }
       body main #info a, body main #info h1, body main #info h2, body main #info h3, body main #info h4, body main #info p {
         color: var(--body-bg-text-color); }
+      body main #info .info-wrapper {
+        display: flex;
+        flex-direction: column; }
       body main #info .contact_info {
         display: grid;
         grid-column: 1;
-        grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
-        grid-template-rows: repeat(3, 1fr);
-        position: absolute;
-        max-height: 100%;
-        align-items: flex-start;
-        padding: 3rem 0; }
+        margin-bottom: 4rem;
+        border-bottom: 1px solid cadetblue; }
         body main #info .contact_info .self {
           background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
           background-repeat: no-repeat;
           background-size: 100%;
           border-radius: 5px;
-          display: grid;
           grid-column: 1 / span 4;
           grid-row: 1;
-          height: 260px;
+          height: 200px;
           width: 320px;
-          margin-bottom: 5rem; }
+          margin-bottom: 3rem; }
+        body main #info .contact_info .access {
+          display: grid;
+          grid-row: 2;
+          grid-column: 1 / span 4;
+          justify-content: space-between;
+          width: 90%;
+          margin-bottom: 4rem; }
+          body main #info .contact_info .access .personal {
+            align-items: end;
+            height: 3rem;
+            width: min-content;
+            width: -moz-min-content;
+            font-family: 'Josefin Slab', serif;
+            font-size: 1.2rem;
+            grid-row: 3; }
+            body main #info .contact_info .access .personal.email {
+              display: grid;
+              transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+              body main #info .contact_info .access .personal.email:hover {
+                background-color: rgba(130, 173, 95, 0.1);
+                transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+            body main #info .contact_info .access .personal.resume {
+              display: grid; }
+              body main #info .contact_info .access .personal.resume:hover {
+                background-color: rgba(130, 173, 95, 0.1);
+                transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
         body main #info .contact_info .social {
           cursor: pointer;
           display: grid;
           grid-row: 3;
-          height: 3.5rem; }
+          height: 3.5rem;
+          justify-content: space-between;
+          margin-bottom: 1rem; }
           body main #info .contact_info .social:hover {
             background-color: rgba(130, 173, 95, 0.1);
             background-size: 120%;
@@ -232,33 +249,6 @@ body {
           body main #info .contact_info .social .logo {
             background-size: 100%;
             width: 3.2rem; }
-        body main #info .contact_info .access {
-          display: grid;
-          grid-row: 2;
-          grid-column: 1 / span 4;
-          justify-self: normal; }
-          body main #info .contact_info .access .personal {
-            align-items: end;
-            height: 2rem;
-            width: min-content;
-            width: -moz-min-content;
-            font-family: 'Josefin Slab', serif;
-            font-size: 1.1rem;
-            grid-row: 3; }
-            body main #info .contact_info .access .personal.email {
-              display: grid;
-              grid-column: 1 / span 2;
-              transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
-              body main #info .contact_info .access .personal.email:hover {
-                background-color: rgba(130, 173, 95, 0.1);
-                transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
-            body main #info .contact_info .access .personal.resume {
-              display: grid;
-              grid-column: 4;
-              margin-left: 55%; }
-              body main #info .contact_info .access .personal.resume:hover {
-                background-color: rgba(130, 173, 95, 0.1);
-                transition: cubic-bezier(0.45, 0.05, 0.55, 0.95); }
       body main #info .statement {
         align-items: flex-start;
         display: grid;
@@ -268,27 +258,20 @@ body {
         body main #info .statement p:first-of-type {
           margin-bottom: 1rem; }
     body main footer {
-      align-items: flex-end;
       display: grid;
       grid-column: 2;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      justify-content: space-around;
       grid-row: 6;
-      font-family: var(--para-type), serif; }
+      font-family: var(--para-type), serif;
+      padding: 2rem 0; }
       body main footer a {
-        color: var(--dark-impact-color); }
-        body main footer a:first-of-type {
-          grid-row: 6;
-          padding: 5px 0;
-          text-align: start; }
-        body main footer a:nth-of-type(2) {
-          grid-row: 6;
-          padding: 5px 0;
-          text-align: end; }
+        color: var(--dark-impact-color);
+        grid-row: 6; }
         body main footer a:hover {
           color: var(--impact-color); }
     @media (min-width: 300px) and (max-width: 374px) {
       body main #intro {
-        padding: 9vh 0; }
+        margin-top: -2rem; }
         body main #intro h1 {
           font-size: 3rem;
           line-height: 1.1em; }
@@ -296,14 +279,9 @@ body {
             color: var(--body-bg-color);
             line-height: 0.2em; }
         body main #intro .chevron {
-          height: 11vh;
-          width: 9vh;
-          background-size: cover; }
-      body main #work .project-container {
-        grid-template-columns: minmax(280px, 1fr);
-        grid-column: 2; }
-        body main #work .project-container .project {
-          margin-top: 10vh; } }
+          display: grid; }
+      body main #work .project {
+        margin-top: 8vh; } }
     @media (min-width: 375px) and (max-width: 640px) {
       body main #intro h1 {
         font-size: 3.5rem;
