@@ -125,39 +125,39 @@ body {
         display: grid;
         height: 390px;
         position: relative; }
-        body main #work .project a {
-          display: grid; }
-          body main #work .project a .pic {
+        body main #work .project #tile {
+          display: grid;
+          position: absolute; }
+          body main #work .project #tile .pic {
             display: grid; }
-            body main #work .project a .pic img {
+            body main #work .project #tile .pic img {
               border-radius: 5px;
               opacity: 0.9;
               transition: all ease-out .3s; }
-          body main #work .project a .desc {
-            display: grid;
-            position: absolute;
-            top: 65%; }
-            body main #work .project a .desc h3 {
+          body main #work .project #tile .desc {
+            display: grid; }
+            body main #work .project #tile .desc h3 {
               display: inline-block;
-              font-family: 'Cassannet Regular', 'Lato';
+              font-family: 'Cassannet Regular','Lato';
               transition: ease-out .1s; }
-          body main #work .project a:hover img {
+          body main #work .project #tile:hover img {
             box-shadow: 0 0.3rem 1.5rem 0rem var(--dark-green);
             opacity: 1;
             transform: translateY(-0.3rem);
             transition: opacity linear .05s box-shadow ease-in-out .2s; }
-          body main #work .project a:hover h3 {
+          body main #work .project #tile:hover h3 {
             color: black;
             font-family: 'Cassannet Outline', 'Lato';
             transition: all ease-in-out .4s; }
         body main #work .project #link {
-          border-bottom: 1px solid var(--dim-impact-color);
           color: var(--dim-impact-color);
-          display: inline-block;
+          display: block;
           font-family: var(--disp-sans);
           position: absolute;
-          top: 100%;
-          transition: ease-in .2s; }
+          top: 88%;
+          transition: ease-in .2s;
+          height: 2.5rem;
+          line-height: 1rem; }
           body main #work .project #link:hover {
             color: var(--impact-color);
             transition: linear .2s; }
@@ -177,10 +177,9 @@ body {
       grid-column: 2;
       grid-row: 5;
       grid-gap: 4rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      width: 100vw;
-      margin-top: 20vw;
-      padding: 8rem 0; }
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      margin: 20vw -7vw 0;
+      padding: 5rem; }
       body main #info a, body main #info h1, body main #info h2, body main #info h3, body main #info h4, body main #info p {
         color: var(--body-bg-text-color); }
       body main #info .info-wrapper {
@@ -190,7 +189,7 @@ body {
         display: grid;
         grid-column: 1;
         margin-bottom: 4rem;
-        border-bottom: 1px solid cadetblue; }
+        border-bottom: 1px solid whitesmoke; }
         body main #info .contact_info .self {
           background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
           background-repeat: no-repeat;
@@ -281,7 +280,16 @@ body {
         body main #intro .chevron {
           display: grid; }
       body main #work .project {
-        margin-top: 8vh; } }
+        margin-top: 8vh; }
+        body main #work .project a .pic img {
+          opacity: 1; }
+        body main #work .project a:active {
+          box-shadow: 0 0.3rem 1.5rem 0rem var(--dark-green);
+          transform: translateY(-0.3rem);
+          transition: all ease-in-out .2s; }
+      body main #info {
+        padding: 3rem;
+        border: 2px solid white; } }
     @media (min-width: 375px) and (max-width: 640px) {
       body main #intro h1 {
         font-size: 3.5rem;
