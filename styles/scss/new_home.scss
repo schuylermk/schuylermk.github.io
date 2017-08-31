@@ -167,7 +167,7 @@ body {
 					color: var(--soft-green);
 				}
 
-				div {
+				#dot {
 					display: none;
 				}
 				
@@ -461,7 +461,7 @@ body {
 					font-size: 2.8rem;
 					line-height: 3.5rem;
 					
-					div {
+					#dot {
 						color: var(--body-bg-color);
 						line-height: 0.2em;
 						display: flex;

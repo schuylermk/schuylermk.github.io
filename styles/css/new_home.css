@@ -112,7 +112,7 @@ body {
       grid-column: 2; }
       body main #intro a {
         color: var(--soft-green); }
-      body main #intro div {
+      body main #intro #dot {
         display: none; }
       body main #intro .chevron {
         display: grid;
@@ -294,7 +294,7 @@ body {
       body main #intro h1 {
         font-size: 2.8rem;
         line-height: 3.5rem; }
-        body main #intro h1 div {
+        body main #intro h1 #dot {
           color: var(--body-bg-color);
           line-height: 0.2em;
           display: flex; }
