@@ -289,20 +289,23 @@ body {
         grid-column: 2; }
         body main footer a {
           margin: 1rem; } }
-    @media (min-width: 300px) and (max-width: 850px) {
-      body main #intro {
-        margin-top: -2rem; }
-        body main #intro h1 {
-          font-size: 3rem;
-          line-height: 1.1em; }
-          body main #intro h1 div {
-            color: var(--body-bg-color);
-            line-height: 0.2em; }
-        body main #intro .chevron {
-          display: grid; }
-      body main #work {
-        grid-gap: 6vw; }
-        body main #work .project a .pic img {
-          opacity: 1; } }
+    @media (min-width: 300px) and (max-width: 370px) {
+      body main #intro h1 {
+        font-size: 2.8rem;
+        line-height: 3.5rem; }
+        body main #intro h1 div {
+          color: var(--body-bg-color);
+          line-height: 0.2em;
+          display: flex; }
+      body main #work .project a .pic img {
+        opacity: 1; } }
+    @media (min-width: 371px) and (max-width: 769px) {
+      body main #intro h1 {
+        font-size: 3.4rem;
+        line-height: 4rem; }
+        body main #intro h1 #dot {
+          color: var(--body-bg-color);
+          line-height: 0.2em;
+          display: inline-block; } }
 
 /*# sourceMappingURL=new_home.css.map */

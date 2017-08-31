@@ -452,31 +452,26 @@ body {
 		}
 		
 		
-		@media (min-width: 300px) and (max-width: 850px) {
+		@media (min-width: 300px) and (max-width: 370px) {
 
 			#intro {
-				margin-top: -2rem ;
 
 				h1 {
-					font-size: 3rem;
-					line-height: 1.1em;
+					font-size: 2.8rem;
+					line-height: 3.5rem;
 					
 					div {
 						color: var(--body-bg-color);
 						line-height: 0.2em;
+						display: flex;
 					}
-				}
-
-				.chevron {
-					display: grid;
 				}
 			}
 
 			#work {	
-				grid-gap: 6vw; 
 					
 				.project {
-					// margin-top: 15vh;
+
 					a {
 						.pic img {
 							opacity: 1;
@@ -484,7 +479,20 @@ body {
 					}
 				}
 			}	
-		
+		}
+		@media (min-width: 371px) and (max-width: 769px) {
+			#intro {
+				h1 {
+					font-size: 3.4rem;
+					line-height: 4rem;
+
+					#dot {
+						color: var(--body-bg-color);
+						line-height: 0.2em;
+						display: inline-block;	
+					}	
+				}
+			}
 		}
 	}
 }
