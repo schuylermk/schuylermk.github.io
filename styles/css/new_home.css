@@ -190,28 +190,32 @@ body {
           border-radius: 5px;
           height: 225px;
           width: 300px;
-          margin-bottom: 3rem;
           display: none; }
-        body main #info .contact_info .personal {
-          color: var(--soft-green);
-          font-family: 'Source Sans Pro', sans-serif;
-          font-size: 1rem;
-          font-weight: 100;
-          margin: -1rem;
-          transition: ease-in .2s; }
-          body main #info .contact_info .personal:hover {
-            color: var(--body-bg-text-color);
-            transition: linear .2s; }
-          body main #info .contact_info .personal::after {
-            background: var(--impact-color);
-            content: '';
-            display: block;
-            height: 1px;
-            width: 0;
-            transition: width ease-out .2s; }
-          body main #info .contact_info .personal:hover::after {
-            transition: width ease-out .2s;
-            width: 100%; }
+        body main #info .contact_info .access {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: inherit;
+          height: 3.5rem; }
+          body main #info .contact_info .access .personal {
+            color: var(--soft-green);
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+            font-weight: 100;
+            transition: ease-in .2s; }
+            body main #info .contact_info .access .personal:hover {
+              color: var(--body-bg-text-color);
+              transition: linear .2s; }
+            body main #info .contact_info .access .personal::after {
+              background: var(--impact-color);
+              content: '';
+              display: block;
+              height: 1px;
+              width: 0;
+              transition: width ease-out .2s; }
+            body main #info .contact_info .access .personal:hover::after {
+              transition: width ease-out .2s;
+              width: 100%; }
         body main #info .contact_info .icon-row {
           display: flex;
           justify-content: space-between;
@@ -236,9 +240,12 @@ body {
         flex-direction: column;
         margin-bottom: 1rem; }
         body main #info .statement h3 {
+          font-family: var(--disp-serif);
           font-weight: 400;
           line-height: 1em; }
         body main #info .statement p {
+          font-family: var(--disp-sans);
+          font-weight: 300;
           margin: 1em 0; }
     body main footer {
       align-items: center;
@@ -248,17 +255,34 @@ body {
       grid-row: 5; }
       body main footer a {
         color: var(--dark-impact-color);
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 1.1rem;
+        font-family: var(--disp-sans), sans-serif;
         font-weight: 300;
         margin: 0.5rem; }
         body main footer a:hover {
           color: var(--impact-color); }
     @media screen and (min-width: 650px) {
       body main #info {
-        flex-direction: row; }
-        body main #info .contact-info .self {
-          display: flex; }
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between; }
+        body main #info .contact_info {
+          height: auto;
+          width: 24vw; }
+          body main #info .contact_info .self {
+            display: flex;
+            height: 18vw;
+            width: 24vw; }
+          body main #info .contact_info .access {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%; }
+            body main #info .contact_info .access .personal {
+              margin: 2rem 0; }
+          body main #info .contact_info .icon-row .logo {
+            height: 4.5vw;
+            width: 4.5vw; }
+        body main #info .statement {
+          width: 50vw; }
       body main footer {
         flex-direction: row;
         justify-content: space-between;
