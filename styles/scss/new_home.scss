@@ -278,7 +278,7 @@ body {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				height: 28vh; width: 90vw;
+				height: 100%; width: 90vw;
 
 				// border: 2px solid lime;
 
@@ -296,8 +296,6 @@ body {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					justify-content: inherit;
-					height: 3.5rem;
 
 					.personal {
 						color: var(--soft-green);
@@ -305,6 +303,7 @@ body {
 						sans-serif;
 						font-size: 1rem; font-weight: 100;
 						transition: ease-in .2s;
+						margin: 1rem 0 2rem;
 						
 						// border: 1px solid cornflowerblue;
 
@@ -326,13 +325,19 @@ body {
 							transition: width ease-out .2s;
 							width: 100%;
 						}
+
+						&:first-of-type {
+							margin-bottom: 1rem;
+						}
+
 					}
 				}			
 
 				.icon-row {
 					display: flex;
 					justify-content: space-between;
-					width: 100%;
+					width: 86vw;
+					margin: 1rem 0;
 			
 					.medium { background: no-repeat url(../../img/Medium_Logo_Green.svg); }
 					.twitter { background: no-repeat url(../../img/Twitter_Logo_Blue.svg); }
@@ -341,8 +346,8 @@ body {
 					
 					.logo {
 						background-size: cover;
-						width: 3.2rem;
-						height: 3.2rem;
+						width: 3rem;
+						height: 3rem;
 						&:hover {
 							background-color: rgba(130, 173, 95, .1);
 							transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -355,7 +360,6 @@ body {
 			.statement {
 				display: flex;
 				flex-direction: column;
-				margin-bottom: 1rem;
 				// border: 1px solid yellow;
 
 				h3 {
@@ -367,7 +371,7 @@ body {
 				p {
 					font-family: var(--disp-sans);
 					font-weight: 300;
-					margin: 1em 0;
+					margin: 1rem 0;
 				}
 			}
 
@@ -377,6 +381,7 @@ body {
 //  FOOTER  //
 		footer {
 			align-items: center;
+			border: 1rem solid white;
 			display: flex;
 			flex-direction: column-reverse;
 			grid-column: 1 / span 3; grid-row: 5;
@@ -404,29 +409,30 @@ body {
 				justify-content: space-between;
 
 				.contact_info {
-					height: auto; width: 24vw;
+					height: 100%; width: 28vw;
 
 					.self {
 						display: flex;
-						height: 18vw; width: 24vw;
+						width: 100%;
 					}
 
 					.access {
-						flex-direction: row;
+						flex-flow: row wrap;
 						justify-content: space-between;
-						width: 100%;
+						margin: 2rem auto;
 
 						.personal {
-							margin: 2rem 0;
+							
+							&:first-of-type {
+								margin: 0 2rem 1rem 0;
+							}
 						}
-					}
 
+					}
+					
 					.icon-row {
-						.logo { 
-							height: 4.5vw; width: 4.5vw; 
-						}
+						width: 100%;
 					}
-
 				}
 
 				.statement {

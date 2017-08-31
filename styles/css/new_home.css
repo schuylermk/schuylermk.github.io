@@ -182,7 +182,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 28vh;
+        height: 100%;
         width: 90vw; }
         body main #info .contact_info .self {
           background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
@@ -194,15 +194,14 @@ body {
         body main #info .contact_info .access {
           display: flex;
           flex-direction: column;
-          align-items: center;
-          justify-content: inherit;
-          height: 3.5rem; }
+          align-items: center; }
           body main #info .contact_info .access .personal {
             color: var(--soft-green);
             font-family: 'Source Sans Pro', sans-serif;
             font-size: 1rem;
             font-weight: 100;
-            transition: ease-in .2s; }
+            transition: ease-in .2s;
+            margin: 1rem 0 2rem; }
             body main #info .contact_info .access .personal:hover {
               color: var(--body-bg-text-color);
               transition: linear .2s; }
@@ -216,10 +215,13 @@ body {
             body main #info .contact_info .access .personal:hover::after {
               transition: width ease-out .2s;
               width: 100%; }
+            body main #info .contact_info .access .personal:first-of-type {
+              margin-bottom: 1rem; }
         body main #info .contact_info .icon-row {
           display: flex;
           justify-content: space-between;
-          width: 100%; }
+          width: 86vw;
+          margin: 1rem 0; }
           body main #info .contact_info .icon-row .medium {
             background: no-repeat url(../../img/Medium_Logo_Green.svg); }
           body main #info .contact_info .icon-row .twitter {
@@ -230,15 +232,14 @@ body {
             background: no-repeat url(../../img/Linkedin_Logo_Blue.svg); }
           body main #info .contact_info .icon-row .logo {
             background-size: cover;
-            width: 3.2rem;
-            height: 3.2rem; }
+            width: 3rem;
+            height: 3rem; }
             body main #info .contact_info .icon-row .logo:hover {
               background-color: rgba(130, 173, 95, 0.1);
               transition: cubic-bezier(0.785, 0.135, 0.15, 0.86); }
       body main #info .statement {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 1rem; }
+        flex-direction: column; }
         body main #info .statement h3 {
           font-family: var(--disp-serif);
           font-weight: 400;
@@ -246,9 +247,10 @@ body {
         body main #info .statement p {
           font-family: var(--disp-sans);
           font-weight: 300;
-          margin: 1em 0; }
+          margin: 1rem 0; }
     body main footer {
       align-items: center;
+      border: 1rem solid white;
       display: flex;
       flex-direction: column-reverse;
       grid-column: 1 / span 3;
@@ -266,21 +268,19 @@ body {
         flex-direction: row;
         justify-content: space-between; }
         body main #info .contact_info {
-          height: auto;
-          width: 24vw; }
+          height: 100%;
+          width: 28vw; }
           body main #info .contact_info .self {
             display: flex;
-            height: 18vw;
-            width: 24vw; }
-          body main #info .contact_info .access {
-            flex-direction: row;
-            justify-content: space-between;
             width: 100%; }
-            body main #info .contact_info .access .personal {
-              margin: 2rem 0; }
-          body main #info .contact_info .icon-row .logo {
-            height: 4.5vw;
-            width: 4.5vw; }
+          body main #info .contact_info .access {
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin: 2rem auto; }
+            body main #info .contact_info .access .personal:first-of-type {
+              margin: 0 2rem 1rem 0; }
+          body main #info .contact_info .icon-row {
+            width: 100%; }
         body main #info .statement {
           width: 50vw; }
       body main footer {
