@@ -11,26 +11,26 @@
 /* ------------------------------------------- */
 
 @font-face {
-	font-family: "Cassannet Outline";
-	src: url("typefaces/Cassannet/cassannet_outline-webfont.woff2") format('woff2'),
-	url('typefaces/Cassannet/cassannet_outline-webfont.woff') format('woff');
+	font-family: 'Cassannet';
+	src: url('typefaces/Cassannet/Cassannet-Regular.woff2') format('woff2'),
+	url('typefaces/Cassannet/Cassannet-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Cassannet Regular';
-	src: url('typefaces/Cassannet/cassannet-webfont.woff') format('woff'),
-	url('typefaces/Cassannet/cassannet-webfont.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Cassannet Bold';
-	src: url('typefaces/Cassannet/cassannet_bold-webfont.woff') format('woff'),
-	url('typefaces/Cassannet/cassannet_bold-webfont.woff2') format('woff2');
+	font-family: 'Cassannet';
+	src: url('typefaces/Cassannet/Cassannet-Bold.woff2') format('woff2'),
+	url('typefaces/Cassannet/Cassannet-Bold.woff') format('woff');
 	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cassannet Outline';
+	src: url('typefaces/Cassannet/CassannetOutline-Regular.woff2') format('woff2'),
+	url('typefaces/Cassannet/CassannetOutline-Regular.woff') format('woff');
+	font-weight: normal;
 	font-style: normal;
 }
 
@@ -218,7 +218,7 @@ body {
 						.desc {
 							h3 {
 								display: inline-block;
-								font-family: 'Cassannet Regular','Lato';
+								font-family: 'Cassannet','Lato'; font-weight: normal;
 								transition: ease-out .1s;
 							}
 						}
@@ -232,7 +232,8 @@ body {
 						
 						&:hover h3 {
 							color: black;
-							font-family: 'Cassannet Outline', 'Lato';
+							font-family: 'Cassannet Outline',
+							'Lato'; font-weight: normal;
 							transition: all ease-in-out .4s;
 						}
 					}
