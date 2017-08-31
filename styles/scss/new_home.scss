@@ -420,6 +420,7 @@ body {
 						flex-flow: row wrap;
 						justify-content: space-between;
 						margin: 2rem auto;
+						width: 100%;
 
 						.personal {
 							
@@ -481,6 +482,7 @@ body {
 			}	
 		}
 		@media (min-width: 371px) and (max-width: 769px) {
+
 			#intro {
 				h1 {
 					font-size: 3.4rem;

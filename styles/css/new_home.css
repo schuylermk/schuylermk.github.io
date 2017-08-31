@@ -276,7 +276,8 @@ body {
           body main #info .contact_info .access {
             flex-flow: row wrap;
             justify-content: space-between;
-            margin: 2rem auto; }
+            margin: 2rem auto;
+            width: 100%; }
             body main #info .contact_info .access .personal:first-of-type {
               margin: 0 2rem 1rem 0; }
           body main #info .contact_info .icon-row {
