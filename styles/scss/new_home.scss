@@ -11,7 +11,7 @@
 /* ------------------------------------------- */
 
 @font-face {
-	font-family: 'Cassannet';
+	font-family: 'Cassannet Regular';
 	src: url('typefaces/Cassannet/Cassannet-Regular.woff2') format('woff2'),
 	url('typefaces/Cassannet/Cassannet-Regular.woff') format('woff');
 	font-weight: normal;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-	font-family: 'Cassannet';
+	font-family: 'Cassannet Bold';
 	src: url('typefaces/Cassannet/Cassannet-Bold.woff2') format('woff2'),
 	url('typefaces/Cassannet/Cassannet-Bold.woff') format('woff');
 	font-weight: bold;
@@ -237,7 +237,7 @@ body {
 						.desc {
 							h3 {
 								display: inline-block;
-								font-family: 'Cassannet','Lato'; font-weight: normal;
+								font-family: 'Cassannet Regular','Lato'; font-weight: normal;
 								transition: ease-out .1s;
 							}
 						}

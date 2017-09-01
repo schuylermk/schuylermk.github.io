@@ -10,12 +10,12 @@
 /* ------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,200,200i,300,300i,400,400i|Josefin+Slab:200,200i,300,300i,400,400i|Lato:200,200i,300,300i,400,400i|Source+Sans+Pro:200,200i,300,300i,400,400i|Trirong:200,200i,300,300i,400,400i|Unica+One");
 @font-face {
-  font-family: 'Cassannet';
+  font-family: 'Cassannet Regular';
   src: url("typefaces/Cassannet/Cassannet-Regular.woff2") format("woff2"), url("typefaces/Cassannet/Cassannet-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'Cassannet';
+  font-family: 'Cassannet Bold';
   src: url("typefaces/Cassannet/Cassannet-Bold.woff2") format("woff2"), url("typefaces/Cassannet/Cassannet-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
@@ -156,7 +156,7 @@ body {
           transition: all ease-out .3s; }
         body main #work .project #tile .desc h3 {
           display: inline-block;
-          font-family: 'Cassannet','Lato';
+          font-family: 'Cassannet Regular','Lato';
           font-weight: normal;
           transition: ease-out .1s; }
         body main #work .project #tile:hover img {
