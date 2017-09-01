@@ -15,3 +15,27 @@
   flex-grow: $grow;
   flex-shrink: $shr;
 }
+
+@mixin link {
+  color: var(--soft-green);
+  transition: ease-in .2s;
+  
+  &:hover {
+    color: var(--body-bg-text-color);
+    transition: linear .2s;
+  }
+
+  &::after {
+    background: var(--impact-color);
+    content: '';
+    display: inherit;
+    height: 1px;
+    width: 0;
+    transition: width ease-out .2s;
+  }
+
+  &:hover::after {
+    transition: width ease-out .2s;
+    width: 100%;
+  }
+}

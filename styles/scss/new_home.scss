@@ -42,6 +42,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,200,200i,300,300i,400,400i|Josefin+Slab:200,200i,300,300i,400,400i|Lato:200,200i,300,300i,400,400i|Source+Sans+Pro:200,200i,300,300i,400,400i|Trirong:200,200i,300,300i,400,400i|Unica+One');
 
+@import "base/mixins.scss";
+
 
 /* ------------------------------------------- */
 /*	1. CSS Reset
@@ -310,8 +312,6 @@ body {
 				flex-direction: column;
 				justify-content: space-between;
 
-				// border: 2px solid lime;
-
 				.self {
 					background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
 					background-size: cover;
@@ -328,33 +328,12 @@ body {
 					align-items: center;
 
 					.personal {
-						color: var(--soft-green);
+						@include link; 		
 						font-family: 'Source Sans Pro',
 						sans-serif;
 						font-size: 1rem; font-weight: 100;
-						transition: ease-in .2s;
 						margin: 1rem 0 2rem;
-						
-						// border: 1px solid cornflowerblue;
-
-						&:hover { 
-							color: var(--body-bg-text-color);
-							transition: linear .2s;
-						}	
-							
-						&::after {
-							background: var(--impact-color);
-							content: '';
-							display: block;
-							height: 1px;
-							width: 0;
-							transition: width ease-out .2s;
-						}
-
-						&:hover::after {
-							transition: width ease-out .2s;
-							width: 100%;
-						}
+				
 
 						&:first-of-type {
 							margin-bottom: 1rem;
@@ -390,7 +369,6 @@ body {
 			.statement {
 				display: flex;
 				flex-direction: column;
-				// border: 1px solid yellow;
 
 				h3 {
 					font-family: var(--disp-serif);
@@ -399,10 +377,13 @@ body {
 				}
 
 				p {
+					// display: inline-block;
 					font-family: var(--disp-sans);
 					font-weight: 300;
 					margin: 1rem 0;
 				}
+					.product { @include link; }
+
 			}
 
 		}

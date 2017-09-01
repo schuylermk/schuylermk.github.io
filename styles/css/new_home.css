@@ -219,10 +219,10 @@ body {
           align-items: center; }
           body main #info .contact_info .access .personal {
             color: var(--soft-green);
+            transition: ease-in .2s;
             font-family: 'Source Sans Pro', sans-serif;
             font-size: 1rem;
             font-weight: 100;
-            transition: ease-in .2s;
             margin: 1rem 0 2rem; }
             body main #info .contact_info .access .personal:hover {
               color: var(--body-bg-text-color);
@@ -230,7 +230,7 @@ body {
             body main #info .contact_info .access .personal::after {
               background: var(--impact-color);
               content: '';
-              display: block;
+              display: inherit;
               height: 1px;
               width: 0;
               transition: width ease-out .2s; }
@@ -270,6 +270,22 @@ body {
           font-family: var(--disp-sans);
           font-weight: 300;
           margin: 1rem 0; }
+        body main #info .statement .product {
+          color: var(--soft-green);
+          transition: ease-in .2s; }
+          body main #info .statement .product:hover {
+            color: var(--body-bg-text-color);
+            transition: linear .2s; }
+          body main #info .statement .product::after {
+            background: var(--impact-color);
+            content: '';
+            display: inherit;
+            height: 1px;
+            width: 0;
+            transition: width ease-out .2s; }
+          body main #info .statement .product:hover::after {
+            transition: width ease-out .2s;
+            width: 100%; }
     body main footer {
       align-items: center;
       border: 1rem solid white;
