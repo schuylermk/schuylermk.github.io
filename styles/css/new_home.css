@@ -10,12 +10,20 @@
 /* ------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,200,200i,300,300i,400,400i|Josefin+Slab:200,200i,300,300i,400,400i|Lato:200,200i,300,300i,400,400i|Source+Sans+Pro:200,200i,300,300i,400,400i|Trirong:200,200i,300,300i,400,400i|Unica+One");
 @font-face {
+  font-family: 'Cassannet';
+  src: url("typefaces/Cassannet/Cassannet-Regular.woff2") format("woff2"), url("typefaces/Cassannet/Cassannet-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Cassannet';
+  src: url("typefaces/Cassannet/Cassannet-Bold.woff2") format("woff2"), url("typefaces/Cassannet/Cassannet-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
   font-family: 'Cassannet Outline';
-  src: url("typefaces/Cassannet/cassannet_outline-webfont.woff2") format("woff2"), url("typefaces/Cassannet/cassannet_outline-webfont.woff") format("woff");
-  font-family: 'Cassannet Regular';
-  src: url("typefaces/Cassannet/cassannet-webfont.woff") format("woff"), url("typefaces/Cassannet/cassannet-webfont.woff2") format("woff2");
-  font-family: 'Cassannet Bold';
-  src: url("typefaces/Cassannet/cassannet_bold-webfont.woff") format("woff"), url("typefaces/Cassannet/cassannet_bold-webfont.woff2") format("woff2"); }
+  src: url("typefaces/Cassannet/CassannetOutline-Regular.woff2") format("woff2"), url("typefaces/Cassannet/CassannetOutline-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: 'Knile';
   src: url("typefaces/Knile/knile-regular-webfont.woff") format("woff"); }
@@ -120,6 +128,19 @@ body {
         width: 10vh;
         margin: 12vw auto;
         justify-content: center; }
+      body main #intro .hop {
+        animation: bounce 1.5s infinite;
+        animation-delay: 3s; }
+@keyframes bounce {
+  0%,
+				40%,
+				80%,
+				100% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(2rem); }
+  50% {
+    transform: translateY(4rem); } }
     body main #work {
       display: grid;
       grid-column: 2;
@@ -135,7 +156,8 @@ body {
           transition: all ease-out .3s; }
         body main #work .project #tile .desc h3 {
           display: inline-block;
-          font-family: 'Cassannet Regular','Lato';
+          font-family: 'Cassannet','Lato';
+          font-weight: normal;
           transition: ease-out .1s; }
         body main #work .project #tile:hover img {
           box-shadow: 0 0.3rem 1.5rem 0rem var(--dark-green);
@@ -145,6 +167,7 @@ body {
         body main #work .project #tile:hover h3 {
           color: black;
           font-family: 'Cassannet Outline', 'Lato';
+          font-weight: normal;
           transition: all ease-in-out .4s; }
         body main #work .project .link {
           color: var(--dim-impact-color);
@@ -182,9 +205,7 @@ body {
         align-items: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        width: 90vw; }
+        justify-content: space-between; }
         body main #info .contact_info .self {
           background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
           background-size: cover;
