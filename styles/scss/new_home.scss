@@ -12,24 +12,25 @@
 
 @font-face {
 	font-family: 'Cassannet Regular';
-	src: url('typefaces/Cassannet/Cassannet-Regular.woff2') format('woff2'),
-	url('typefaces/Cassannet/Cassannet-Regular.woff') format('woff');
+	src: url("/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/Cassannet-Regular.woff2") format('woff2'),
+	url('/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/Cassannet-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Cassannet Bold';
-	src: url('typefaces/Cassannet/Cassannet-Bold.woff2') format('woff2'),
-	url('typefaces/Cassannet/Cassannet-Bold.woff') format('woff');
+	src: url('/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/Cassannet-Bold.woff2') format('woff2'),
+	url('/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/Cassannet-Bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Cassannet Outline';
-	src: url('typefaces/Cassannet/CassannetOutline-Regular.woff2') format('woff2'),
-	url('typefaces/Cassannet/CassannetOutline-Regular.woff') format('woff');
+	src: url('/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/CassannetOutline-Regular.woff2'),
+	format('woff2')
+	url('/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/CassannetOutline-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -175,6 +176,7 @@ body {
 			display: grid;
 			grid-row: 2; 
 			grid-column: 2;
+			margin: -2vw 0 0 0;
 
 				a {
 					color: var(--soft-green);
@@ -188,7 +190,7 @@ body {
 			.chevron {
 				display: grid;
 				height: auto; width: 10vh;
-				margin: 12vw auto;
+				margin: 10vw auto;
 				justify-content: center;
 			}
 			.hop {
@@ -236,7 +238,8 @@ body {
 						.desc {
 							h3 {
 								display: inline-block;
-								font-family: 'Cassannet Regular','Lato'; font-weight: normal;
+								font-family: 'Cassannet','Lato'; font-weight: normal;
+								font-style: normal;
 								transition: ease-out .1s;
 							}
 						}
@@ -252,6 +255,7 @@ body {
 							color: black;
 							font-family: 'Cassannet Outline',
 							'Lato'; font-weight: normal;
+							font-style: normal;
 							transition: all ease-in-out .4s;
 						}
 					}
@@ -345,7 +349,7 @@ body {
 					width: 86vw;
 					margin: 1rem 0;
 			
-					.medium { background: no-repeat url(../../img/Monogram_Outline.svg); }
+					.medium { background: no-repeat url(../../img/Monogram.svg); }
 					.twitter { background: no-repeat url(../../img/Twitter_Logo_Blue.svg); }
 					.github { background: no-repeat url(../../img/Github_Logo_White.svg); }
 					.linkedin { background: no-repeat url(../../img/Linkedin_Logo_Blue.svg); }
@@ -410,7 +414,11 @@ body {
            //       Media Queries        //	
 		
 		@media screen and (min-width: 650px) { 
-			
+
+			#intro {
+				margin-top: 0;
+			}
+
 			#info {
 				align-items: flex-start;
 				flex-direction: row;
