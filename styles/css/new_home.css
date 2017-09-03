@@ -172,6 +172,7 @@ body {
           color: black;
           font-family: 'Cassannet Outline', 'Lato';
           font-weight: normal;
+          font-style: normal;
           transition: all ease-in-out .4s; }
         body main #work .project .link {
           color: var(--dim-impact-color);
