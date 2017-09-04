@@ -56,7 +56,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
+
 	h1,
 	h2,
 	h3,
@@ -92,7 +92,7 @@ body {
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-weight: normal;
+		// font-weight: normal;
 		font-style: normal;
 		text-align: left;
 	}
@@ -189,7 +189,7 @@ body {
 	main {
 		display: grid;
 		grid-template-columns: 2vw 96vw 2vw;
-		grid-template-rows: repeat(auto-fill, minmax(15vh, 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(5vh, 1fr));
 		
 //  HELLO Section  //
 
@@ -197,7 +197,7 @@ body {
 			display: flex;
 			grid-row: 2;
 			grid-column: 2;
-			margin: -2vw 0 10vw 0;
+			margin-bottom: 5rem;
 			flex-direction: column;
 
 			h1 {
@@ -254,8 +254,11 @@ body {
 			.project {
 				height: 400px;
 				margin-top: 15vw;
+				
 				#tile {
+				
 					.pic {
+				
 						img {
 							border-radius: 5px;
 							opacity: 1;
@@ -272,17 +275,20 @@ body {
 						}
 					}
 				}
-				.link a {
+
+				.link {
 					color: var(--dim-impact-color);
 					display: inline-block;
 					font-family: var(--disp-sans);
 					bottom: 0%;
 					transition: ease-in .2s;
 					line-height: 1rem;
+					
 					&:hover {
 						color: var(--impact-color);
 						transition: linear .2s;
 					}
+					
 					&::after {
 						background: var(--impact-color);
 						content: '';
@@ -291,6 +297,7 @@ body {
 						width: 0;
 						transition: width ease-out .2s;
 					}
+					
 					&:hover::after {
 						transition: width ease-out .2s;
 						width: 100%;
@@ -307,7 +314,7 @@ body {
 			grid-column: 1;
 			grid-row: 4;
 			margin-top: 25vw;
-			padding: 2rem 7vw;
+			padding: 3rem 2vw;
 			width: 100vw; // border: 3px solid red;
 			a,
 			h1,
@@ -317,11 +324,14 @@ body {
 			p {
 				color: var(--body-bg-text-color);
 			}
+
 			.contact_info {
 				align-items: center;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+				margin-top: 2rem;
+			
 				.self {
 					background-image: url("https://lh3.googleusercontent.com/4yMhhFN7LW8V4cKWcZI78Rt50rk7RyMeUl4sFP6Sucux_nt2M9lJM0v703_2jadKbDUBeTbLaow1rZQcXupWEOm8oVoKVVkhhSb7NGX0lZxUZuglOt1rtRYVceHE6xJNWx7zIwvPQWmgBqAbtdP8Kx5VUy93nfO8Se7kP3fmcgh4p36fP65QlEHQ9jhbd9ldhYSpCU6f6TxrXp_l1HiK4-AgGODGvXoK3b6GyYKhhganvKMXo8ah76JTCnfw-dWNbGkbI4lEtD0psTHxrY2hjwBFOn6BCKjf6cS0zX_89u2QvGXuRLLaggy6yNLy66xiQsPx1xJsqwvMfu3Su8Cz0pwVk_lhYXlUpbua9krDdfTfMaB7oIyadz88VtzCCob_Kl0XOLlsdGMPl2cKES6tRoaAwl0Ec3o21PI3n38yuamRPgZAt1Y-JpTFTxUb36KqCP0N02Of9W8cU4WuwE44ScpnEEsJc8llPuxgWFLeBw8YXAmfVVV4ZnT4ZGpbRN_WPhgaftQ-kHNY8yBCImutFjqIsUp-yTbD4O-hOxDGJRffdnSqnN_d7MNJ7lC2BAucEKq2Wq-bJKq_4yR5gD-y3kY-sg0RbTC1QYIzVMvA4Xuu6GONzmqsEuvi8Q=w811-h691-no");
 					background-size: cover;
@@ -330,10 +340,12 @@ body {
 					width: 300px;
 					display: none;
 				}
+
 				.access {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+				
 					.personal {
 						@include link;
 						font-family: 'Source Sans Pro', sans-serif;
@@ -345,23 +357,29 @@ body {
 						}
 					}
 				}
+				
 				.icon-row {
 					display: flex;
 					justify-content: space-between;
 					width: 86vw;
 					margin: 1rem 0;
+					
 					.medium {
 						background: no-repeat url(../../img/Monogram.svg);
 					}
+					
 					.twitter {
 						background: no-repeat url(../../img/Twitter_Logo_Blue.svg);
 					}
+					
 					.github {
 						background: no-repeat url(../../img/Github_Logo_White.svg);
 					}
+					
 					.linkedin {
 						background: no-repeat url(../../img/Linkedin_Logo_Blue.svg);
 					}
+					
 					.logo {
 						background-size: cover;
 						width: 3rem;
@@ -373,25 +391,32 @@ body {
 					}
 				}
 			}
+
 			.statement {
 				display: flex;
 				flex-direction: column;
+				margin-top: 2rem;
+			
 				h3 {
 					font-family: var(--disp-serif);
 					font-weight: 400;
 					line-height: 1em;
 				}
+			
 				p {
 					font-family: var(--disp-sans);
 					font-weight: 300;
 					margin: 1rem 0;
 				}
+			
 				.product {
 					@include link;
 				}
 			}
 		}
-		//  FOOTER  //
+
+//  FOOTER  //
+
 		footer {
 			align-items: center;
 			border: 1rem solid white;
@@ -399,6 +424,7 @@ body {
 			flex-direction: column-reverse;
 			grid-column: 1 / span 3;
 			grid-row: 5;
+
 			a {
 				color: var(--dark-impact-color);
 				font-family: var(--disp-sans), sans-serif;
@@ -415,10 +441,13 @@ body {
 
 
 		@media screen and (min-width: 650px) {
-		main {
 		
+		main {
+			
+			grid-template-columns: 5vw 90vw 5vw;
+
 			#intro {
-				margin-top: 0;
+				margin: 3rem;
 		
 				h1 {
 					font-size: 6vw;
@@ -431,7 +460,8 @@ body {
 			}
 		
 			#work {
-		
+				margin: 0 2rem;
+				
 				#tile {
 		
 					.pic {
@@ -468,6 +498,7 @@ body {
 				.contact_info {
 					height: 100%;
 					width: 28vw;
+					margin-left: 5vw;
 		
 					.self {
 						display: flex;
@@ -494,7 +525,12 @@ body {
 				}
 		
 				.statement {
+					margin-right: 5vw;
 					width: 50vw;
+					
+					p:last-of-type {
+						margin-bottom: 2rem;
+					}
 				}
 			}
 		
