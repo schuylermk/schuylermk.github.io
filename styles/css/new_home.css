@@ -11,17 +11,17 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,200,200i,300,300i,400,400i|Josefin+Slab:200,200i,300,300i,400,400i|Lato:200,200i,300,300i,400,400i|Source+Sans+Pro:200,200i,300,300i,400,400i|Trirong:200,200i,300,300i,400,400i|Unica+One");
 @font-face {
   font-family: 'Cassannet Regular';
-  src: url("/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/Cassannet-Regular.woff2") format("woff2"), url("/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/Cassannet-Regular.woff") format("woff");
+  src: url(typefaces/Cassannet/Cassannet-Regular.woff2) format("woff2"), url(typefaces/Cassannet/Cassannet-Regular.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Cassannet Bold';
-  src: url("/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/Cassannet-Bold.woff2") format("woff2"), url("/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/Cassannet-Bold.woff") format("woff");
+  src: url(typefaces/Cassannet/Cassannet-Bold.woff2) format("woff2"), url(typefaces/Cassannet/Cassannet-Bold.woff) format("woff");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'Cassannet Outline';
-  src: url("/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/CassannetOutline-Regular.woff2"), format("woff2") url("/Users/name/Desktop/theschuyler/schuylermk.github.io/docs/sk_site/typefaces/Cassannet/CassannetOutline-Regular.woff") format("woff");
+  src: url(typefaces/Cassannet/CassannetOutline-Regular.woff2), format("woff2") url(typefaces/Cassannet/CassannetOutline-Regular.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
