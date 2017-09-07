@@ -1,5 +1,3 @@
-/* ------------------------------------------- */
-
 
 /*
 	0. Typography
@@ -118,9 +116,9 @@ body {
 /*	2. Document setup
 /* ------------------------------------------- */
 
-////////////////             ////////////////////////////
+
 //       CSS Variables        //
-////////////////             ////////////////////////////				
+				
 :root {
 	--body-bg-color: #fefefe;
 	--body-bg-text-color: #E1E7DC;
@@ -566,12 +564,6 @@ body {
 					h1 {
 						font-size: 3.4rem;
 						line-height: 4rem;
-		
-						// #dot {
-						// 	color: var(--body-bg-color);
-						// 	line-height: 0.2em;
-						// 	display: inline-block;
-						// }
 					}
 				}
 			}
