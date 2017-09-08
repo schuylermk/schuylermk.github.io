@@ -151,8 +151,8 @@ body {
   position: absolute;
   overflow-x: hidden;
   /* ------------------------------------------- */
-  	/*	3. Page Layout
-    /* ------------------------------------------- */ }
+                                                  /*	3. Page Layout
+/* ------------------------------------------- */ }
   body h1 {
     font-family: var(--disp-sans);
     font-size: 6vw;
@@ -362,8 +362,8 @@ body {
       align-items: center;
       border: 1rem solid white;
       display: flex;
-      flex-direction: column-reverse;
-      grid-column: 1 / span 3;
+      flex-direction: column;
+      grid-column: 2;
       grid-row: 5; }
       body main footer a {
         color: var(--dark-impact-color);
@@ -422,8 +422,6 @@ body {
           body main #info .statement p:last-of-type {
             margin-bottom: 2rem; }
       body main footer {
-        flex-direction: row;
-        justify-content: space-between;
         grid-column: 2; }
         body main footer a {
           margin: 1rem; } }

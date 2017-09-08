@@ -185,14 +185,19 @@ body {
 		max-width: 100%;
 		height: auto;
 	}
-	/* ------------------------------------------- */
-	/*	3. Page Layout
-  /* ------------------------------------------- */
+
+/* ------------------------------------------- */ /*	3. Page Layout
+/* ------------------------------------------- */
+
+// MAIN Section  //
+
 	main {
 		display: grid;
 		grid-template-columns: 2vw 96vw 2vw;
 		grid-template-rows: repeat(auto-fill, minmax(5vh, 1fr));
-		
+
+
+
 //  HELLO Section  //
 
 		#intro {
@@ -243,7 +248,9 @@ body {
 					transform: translateY(3.5rem);
 				}
 			}
-		}
+		}   // ['intro' closing] //
+
+
 
 //  WORK Section  //
 
@@ -306,8 +313,12 @@ body {
 					}
 				}
 			}
-		}
-		//  ABOUT Section  //
+		}   // ['work' closing] //
+		
+
+
+//  ABOUT Section  //
+		
 		#info {
 			align-items: center;
 			background-color: #222;
@@ -415,7 +426,11 @@ body {
 					@include link;
 				}
 			}
-		}
+
+
+		}   // ['info' closing] //
+
+
 
 //  FOOTER  //
 
@@ -423,8 +438,8 @@ body {
 			align-items: center;
 			border: 1rem solid white;
 			display: flex;
-			flex-direction: column-reverse;
-			grid-column: 1 / span 3;
+			flex-direction: column;
+			grid-column: 2;
 			grid-row: 5;
 
 			a {
@@ -436,11 +451,13 @@ body {
 					color: var(--impact-color);
 				}
 			}
-		}
-	}
+		}   // ['footer' closing] //
 
-		//       Media Queries        //	
+	}     //  [[ 'main' closing ]]  //
 
+
+
+//  Media Queries  //	
 
 		@media screen and (min-width: 650px) {
 		
@@ -531,9 +548,8 @@ body {
 				}
 			
 				footer {
-					flex-direction: row;
-					justify-content: space-between;
 					grid-column: 2;
+					
 					a {
 						margin: 1rem;
 					}
@@ -568,4 +584,5 @@ body {
 				}
 			}
 		}
-}
+
+}   	//   [[[ 'body' closing ]]]   //
