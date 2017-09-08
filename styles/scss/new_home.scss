@@ -17,23 +17,23 @@
 
 @font-face {
 	font-family: 'Cassannet Regular';
-	src: url(typefaces/Cassannet/Cassannet-Regular.woff2) format('woff2'), 
-	url(typefaces/Cassannet/Cassannet-Regular.woff) format('woff');
+	src: url('../typefaces/Cassannet/Cassannet-Regular.woff2') format('woff2'), 
+	url('../typefaces/Cassannet/Cassannet-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Cassannet Bold';
-	src: url(typefaces/Cassannet/Cassannet-Bold.woff2) format('woff2'), 
-	url(typefaces/Cassannet/Cassannet-Bold.woff) format('woff');
+	src: url('../typefaces/Cassannet/Cassannet-Bold.woff2') format('woff2'), 
+	url('../typefaces/Cassannet/Cassannet-Bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Cassannet Outline';
-	src: url(typefaces/Cassannet/CassannetOutline-Regular.woff2), format('woff2') url(typefaces/Cassannet/CassannetOutline-Regular.woff) format('woff');
+	src: url('../typefaces/Cassannet/CassannetOutline-Regular.woff2'), format('woff2') url('../typefaces/Cassannet/CassannetOutline-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -138,6 +138,8 @@ body {
 	--disp-sans: 'Josefin Sans', sans-serif;
 	--disp-serif: 'Josefin Slab', sans-serif;
 	--para-type: 'Josefin Slab', serif;
+	--cassannet-reg: 'Cassannet Regular', 'Josefin Sans', 'Trirong', 'Lato', sans-serif;
+	--cassannet-outline: 'Cassannet Outline', 'Josefin Slab', 'Trirong', serif;
 }
 
 ///////////////////////////////////////////////////////////	
@@ -268,7 +270,7 @@ body {
 					.desc {
 						h3 {
 							display: inline-block;
-							font-family: 'Cassannet Regular', 'Lato';
+							font-family: var(--cassannet-reg);
 							font-weight: normal;
 							font-style: normal;
 							transition: ease-out .2s;
@@ -478,9 +480,7 @@ body {
 						}
 			
 						&:hover .desc h3 {
-							font-family: 'Cassannet Outline', 'Lato';
-							font-weight: normal;
-							font-style: normal;
+							font-family: var(--cassannet-outline);
 							transition: all ease-in-out .3s;
 						} 	
 					}	
