@@ -154,7 +154,7 @@ img {
 
 ::selection {
     background: #333;
-    color: #FFF;
+    color: lime;
 }
 
 ::-webkit-input-placeholder {
@@ -164,40 +164,3 @@ img {
 :-ms-input-placeholder {
     color: #A9A9A9;
 }
-
-
-/* ------------------------------------------ 
-* {
-  font-size: 12px;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  background-color: black;
-  line-height: 1.4;
-
-  h1 {
-    font-size: 2em;
-  }       
-  h2 {
-    font-size: 1.5em;
-  }      
-  aside {
-    font-size: 0.75em;
-  }
-  p {
-    color: white;
-    font-weight: 200;
-    z-index: 777;
-  }
-  
-  .boldy {
-    letter-spacing: 5px;
-    font-size: 2.75em;
-    font-family: 'cassannet_boldbold';
-  }
-}
-*/
