@@ -228,12 +228,11 @@ body {
           border-radius: 5px;
           opacity: 1;
           transition: all ease-out .3s; }
-        body main #work .project #tile .desc h3 {
-          display: inline-block;
-          font-family: var(--cassannet-reg);
-          font-weight: normal;
-          font-style: normal;
-          transition: ease-out .2s; }
+        body main #work .project #tile .desc .beer {
+          height: 2.5rem;
+          width: auto;
+          background-image: url("../../img/regular_beerocracy.svg");
+          background-repeat: no-repeat; }
         body main #work .project .link {
           color: var(--dim-impact-color);
           display: inline-block;
@@ -393,8 +392,10 @@ body {
           opacity: 1;
           transform: translateY(-0.3rem);
           transition: opacity linear .2s box-shadow ease-in-out .2s; }
-        body main #work .project #tile:hover .desc h3 {
-          font-family: var(--cassannet-outline);
+        body main #work .project #tile:hover h3 .beer {
+          height: 2.5rem;
+          width: auto;
+          background-image: url("../../img/outline _beerocracy.svg");
           transition: all ease-in-out .3s; }
       body main #info {
         align-items: flex-start;
