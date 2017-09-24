@@ -261,9 +261,11 @@ body {
 			grid-row: 3;
 			grid-gap: 4vw;
 			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			margin-top: 5vw;
+			
 			.project {
 				height: 400px;
-				margin-top: 15vw;
+				margin-top: 5vw;
 				
 				#tile {
 				
