@@ -173,7 +173,8 @@ body {
 		line-height: 4rem;
 	}
 	p {
-		font-family: var(--para-type), serif;
+		font-family: var(--disp-sans);
+		font-weight: 300;
 		line-height: 1.5rem;
 	}
 	a {
@@ -275,13 +276,23 @@ body {
 						}
 					}
 					.desc {
-						.beer {
-							height: 2.5rem;
-							width: auto;
-							background-image: url('../../img/regular_beerocracy.svg');
+						.svg-title {
 							background-repeat: no-repeat;
+							height: 3rem;
+							transition: .25s;
 						}
-						
+
+						.beer {
+							background-image: url('../../img/regular_beerocracy.svg');
+						}
+
+						.seagle {
+							background-image: url('../../img/regular_seagle.svg');
+						}
+
+						.ironvice {
+							background-image: url('../../img/regular_ironvice.svg');
+						}
 					}
 				}
 
@@ -496,12 +507,21 @@ body {
 							transition: opacity linear .2s box-shadow ease-in-out .2s;
 						}
 			
-						&:hover h3 .beer {
-							height: 2.5rem;
-							width: auto;
-							background-image: url('../../img/outline _beerocracy.svg');
-							transition: all ease-in-out .3s;
+						&:hover .svg-title {
+							transition: all ease-out .15s;
+						}
+
+						&:hover .beer {
+							background-image: url('../../img/outline_beerocracy.svg');
 						} 	
+
+						&:hover .seagle {
+							background-image: url('../../img/outline_seagle.svg');
+						}
+
+						&:hover .ironvice {
+							background-image: url('../../img/outline_ironvice.svg');
+						}
 					}	
 				}
 			
