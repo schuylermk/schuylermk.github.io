@@ -252,14 +252,14 @@ body {
 			}
 		}   // ['intro' closing] //
 
-		.deliver {
-			color: #AFB999;
-			font-family: var(--disp-sans);
-			font-size: 2rem;
-			margin: -5vw 0;
-			grid-column: 2;
-			grid-row: 3;
-		}
+		// .deliver {
+		// 	color: #AFB999;
+		// 	font-family: var(--disp-sans);
+		// 	font-size: 2rem;
+		// 	margin: -5vw 0;
+		// 	grid-column: 2;
+		// 	grid-row: 3;
+		// }
 
 
 //  WORK Section  //  mobile-first   //
@@ -503,19 +503,18 @@ body {
 					
 				}
 				
-				.deliver {
-					color: #AFB999;
-					font-family: var(--disp-sans);
-					font-size: 2rem;
-					margin: -5vw 0;
-					grid-column: 2;
-					grid-row: 3;
-				}
+				// .deliver {
+				// 	color: #AFB999;
+				// 	font-family: var(--disp-sans);
+				// 	font-size: 2rem;
+				// 	margin: -5vw 0;
+				// 	grid-column: 2;
+				// 	grid-row: 3;
+				// }
 			
 				#work {
 					margin: 0 2rem;
 					
-
 					.project #tile {
 			
 						img {
@@ -547,8 +546,41 @@ body {
 							background-image: url('../../img/outline_ironvice.svg');
 						}
 					}	
+
+					#lightbox {
+						position: fixed;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: rgba(0, 0, 0, 0.8);
+						justify-content: center;
+						align-items: center;
+						display: flex;
+					}	
+						
+					#lightbox:not(:target) {
+						opacity: 0;
+						visibility: hidden;
+						transition: opacity 1s, visibility 1s;
+					}	
+				
+					#lightbox:target {
+						opacity: 1;
+						visibility: visible;
+						transition: opacity 1s, visibility 1s;
+					}
+
+					// .modal {
+					// 	height: 80vh;
+					// 	width: 70%;
+					// 	background: #fff;
+					// 	padding: 20px;
+					// 	text-align: center;
+					// }
 				}
-			
+
+
 				#info {
 					align-items: flex-start;
 					flex-direction: row;
