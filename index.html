@@ -1,172 +1,191 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>-->
-        <title>Schuyler Klaassen</title>
-        <link rel="stylesheet" type="" href="styles/css/new_home.css">
-        <!--<script type="text/javascript" src="../scripts/scriptish.js"></script>-->
-    </head>
-    <body>
-        <main>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schuyler Klaassen</title>
+
+    <link rel="stylesheet" type="" href="styles/css/new_home.css">
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <main>
+
+        <section id="intro">
+
+            <h1>Hi,
+                <!-- I'm-->my&nbsp;name is
+                <span class="under">
+                    <a title="sky + ler" href="#info">Schuyler</a>.
+                </span>
+                <span id="dot" aria-hidden="true">.
+                    <br>
+                </span>
+ I'm a User Experience /Interface Developer in Portland<span class="period" aria-hidden="true"><img src="img/oregon.svg" alt="Here be extraneous content in the form of the outline of Oregon as a period/full-stop"></span>
+                <!-- here on&nbsp;Earth-->
+            </h1>
+            <div class="chevron hop">
+                <img src="img/ArrowJosefin2.svg" alt="">
+            </div>
+        </section>
+
+        <section id="work">
+
+            <article class="project">
+                <a class="tile" href="beerocrat-casestudy.html" target="_blank">
+
+                    <div class="pic">
+                        <img src="img/beerocrat-search-page.png" alt="Beerocrat mobile app design Sketch Invision Prototype">
+                    </div>
+
+                    <div class="desc">
+
+                        <div class="svg-title beer"></div>
+                        <p>Your go-to mobile app for all the beer info you could possibly need. UX/UI Design, User Research,
+                            Sketch, Invision Prototype. Click/tap to read the case study.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="project">
+
+                <a class="tile" href="https://invis.io/PED0DJARA" target="_blank">
+
+                    <div class="pic">
+                        <img src="img/Seagle_noeye_logo.png" alt="Seagle Food Shop, Caterer">
+                    </div>
+
+                    <div class="desc">
+
+                        <div class="svg-title seagle"></div>
+                        <p>Finest provisions and refreshments for soaring palettes. UX/UI Design, Sketch, Invision Prototype.
+                            Click/tap to see a prototype, or link to a user flow below.</p>
+
+                    </div>
+                </a>
+
+                <a class="link" href="seagle-flow.html" target="_blank">&nbsp;
+                    <br>User Flow</a>
+            </article>
+
+            <article class="project">
+
+                <a class="tile" href="ironvice-casestudy.html" target="_blank">
+
+                    <div class="pic">
+                        <img src="img/IronViceWebsite.png" alt="Iron Vice Intro .png Javascript MVC Ember">
+                    </div>
+
+                    <div class="desc">
+                        <div class="svg-title ironvice"></div>
+                        <p>User experience / user interface development job I did as an intern for an independent video game
+                            company. UX/UI Design, Sketch, Javascript MVC framework Ember. Click/tap to read the case study.</p>
+
+                    </div>
+                </a>
+            </article>
             
-            <section id="intro">   
+            <article class="project">
+                
+                <a class="tile" aria-label="Open Navigation" href="#lightbox">
+                    <div class="pic">
+                        <img src="img/Persona - Lynn@sm.jpg" alt="User persona pages image Pylon app">
+                    </div>      
 
-                <h1>Hi, my&nbsp;name is&nbsp;<a title="sky + ler" href="#info">Schuyler</a>.<span id="dot">.<br></span>
-                
-                <!--style="color:#82AD5F;" -->
-                
-                    I&nbsp;am a user experience designer here on&nbsp;Earth.
-                </h1>
-                <div class="chevron hop">
-                    <img src="img/Arrow.svg" alt="">
+                    <div class="desc">
+                        <div class="svg-title pylon"></div>
+                        <p>User personas for Pylon App. Process involved having interview conversations with 1 potential user, and 2 fictional potential users which helped to greatlyincrease empathy. Highlights design skill and Sketch mastery.</p>
+                    </div>
+                </a>
+            </article>
+
+            <div id="lightbox" onkeydown="ESCclose(evt)">
+
+
+                <a href="#work/#lightbox" class="close"></a>
+                <ul class="bxslider">
+                    <li>
+                        <img src="img/Persona - Lynn.jpg" alt="" title="Funky roots">
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="img/Persona - Walter.jpg" alt="" title="Funky roots">
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="img/Persona - Amanda.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+
+        <section id="info">
+
+            <article class="contact_info">
+
+                <div class="self" title="So meta, dog">
                 </div>
-            </section>
 
-            <!-- <h2 class="deliver">UX/UI Work</h2> -->
+                <div class="access">
 
-            <section id="work">
+                    <a target="_blank" class="personal" href="img/Sept_Resume_sklaassen@2x.pdf">Resumé</a>
 
-                    <article class="project">
-                        <a id="tile" href="beerocrat-casestudy.html" target="_blank">
-                        
-                        <div class="pic">
-                            <img src="img/beerocrat-search-page.png" alt="Beerocrat mobile app design Sketch Invision Prototype"></div>
-                        
-                        <div class="desc">
+                    <a class="personal" href="mailto:schuyler@theschuyler.com">schuyler@theschuyler.com</a>
+                </div>
 
-                            <div class="svg-title beer"></div>
-                            <p>Your go-to mobile app for all the beer info you could possibly need. UX/UI Design, User Research, Sketch, Invision Prototype. Click/tap to read the case study.</p>
+                <div class="icon-row">
 
-                        </div>
-                        </a> 
-                    </article>
+                    <a class="social" title="Linkedin Account" href="https://www.linkedin.com/in/schuylermarinus/">
+                        <div class="logo linkedin"></div>
+                    </a>
+                    <a class="social" title="Github Account" href="https://github.com/schuylermk ">
+                        <div class="logo github"></div>
+                    </a>
+
+                    <a class="social" title="Twitter Profile" href="https://twitter.com/OrenNorwalk">
+                        <div class="logo twitter"></div>
+                    </a>
+
+                    <a class="social" title="Medium bookmarked articles" href="https://medium.com/@schuylermk/has-recommended">
+                        <div class="logo medium"></div>
+                    </a>
+
+                </div>
+            </article>
+
+            <article class="statement">
+
+                <h3>Thank you for visiting. </h3>
+
+                <p>I'm a front end developer educated in human computer interaction and user experience design. My focus is
+                    on building clean, navigable user interfaces and I believe keeping sight of the needs of the user is
+                    the truest path toward any product's ultimate success.</p>
+
+                <p>When I'm not with nose to an artboard in
+                    <a class="product sketch" href="https://www.sketchapp.com/features/">Sketch</a> or digging through Firefox
+                    <a class="product nightly" href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly</a> or Chrome's developer tools, I'm probably pedaling a bicycle around town toward a park/restaurant/cafe/theater/music
+                    venue, hiking toward a summit vista/swimming hole, or on the porch listening to music/the breeze/the
+                    birds.
+                </p>
+
+                <!--<h3>Writing</h3>-->
+            </article>
+
+        </section>
+
+        <footer>
+            <a href="#">
+                <i>&copy; 2017 Schuyler Klaassen</i>
+            </a>
+        </footer>
+
+    </main>
     
-                    <article class="project">
-                        
-                        <a id="tile" href="https://invis.io/PED0DJARA" target="_blank">
-                            
-                            <div class="pic"><img src="img/Seagle_noeye_logo.png" alt="Seagle Food Shop, Caterer"></div>
-                            
-                            <div class="desc">
-                            
-                                <div class="svg-title seagle"></div>
-                                <p>Finest provisions and refreshments for soaring palettes. UX/UI Design, Sketch, Invision Prototype. Click/tap to see a prototype, or link to a user flow below.</p>
-                            
-                            </div>
-                        </a> 
+</body>
 
-                        <a class="link" href="seagle-flow.html" target="_blank">&nbsp;<br>User Flow</a> 
-                    </article>
-    
-                    <article class="project">
-                        
-                        <a id="tile" href="ironvice-casestudy.html" target="_blank">
-                         
-                            <div class="pic"><img src="img/IronViceWebsite.png" alt="Iron Vice Intro .png Javascript MVC Ember"></div>
-                            
-                            <div class="desc">
-                                <div class="svg-title ironvice"></div>
-                                <p>User experience / user interface development job I did as an intern for an independent video game company. UX/UI Design, Sketch, Javascript MVC framework Ember. Click/tap to read the case study.</p>
-                          
-                            </div>
-                        </a> 
-                    </article>
-
-                    <!-- <article class="project">
-                        
-                        <a id="tile" aria-label="Open Navigation" href="#lightbox">
-                            <img src="img/Persona - Lynn@sm.jpg" alt="Beerocrat mobile app design Sketch Invision Prototype">
-                        Click</a>
-                        
-                        <div id="lightbox">
-                            <div class="modal">
-                                <div class="carousel-wrapper">
-                                    <span id="target-item-1"></span>
-                                    <span id="target-item-2"></span>
-                                    <span id="target-item-3"></span>
-
-                                    <div class="carousel-item item-1">
-                                        <img src="img/Persona - Lynn.jpg">
-                                        <a class="arrow arrow-prev" href="#target-item-3"></a>
-                                        <a class="arrow arrow-next" href="#target-item-2"></a>
-                                    </div>
-                                    <div class="carousel-item item-2">
-                                        <img src="img/Persona - Amanda.jpg">
-                                        <a class="arrow arrow-prev" href="#target-item-1"></a>
-                                        <a class="arrow arrow-next" href="#target-item-3"></a>
-                                    </div>
-                                    <div class="carousel-item item-3">
-                                        <img src="img/Persona - Walter.jpg">
-                                        <a class="arrow arrow-prev" href="#target-item-2"></a>
-                                        <a class="arrow arrow-next" href="#target-item-1"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>      -->
-                </section>
-                        
-
-            <section id="info">
-                
-                <article class="contact_info">    
-                    
-                    <div class="self"  title="So meta, dog">
-                    </div>
-                    
-                    <div class="access">
-                     
-                        <a target="_blank" class="personal" href="img/Sept_Resume_sklaassen@2x.pdf">Resumé</a>
-                     
-                        <a class="personal" href="mailto:schuyler@theschuyler.com">schuyler@theschuyler.com</a>
-                    </div>
-    
-                    <div class="icon-row">
-                                               
-                        <a class="social" title="Linkedin Account" href="https://www.linkedin.com/in/schuylermarinus/">
-                            <div class="logo linkedin"></div>
-                        </a>
-                        <a class="social" title="Github Account" href="https://github.com/schuylermk ">
-                            <div class="logo github"></div>
-                        </a>    
-
-                        <a class="social" title="Twitter Profile" href="https://twitter.com/OrenNorwalk">
-                            <div class="logo twitter"></div>
-                        </a>
-
-                        <a class="social" title="Medium bookmarked articles" href="https://medium.com/@schuylermk/has-recommended">
-                            <div class="logo medium"></div>
-                        </a>
-
-                    </div>  
-                </article>
-
-                <article class="statement">
-
-                    <h3>Thank you for visiting. </h3>
-                    
-                    <p>I'm a front end developer educated in human computer interaction and user experience design. My focus is on building clean, navigable user interfaces and I believe keeping sight of the needs of the user is the truest path toward any product's ultimate success.</p>
-                    
-                    <p>When I'm not with nose to an artboard in <a class="product" href="https://www.sketchapp.com/features/">Sketch</a> or digging through Firefox <a class="product" href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly</a> or Chrome's developer tools, I'm probably pedaling a bicycle around town toward a park/restaurant/cafe/theater/music venue, hiking toward a summit vista/swimming hole, or on the porch listening to music/the breeze/the birds.</p>
-                    
-                    <!--<h3>Writing</h3>-->
-                </article>
-
-            </section>
-
-            <footer>   
-                 
-                <a href="#"><i>&copy; 2017 Schuyler Klaassen</i></a>
-                <!--<a href="#" title="Back up top" id="tothetop">↑ Back to top ↑</a>-->
-            </footer>
-        
-        </main>
-
-    </body>
 </html>
