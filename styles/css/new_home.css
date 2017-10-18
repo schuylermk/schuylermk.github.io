@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 	0. Typography
 	1. CSS Reset & Clearfix	
@@ -26,6 +27,28 @@
 @font-face {
   font-family: 'Knile';
   src: url("typefaces/Knile/knile-regular-webfont.woff") format("woff"); }
+:root {
+  --color-bg-body: #fefefe;
+  --color-text-light: #E1E7DC;
+  --color-body-text-dark: #4C4C4C;
+  --color-link-text: #37ABB8;
+  --color-impact-dark: #436ca5;
+  /* hex #143D66 */
+  --color-impact-dim: rgba(59, 126, 194, 0.8);
+  /* hex #287acc */
+  --color-impact: #287acc;
+  /* hex #287acc */
+  --color-green-dark: #464c35;
+  --color-green-soft: #82915f;
+  /* hex #708C54 */
+  --color-green-olive: #575e33;
+  /* hex #575E33 */
+  --disp-sans: 'Josefin Sans', sans-serif;
+  --disp-serif: 'Josefin Slab', sans-serif;
+  --para-type: 'Josefin Slab', serif;
+  --cassannet-reg: 'Cassannet Regular', 'Josefin Sans', 'Trirong', 'Lato', sans-serif;
+  --cassannet-outline: 'Cassannet Outline', 'Josefin Slab', 'Trirong', serif; }
+
 /* ------------------------------------------- */
 /*	1. CSS Reset
 /* ------------------------------------------- */
@@ -119,20 +142,20 @@ body {
 /*	2. Document setup
 /* ------------------------------------------- */
 :root {
-  --body-bg-color: #fefefe;
-  --body-bg-text-color: #E1E7DC;
-  --body-text-color: #4C4C4C;
-  --link-text-color: #37ABB8;
-  --dark-impact-color: rgba(20, 61, 102, 0.8);
+  --color-bg-body: #fefefe;
+  --color-text-light: #E1E7DC;
+  --color-body-text-dark: #4C4C4C;
+  --color-link-text: #37ABB8;
+  --color-impact-dark: #436ca5;
   /* hex #143D66 */
-  --dim-impact-color: rgba(40, 122, 204, 0.8);
+  --color-impact-dim: rgba(59, 126, 194, 0.8);
   /* hex #287acc */
-  --impact-color: #287acc;
+  --color-impact: #287acc;
   /* hex #287acc */
-  --dark-green: #464c35;
-  --soft-green: #82915f;
+  --color-green-dark: #464c35;
+  --color-green-soft: #82915f;
   /* hex #708C54 */
-  --oliver: #575e33;
+  --color-green-olive: #575e33;
   /* hex #575E33 */
   --disp-sans: 'Josefin Sans', sans-serif;
   --disp-serif: 'Josefin Slab', sans-serif;
@@ -144,15 +167,15 @@ body {
   box-sizing: border-box; }
 
 body {
-  color: var(--body-text-color);
-  background: var(--body-bg-color);
-  font-size: 18px;
+  color: var(--color-body-text-dark);
+  background: var(--color-bg-body);
+  font-size: 20px;
   width: 100%;
   position: absolute;
   overflow-x: hidden;
   /* ------------------------------------------- */
-                                                  /*	3. Page Layout
-/* ------------------------------------------- */ }
+  	/*	3. Page Layout
+  /* ------------------------------------------- */ }
   body h1 {
     font-family: var(--disp-sans);
     font-size: 6vw;
@@ -174,7 +197,7 @@ body {
     line-height: 1.5rem; }
   body a {
     cursor: pointer;
-    color: var(--body-text-color);
+    color: var(--color-body-text-dark);
     text-decoration: none; }
   body img {
     max-width: 100%;
@@ -193,15 +216,16 @@ body {
         font-size: 2.8rem;
         line-height: 3.5rem;
         padding: 2rem; }
+        body main #intro h1 a {
+          color: var(--color-impact-dark); }
         body main #intro h1 #dot {
-          color: var(--body-bg-color);
+          color: var(--color-bg-body);
           line-height: 0.2em;
           display: flex; }
-      body main #intro a {
-        color: var(--soft-green); }
       body main #intro .chevron {
         width: 3rem;
-        margin: 10vw auto; }
+        margin: 10vw auto;
+        transform: rotate(90); }
       body main #intro .hop {
         animation: bounce 3s infinite;
         animation-delay: 2s;
@@ -216,13 +240,6 @@ body {
     transform: translateY(2rem); }
   25% {
     transform: translateY(3.5rem); } }
-    body main .deliver {
-      color: #AFB999;
-      font-family: var(--disp-sans);
-      font-size: 2rem;
-      margin: -5vw 0;
-      grid-column: 2;
-      grid-row: 3; }
     body main #work {
       display: grid;
       grid-column: 2;
@@ -231,34 +248,36 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       margin-top: 5vw; }
       body main #work .project {
-        height: 400px;
+        height: 70vh;
         margin-top: 5vw; }
-        body main #work .project #tile img {
+        body main #work .project .tile img {
           border-radius: 5px;
           opacity: 1;
           transition: all ease-out .3s; }
-        body main #work .project #tile .desc .svg-title {
+        body main #work .project .tile .desc .svg-title {
           background-repeat: no-repeat;
           height: 3rem;
           transition: .25s; }
-        body main #work .project #tile .desc .beer {
+        body main #work .project .tile .desc .beer {
           background-image: url("../../img/regular_beerocracy.svg"); }
-        body main #work .project #tile .desc .seagle {
+        body main #work .project .tile .desc .seagle {
           background-image: url("../../img/regular_seagle.svg"); }
-        body main #work .project #tile .desc .ironvice {
+        body main #work .project .tile .desc .ironvice {
           background-image: url("../../img/regular_ironvice.svg"); }
+        body main #work .project .tile .desc .pylon {
+          background-image: url("../../img/regular_pylon.svg"); }
         body main #work .project .link {
-          color: var(--dim-impact-color);
+          color: var(--color-impact-dim);
           display: inline-block;
           font-family: var(--disp-sans);
           bottom: 0%;
           transition: ease-in .2s;
           line-height: 1rem; }
           body main #work .project .link:hover {
-            color: var(--impact-color);
+            color: var(--color-impact);
             transition: linear .2s; }
           body main #work .project .link::after {
-            background: var(--impact-color);
+            background: var(--color-impact);
             content: '';
             display: block;
             height: 1.5px;
@@ -267,6 +286,68 @@ body {
           body main #work .project .link:hover::after {
             transition: width ease-out .2s;
             width: 100%; }
+      body main #work #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        display: none; }
+        body main #work #lightbox .close {
+          position: relative;
+          display: block; }
+          body main #work #lightbox .close:after {
+            background-color: #e60000;
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            right: 9vw;
+            top: 7vh;
+            display: flex;
+            z-index: 1;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            content: "×";
+            cursor: pointer; }
+          body main #work #lightbox .close:before {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.7);
+            content: "";
+            cursor: default; }
+        body main #work #lightbox:not(:target) {
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 1s, visibility 1s; }
+        body main #work #lightbox:target {
+          display: grid;
+          opacity: 1;
+          visibility: visible;
+          transition: opacity 1s, visibility 1s; }
+        body main #work #lightbox .bxslider {
+          position: relative;
+          justify-self: center;
+          width: 88vw;
+          height: 96vh;
+          background: #fff;
+          overflow-y: auto;
+          align-self: center;
+          border-radius: 4px; }
+          body main #work #lightbox .bxslider > li {
+            height: 56vw;
+            padding: 4vw;
+            display: flex;
+            justify-content: center; }
+          body main #work #lightbox .bxslider hr {
+            border: 1px solid var(--color-text-light);
+            width: 72vw;
+            margin: 0 auto; }
     body main #info {
       align-items: center;
       background-color: #222;
@@ -283,7 +364,7 @@ body {
       body main #info h3,
       body main #info h4,
       body main #info p {
-        color: var(--body-bg-text-color); }
+        color: var(--color-text-light); }
       body main #info .contact_info {
         align-items: center;
         display: flex;
@@ -302,17 +383,17 @@ body {
           flex-direction: column;
           align-items: center; }
           body main #info .contact_info .access .personal {
-            color: var(--soft-green);
+            color: var(--color-green-soft);
             transition: ease-in .2s;
             font-family: 'Source Sans Pro', sans-serif;
             font-size: 1rem;
             font-weight: 100;
             margin: 1rem 0 2rem; }
             body main #info .contact_info .access .personal:hover {
-              color: var(--body-bg-text-color);
+              color: var(--color-bg-body);
               transition: linear .2s; }
             body main #info .contact_info .access .personal::after {
-              background: var(--impact-color);
+              background: var(--color-impact);
               content: '';
               display: inherit;
               height: 1px;
@@ -356,13 +437,13 @@ body {
           font-weight: 300;
           margin: 1rem 0; }
         body main #info .statement .product {
-          color: var(--soft-green);
+          color: var(--color-green-soft);
           transition: ease-in .2s; }
           body main #info .statement .product:hover {
-            color: var(--body-bg-text-color);
+            color: var(--color-bg-body);
             transition: linear .2s; }
           body main #info .statement .product::after {
-            background: var(--impact-color);
+            background: var(--color-impact);
             content: '';
             display: inherit;
             height: 1px;
@@ -379,49 +460,50 @@ body {
       grid-column: 2;
       grid-row: 6; }
       body main footer a {
-        color: var(--dark-impact-color);
+        color: var(--color-impact-dark);
         font-family: var(--disp-sans), sans-serif;
         font-weight: 300;
         margin: 0.5rem; }
         body main footer a:hover {
-          color: var(--impact-color); }
+          color: var(--color-impact); }
   @media screen and (min-width: 650px) {
     body main {
       grid-template-columns: 5vw 90vw 5vw; }
       body main #intro {
         margin: 3rem; }
         body main #intro h1 {
-          font-size: 6vw;
+          font-size: 5vw;
           line-height: 5rem;
           padding: 3rem 0 3rem 2rem; }
+          body main #intro h1 .period img {
+            background-size: .2rem; }
           body main #intro h1 #dot {
             display: none; }
-      body main .deliver {
-        color: #AFB999;
-        font-family: var(--disp-sans);
-        font-size: 2rem;
-        margin: -5vw 0;
-        grid-column: 2;
-        grid-row: 3; }
       body main #work {
         margin: 0 2rem; }
-        body main #work .project #tile img {
+        body main #work .project {
+          height: 28vw; }
+        body main #work .tile img {
           border-radius: 5px;
           opacity: .9;
           transition: all ease-out .3s; }
-        body main #work .project #tile:hover img {
-          box-shadow: 0 0.3rem 1.5rem 0rem var(--dark-green);
+        body main #work .tile p {
+          line-height: 1.2em; }
+        body main #work .tile:hover img {
+          box-shadow: 0 0.3rem 1.5rem 0rem var(--color-green-dark);
           opacity: 1;
           transform: translateY(-0.3rem);
           transition: opacity linear .2s box-shadow ease-in-out .2s; }
-        body main #work .project #tile:hover .svg-title {
+        body main #work .tile:hover .svg-title {
           transition: all ease-out .15s; }
-        body main #work .project #tile:hover .beer {
+        body main #work .tile:hover .beer {
           background-image: url("../../img/outline_beerocracy.svg"); }
-        body main #work .project #tile:hover .seagle {
+        body main #work .tile:hover .seagle {
           background-image: url("../../img/outline_seagle.svg"); }
-        body main #work .project #tile:hover .ironvice {
+        body main #work .tile:hover .ironvice {
           background-image: url("../../img/outline_ironvice.svg"); }
+        body main #work .tile:hover .pylon {
+          background-image: url("../../img/outline_pylon.svg"); }
       body main #info {
         align-items: flex-start;
         flex-direction: row;
@@ -445,6 +527,10 @@ body {
         body main #info .statement {
           margin-right: 5vw;
           width: 50vw; }
+          body main #info .statement .sketch:hover {
+            color: #fcc530; }
+          body main #info .statement .nightly:hover {
+            color: teal; }
           body main #info .statement p:last-of-type {
             margin-bottom: 2rem; }
       body main footer {
