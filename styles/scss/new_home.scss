@@ -102,6 +102,9 @@ body {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 	}
+	sup {
+		font-size: xx-small;
+	}
 }
 
 
@@ -294,9 +297,6 @@ body {
 					}
 					.pylon {
 						background-image: url('../../img/regular_pylon.svg');
-					}
-					
-					.desc {
 					}
 				}
 				.link {

@@ -136,6 +136,9 @@ body {
   body input[type=search] {
     -moz-appearance: none;
     -webkit-appearance: none; }
+  html sup,
+  body sup {
+    font-size: xx-small; }
 
 /* ------------------------------------------- */
 /*	2. Document setup
