@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 	0. Typography
 	1. CSS Reset & Clearfix	
@@ -245,109 +244,109 @@ body {
       grid-column: 2;
       grid-row: 4;
       grid-gap: 4vw;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       margin-top: 5vw; }
-      body main #work .project {
-        height: 70vh;
-        margin-top: 5vw; }
-        body main #work .project .tile img {
+      body main #work .tile .project {
+        height: 62vh;
+        margin-top: 0vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; }
+        body main #work .tile .project img {
           border-radius: 5px;
           opacity: 1;
           transition: all ease-out .3s; }
-        body main #work .project .tile .desc .svg-title {
+        body main #work .tile .project .svg-title {
           background-repeat: no-repeat;
           height: 3rem;
           transition: .25s; }
-        body main #work .project .tile .desc .beer {
+        body main #work .tile .project .beer {
           background-image: url("../../img/regular_beerocracy.svg"); }
-        body main #work .project .tile .desc .seagle {
+        body main #work .tile .project .seagle {
           background-image: url("../../img/regular_seagle.svg"); }
-        body main #work .project .tile .desc .ironvice {
+        body main #work .tile .project .ironvice {
           background-image: url("../../img/regular_ironvice.svg"); }
-        body main #work .project .tile .desc .pylon {
+        body main #work .tile .project .pylon {
           background-image: url("../../img/regular_pylon.svg"); }
-        body main #work .project .link {
-          color: var(--color-impact-dim);
-          display: inline-block;
-          font-family: var(--disp-sans);
-          bottom: 0%;
-          transition: ease-in .2s;
-          line-height: 1rem; }
-          body main #work .project .link:hover {
-            color: var(--color-impact);
-            transition: linear .2s; }
-          body main #work .project .link::after {
-            background: var(--color-impact);
-            content: '';
-            display: block;
-            height: 1.5px;
-            width: 0;
-            transition: width ease-out .2s; }
-          body main #work .project .link:hover::after {
-            transition: width ease-out .2s;
-            width: 100%; }
-      body main #work #lightbox {
+      body main #work .tile .link {
+        color: var(--color-impact-dim);
+        display: inline-block;
+        font-family: var(--disp-sans);
+        bottom: 0%;
+        transition: ease-in .2s;
+        line-height: 1rem; }
+        body main #work .tile .link:hover {
+          color: var(--color-impact);
+          transition: linear .2s; }
+        body main #work .tile .link::after {
+          background: var(--color-impact);
+          content: '';
+          display: block;
+          height: 1.5px;
+          width: 0;
+          transition: width ease-out .2s; }
+        body main #work .tile .link:hover::after {
+          transition: width ease-out .2s;
+          width: 100%; }
+      body main #work .modal-overlay {
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.8);
+        height: 100vh;
+        left: 0;
+        display: flex;
         position: fixed;
         top: 0;
-        left: 0;
+        transition: opacity .2s;
         width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.8);
-        display: none; }
-        body main #work #lightbox .close {
+        z-index: -1; }
+        body main #work .modal-overlay h3 {
+          color: var(--color-impact-dark);
+          line-height: 0em;
+          writing-mode: vertical-rl;
+          display: table-caption;
+          transform: rotate(180deg);
+          position: fixed;
+          top: 10vh;
+          left: 10vw;
+          display: none; }
+        body main #work .modal-overlay .bxslider {
           position: relative;
-          display: block; }
-          body main #work #lightbox .close:after {
-            background-color: #e60000;
-            position: absolute;
-            width: 3rem;
-            height: 3rem;
-            right: 9vw;
-            top: 7vh;
-            display: flex;
-            z-index: 1;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            color: white;
-            content: "×";
-            cursor: pointer; }
-          body main #work #lightbox .close:before {
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            background-color: rgba(0, 0, 0, 0.7);
-            content: "";
-            cursor: default; }
-        body main #work #lightbox:not(:target) {
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 1s, visibility 1s; }
-        body main #work #lightbox:target {
-          display: grid;
-          opacity: 1;
-          visibility: visible;
-          transition: opacity 1s, visibility 1s; }
-        body main #work #lightbox .bxslider {
-          position: relative;
-          justify-self: center;
           width: 88vw;
           height: 96vh;
           background: #fff;
           overflow-y: auto;
           align-self: center;
           border-radius: 4px; }
-          body main #work #lightbox .bxslider > li {
+          body main #work .modal-overlay .bxslider > div {
             height: 56vw;
             padding: 4vw;
             display: flex;
             justify-content: center; }
-          body main #work #lightbox .bxslider hr {
+          body main #work .modal-overlay .bxslider hr {
             border: 1px solid var(--color-text-light);
             width: 72vw;
             margin: 0 auto; }
+          body main #work .modal-overlay .bxslider .btn-close {
+            background: none;
+            cursor: pointer;
+            font-family: var(--disp-sans);
+            font-size: 5em;
+            position: fixed;
+            right: 8vw;
+            top: 7vh;
+            z-index: 2; }
+            body main #work .modal-overlay .bxslider .btn-close:hover {
+              color: #df0029; }
+            body main #work .modal-overlay .bxslider .btn-close:focus {
+              outline: 1px dotted;
+              border-radius: 50%; }
+      body main #work .modal-overlay[aria-hidden="true"] {
+        opacity: 0;
+        visibility: hidden; }
+      body main #work .modal-overlay[aria-hidden="false"] {
+        opacity: 1;
+        visibility: visible;
+        z-index: 2; }
     body main #info {
       align-items: center;
       background-color: #222;
@@ -481,29 +480,29 @@ body {
             display: none; }
       body main #work {
         margin: 0 2rem; }
-        body main #work .project {
-          height: 28vw; }
-        body main #work .tile img {
-          border-radius: 5px;
-          opacity: .9;
-          transition: all ease-out .3s; }
-        body main #work .tile p {
-          line-height: 1.2em; }
-        body main #work .tile:hover img {
-          box-shadow: 0 0.3rem 1.5rem 0rem var(--color-green-dark);
-          opacity: 1;
-          transform: translateY(-0.3rem);
-          transition: opacity linear .2s box-shadow ease-in-out .2s; }
-        body main #work .tile:hover .svg-title {
-          transition: all ease-out .15s; }
-        body main #work .tile:hover .beer {
-          background-image: url("../../img/outline_beerocracy.svg"); }
-        body main #work .tile:hover .seagle {
-          background-image: url("../../img/outline_seagle.svg"); }
-        body main #work .tile:hover .ironvice {
-          background-image: url("../../img/outline_ironvice.svg"); }
-        body main #work .tile:hover .pylon {
-          background-image: url("../../img/outline_pylon.svg"); }
+        body main #work .tile .project {
+          height: 50vh; }
+          body main #work .tile .project img {
+            border-radius: 5px;
+            opacity: .9;
+            transition: all ease-out .3s; }
+          body main #work .tile .project p {
+            line-height: 1.2em; }
+          body main #work .tile .project:hover img {
+            box-shadow: 0 0.3rem 1.5rem 0rem var(--color-green-dark);
+            opacity: 1;
+            transform: translateY(-0.3rem);
+            transition: opacity linear .2s box-shadow ease-in-out .2s; }
+          body main #work .tile .project:hover .svg-title {
+            transition: all ease-out .15s; }
+          body main #work .tile .project:hover .beer {
+            background-image: url("../../img/outline_beerocracy.svg"); }
+          body main #work .tile .project:hover .seagle {
+            background-image: url("../../img/outline_seagle.svg"); }
+          body main #work .tile .project:hover .ironvice {
+            background-image: url("../../img/outline_ironvice.svg"); }
+          body main #work .tile .project:hover .pylon {
+            background-image: url("../../img/outline_pylon.svg"); }
       body main #info {
         align-items: flex-start;
         flex-direction: row;
