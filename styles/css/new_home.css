@@ -211,7 +211,7 @@ body {
     grid-template-rows: repeat(auto-fill, minmax(5vh, 1fr)); }
     body main #intro {
       display: flex;
-      grid-row: 2;
+      grid-row: 1;
       grid-column: 2;
       margin-bottom: 5rem;
       flex-direction: column; }
@@ -253,13 +253,13 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       margin-top: 5vw; }
       body main #work .tile .project {
-        height: 62vh;
+        height: 70vh;
         margin-top: 0vw;
         display: flex;
         flex-direction: column;
         justify-content: flex-end; }
         body main #work .tile .project .card {
-          border-radius: 5px;
+          border-radius: 4px;
           opacity: 1;
           transition: all ease-out .3s; }
         body main #work .tile .project .svg-title {
@@ -476,7 +476,8 @@ body {
     body main {
       grid-template-columns: 5vw 90vw 5vw; }
       body main #intro {
-        margin: 3rem; }
+        margin: 3rem;
+        grid-row: 2; }
         body main #intro h1 {
           font-size: 5vw;
           line-height: 5rem;

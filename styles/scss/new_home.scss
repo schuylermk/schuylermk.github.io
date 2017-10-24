@@ -194,40 +194,19 @@ body {
 		//  HELLO Section  //
 		#intro {
 			display: flex;
-			grid-row: 2;
+			grid-row: 1;
 			grid-column: 2;
 			margin-bottom: 5rem;
 			flex-direction: column;
 			h1 {
 				font-size: 2.8rem;
 				line-height: 3.5rem;
-				padding: 2rem; // .under {
-				// 	position: absolute;
-				// 	width: 40px;
-				// 	height: 1px;
-				// 	background: red;
-				// 	animation: x-diagonal-slide-slow 4s linear infinite;
-				// 	top: 28vh;
+				padding: 2rem; 
+			
 				a {
 					color: var(--color-impact-dark);
-				} // }
-				// @keyframes x-diagonal-slide-slow {
-				// 	0% {
-				// 		transform: translateX(-1000px);
-				// 	}
-				// 	1% {
-				// 		transform: translateX(0px);
-				// 	}
-				// 	14% {
-				// 		transform: translateX(300px);
-				// 	}
-				// 	15% {
-				// 		transform: translateX(300px);
-				// 	}
-				// 	100% {
-				// 		transform: translateX(10000px);
-				// 	}
-				// }
+				} 
+
 				#dot {
 					color: var(--color-bg-body);
 					line-height: 0.2em;
@@ -276,23 +255,15 @@ body {
 			
 			.tile {
 				.project {
-					height: 62vh;
+					height: 70vh;
 					margin-top: 0vw;
 					display: flex;
 					flex-direction: column;
 					justify-content: flex-end;
 					.card {
-						border-radius: 5px;
+						border-radius: 4px;
 						opacity: 1;
 						transition: all ease-out .3s;
-						
-						// .no-webp {
-						// 	background-image: url('../../img/Persona - Lynn.jpg');
-					
-						// }
-						// .webp {
-						// 	background-image: url('../../webp/Persona-Lynn90.webp');
-						// }
 					}
 
 					.svg-title {
@@ -540,6 +511,7 @@ body {
 			grid-template-columns: 5vw 90vw 5vw;
 			#intro {
 				margin: 3rem;
+				grid-row: 2;
 				h1 {
 					font-size: 5vw;
 					line-height: 5rem;
