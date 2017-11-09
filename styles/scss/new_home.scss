@@ -430,7 +430,7 @@ body {
 					.personal {
 						@include link;
 						font-family: 'Source Sans Pro', sans-serif;
-						font-size: 1rem;
+						font-size: 1.1rem;
 						font-weight: 100;
 						margin: 1rem 0 2rem;
 						&:first-of-type {
@@ -477,6 +477,7 @@ body {
 				}
 				p {
 					font-family: var(--disp-sans);
+					font-size: 1.1rem;
 					font-weight: 300;
 					margin: 1rem 0;
 				}
@@ -618,6 +619,7 @@ body {
 			}
 		}
 	}
+
 	@media (min-width: 300px) and (max-width: 370px) {
 		main {
 			#intro {

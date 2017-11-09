@@ -546,6 +546,10 @@ body {
         grid-column: 2; }
         body main footer a {
           margin: 1rem; } }
+  @media screen and (min-width: 650px) {
+    body main {
+      max-width: 1400px;
+      border: 2px solid red; } }
   @media (min-width: 300px) and (max-width: 370px) {
     body main #intro h1 {
       font-size: 2.8rem;
