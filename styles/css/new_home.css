@@ -392,7 +392,7 @@ body {
             color: var(--color-green-soft);
             transition: ease-in .2s;
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 100;
             margin: 1rem 0 2rem; }
             body main #info .contact_info .access .personal:hover {
@@ -440,6 +440,7 @@ body {
           line-height: 1em; }
         body main #info .statement p {
           font-family: var(--disp-sans);
+          font-size: 1.1rem;
           font-weight: 300;
           margin: 1rem 0; }
         body main #info .statement .product {
@@ -546,10 +547,6 @@ body {
         grid-column: 2; }
         body main footer a {
           margin: 1rem; } }
-  @media screen and (min-width: 650px) {
-    body main {
-      max-width: 1400px;
-      border: 2px solid red; } }
   @media (min-width: 300px) and (max-width: 370px) {
     body main #intro h1 {
       font-size: 2.8rem;
