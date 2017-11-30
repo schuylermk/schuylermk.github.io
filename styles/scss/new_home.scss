@@ -429,9 +429,9 @@ body {
 					align-items: center;
 					.personal {
 						@include link;
-						font-family: 'Source Sans Pro', sans-serif;
+						font-family: var(--disp-sans);
 						font-size: 1.1rem;
-						font-weight: 100;
+						font-weight: 300;
 						margin: 1rem 0 2rem;
 						&:first-of-type {
 							margin-bottom: 1rem;
@@ -471,8 +471,8 @@ body {
 				flex-direction: column;
 				margin-top: 2rem;
 				h3 {
-					font-family: var(--disp-serif);
-					font-weight: 400;
+					font-family: var(--disp-sans);
+					font-weight: 300;
 					line-height: 1em;
 				}
 				p {
@@ -483,6 +483,7 @@ body {
 				}
 				.product {
 					@include link;
+					border-bottom: 1px solid var(--color-impact-dark);
 				}
 
 			}
@@ -599,13 +600,15 @@ body {
 				.statement {
 					margin-right: 5vw;
 					width: 50vw;
-					
+
 					.sketch:hover {
+						border-bottom: 1px solid #fcc530;
 						color: #fcc530;
 					} 
 					.nightly:hover {
+						border-bottom: 1px solid #AE44F6;
 						color: #AE44F6;
-					} 
+					}
 					p:last-of-type {
 						margin-bottom: 2rem;
 					}
