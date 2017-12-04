@@ -274,6 +274,8 @@ body {
           background-image: url("../../img/regular_ironvice.svg"); }
         body main #work .tile .project .pylon {
           background-image: url("../../img/regular_pylon.svg"); }
+        body main #work .tile .project .axure {
+          background-image: url("../../img/regular_axure.svg"); }
       body main #work .tile .link {
         color: var(--color-impact-dim);
         display: inline-block;
@@ -515,6 +517,8 @@ body {
             background-image: url("../../img/outline_ironvice.svg"); }
           body main #work .tile .project:hover .pylon {
             background-image: url("../../img/outline_pylon.svg"); }
+          body main #work .tile .project:hover .axure {
+            background-image: url("../../img/outline_axure.svg"); }
       body main #info {
         align-items: flex-start;
         flex-direction: row;

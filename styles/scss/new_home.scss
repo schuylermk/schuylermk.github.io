@@ -283,6 +283,9 @@ body {
 					.pylon {
 						background-image: url('../../img/regular_pylon.svg');
 					}
+					.axure {
+						background-image: url('../../img/regular_axure.svg');
+					}
 				}
 				.link {
 					color: var(--color-impact-dim);
@@ -565,6 +568,9 @@ body {
 					}
 					&:hover .pylon {
 						background-image: url('../../img/outline_pylon.svg');
+					}
+					&:hover .axure {
+						background-image: url('../../img/outline_axure.svg');
 					}
 					
 				}
