@@ -207,7 +207,7 @@ body {
     display: block; }
   body main {
     display: grid;
-    grid-template-columns: 2vw 96vw 2vw;
+    grid-template-columns: 3vw 92vw 5vw;
     grid-template-rows: repeat(auto-fill, minmax(5vh, 1fr)); }
     body main #intro {
       display: flex;
@@ -249,53 +249,57 @@ body {
       display: grid;
       grid-column: 2;
       grid-row: 4;
-      grid-gap: 4vw;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 6rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       margin-top: 5vw; }
-      body main #work .tile .project {
-        height: 70vh;
-        margin-top: 0vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end; }
-        body main #work .tile .project .card {
-          border-radius: 4px;
-          opacity: 1;
-          transition: all ease-out .3s; }
-        body main #work .tile .project .svg-title {
-          background-repeat: no-repeat;
-          height: 3rem;
-          transition: .25s; }
-        body main #work .tile .project .beer {
-          background-image: url("../../img/regular_beerocracy.svg"); }
-        body main #work .tile .project .seagle {
-          background-image: url("../../img/regular_seagle.svg"); }
-        body main #work .tile .project .ironvice {
-          background-image: url("../../img/regular_ironvice.svg"); }
-        body main #work .tile .project .pylon {
-          background-image: url("../../img/regular_pylon.svg"); }
-        body main #work .tile .project .axure {
-          background-image: url("../../img/regular_axure.svg"); }
-      body main #work .tile .link {
-        color: var(--color-impact-dim);
-        display: inline-block;
-        font-family: var(--disp-sans);
-        bottom: 0%;
-        transition: ease-in .2s;
-        line-height: 1rem; }
-        body main #work .tile .link:hover {
-          color: var(--color-impact);
-          transition: linear .2s; }
-        body main #work .tile .link::after {
-          background: var(--color-impact);
-          content: '';
-          display: block;
-          height: 1.5px;
-          width: 0;
-          transition: width ease-out .2s; }
-        body main #work .tile .link:hover::after {
-          transition: width ease-out .2s;
-          width: 100%; }
+      body main #work .tile {
+        margin-bottom: 16vw; }
+        body main #work .tile .project {
+          margin-top: 0vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start; }
+          body main #work .tile .project .card {
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            opacity: 1;
+            transition: all ease-out .3s; }
+          body main #work .tile .project .svg-title {
+            background-repeat: no-repeat;
+            height: 3rem;
+            max-width: 96%;
+            transition: .25s; }
+          body main #work .tile .project .beer {
+            background-image: url("../../img/regular_beerocracy.svg"); }
+          body main #work .tile .project .seagle {
+            background-image: url("../../img/regular_seagle.svg"); }
+          body main #work .tile .project .ironvice {
+            background-image: url("../../img/regular_ironvice.svg"); }
+          body main #work .tile .project .pylon {
+            background-image: url("../../img/regular_pylon.svg"); }
+          body main #work .tile .project .axure {
+            background-image: url("../../img/regular_axure.svg"); }
+          body main #work .tile .project .desc {
+            margin-top: .2rem; }
+        body main #work .tile .link {
+          color: var(--color-impact-dim);
+          display: inline-block;
+          font-family: var(--disp-sans);
+          transition: ease-in .2s;
+          line-height: 1rem; }
+          body main #work .tile .link:hover {
+            color: var(--color-impact);
+            transition: linear .2s; }
+          body main #work .tile .link::after {
+            background: var(--color-impact);
+            content: '';
+            display: block;
+            height: 1.5px;
+            width: 0;
+            transition: width ease-out .2s; }
+          body main #work .tile .link:hover::after {
+            transition: width ease-out .2s;
+            width: 100%; }
       body main #work .modal-overlay {
         justify-content: center;
         background: rgba(0, 0, 0, 0.8);
@@ -477,83 +481,79 @@ body {
         body main footer a:hover {
           color: var(--color-impact); }
   @media screen and (min-width: 650px) {
-    body main {
-      grid-template-columns: 5vw 90vw 5vw; }
-      body main #intro {
-        margin: 3rem;
-        grid-row: 2; }
-        body main #intro h1 {
-          font-size: 5vw;
-          line-height: 5rem;
-          padding: 3rem 0 3rem 2rem; }
-          body main #intro h1 .period img {
-            background-size: .2rem; }
-          body main #intro h1 #dot {
-            display: none; }
-        body main #intro .chevron {
-          margin: 10vw auto; }
-      body main #work {
-        margin: 0 2rem; }
-        body main #work .tile .project {
-          height: 50vh; }
-          body main #work .tile .project img {
-            border-radius: 5px;
-            opacity: .9;
-            transition: all ease-out .3s; }
-          body main #work .tile .project p {
-            line-height: 1.2em; }
-          body main #work .tile .project:hover img {
-            box-shadow: 0 0.3rem 1.5rem 0rem var(--color-green-dark);
-            opacity: 1;
-            transform: translateY(-0.3rem);
-            transition: opacity linear .2s box-shadow ease-in-out .2s; }
-          body main #work .tile .project:hover .svg-title {
-            transition: all ease-out .15s; }
-          body main #work .tile .project:hover .beer {
-            background-image: url("../../img/outline_beerocracy.svg"); }
-          body main #work .tile .project:hover .seagle {
-            background-image: url("../../img/outline_seagle.svg"); }
-          body main #work .tile .project:hover .ironvice {
-            background-image: url("../../img/outline_ironvice.svg"); }
-          body main #work .tile .project:hover .pylon {
-            background-image: url("../../img/outline_pylon.svg"); }
-          body main #work .tile .project:hover .axure {
-            background-image: url("../../img/outline_axure.svg"); }
-      body main #info {
-        align-items: flex-start;
-        flex-direction: row;
-        justify-content: space-between; }
-        body main #info .contact_info {
-          height: 100%;
-          width: 28vw;
-          margin-left: 5vw; }
-          body main #info .contact_info .self {
-            display: flex;
-            width: 100%; }
-          body main #info .contact_info .access {
-            flex-flow: row wrap;
-            justify-content: space-between;
-            margin: 2rem auto;
-            width: 100%; }
-            body main #info .contact_info .access .personal:first-of-type {
-              margin: 0 2rem 1rem 0; }
-          body main #info .contact_info .icon-row {
-            width: 100%; }
-        body main #info .statement {
-          margin-right: 5vw;
-          width: 50vw; }
-          body main #info .statement .sketch:hover {
-            border-bottom: 1px solid #fcc530;
-            color: #fcc530; }
-          body main #info .statement .nightly:hover {
-            border-bottom: 1px solid #AE44F6;
-            color: #AE44F6; }
-          body main #info .statement p:last-of-type {
-            margin-bottom: 2rem; }
-      body main footer {
-        grid-column: 2; }
-        body main footer a {
-          margin: 1rem; } }
+    body main #intro {
+      margin: 3rem;
+      grid-row: 2; }
+      body main #intro h1 {
+        font-size: 5vw;
+        line-height: 5rem;
+        padding: 3rem 0 3rem 2rem; }
+        body main #intro h1 .period img {
+          background-size: .2rem; }
+        body main #intro h1 #dot {
+          display: none; }
+      body main #intro .chevron {
+        margin: 10vw auto; }
+    body main #work {
+      margin: 0 2rem; }
+      body main #work .tile {
+        margin: 0; }
+        body main #work .tile .project .card {
+          border-radius: 5px;
+          opacity: .9;
+          transition: all ease-out .3s; }
+        body main #work .tile .project:hover .card {
+          box-shadow: 0 0.3rem 1.5rem 0rem var(--color-green-dark);
+          opacity: 1;
+          transform: translateY(-0.3rem);
+          transition: opacity linear .2s box-shadow ease-in-out .2s; }
+        body main #work .tile .project:hover .svg-title {
+          transition: all ease-out .15s; }
+        body main #work .tile .project:hover .beer {
+          background-image: url("../../img/outline_beerocracy.svg"); }
+        body main #work .tile .project:hover .seagle {
+          background-image: url("../../img/outline_seagle.svg"); }
+        body main #work .tile .project:hover .ironvice {
+          background-image: url("../../img/outline_ironvice.svg"); }
+        body main #work .tile .project:hover .pylon {
+          background-image: url("../../img/outline_pylon.svg"); }
+        body main #work .tile .project:hover .axure {
+          background-image: url("../../img/outline_axure.svg"); }
+    body main #info {
+      align-items: flex-start;
+      flex-direction: row;
+      justify-content: space-between; }
+      body main #info .contact_info {
+        height: 100%;
+        width: 28vw;
+        margin-left: 5vw; }
+        body main #info .contact_info .self {
+          display: flex;
+          width: 100%; }
+        body main #info .contact_info .access {
+          flex-flow: row wrap;
+          justify-content: space-between;
+          margin: 2rem auto;
+          width: 100%; }
+          body main #info .contact_info .access .personal:first-of-type {
+            margin: 0 2rem 1rem 0; }
+        body main #info .contact_info .icon-row {
+          width: 100%; }
+      body main #info .statement {
+        margin-right: 5vw;
+        width: 50vw; }
+        body main #info .statement .sketch:hover {
+          border-bottom: 1px solid #fcc530;
+          color: #fcc530; }
+        body main #info .statement .nightly:hover {
+          border-bottom: 1px solid #AE44F6;
+          color: #AE44F6; }
+        body main #info .statement p:last-of-type {
+          margin-bottom: 2rem; }
+    body main footer {
+      grid-column: 2; }
+      body main footer a {
+        margin: 1rem; } }
   @media (min-width: 300px) and (max-width: 370px) {
     body main #intro h1 {
       font-size: 2.8rem;
