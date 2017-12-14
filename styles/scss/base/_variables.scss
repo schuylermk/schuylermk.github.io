@@ -1,0 +1,44 @@
+:root {
+    --color-bg-body: #fefefe;
+    --color-text-light: #E1E7DC;
+    --color-body-text-dark: #4C4C4C;
+    --color-link-text: #37ABB8;
+    --color-impact-dark: rgb(67, 108, 165);
+    /* hex #143D66 */
+    --color-impact-dim: rgba(59, 126, 194, 0.8);
+    /* hex #287acc */
+    --color-impact: rgba(40, 122, 204, 1);
+    /* hex #287acc */
+    --color-green-dark: rgba(70, 76, 53, 1);
+    --color-green-soft: rgba(130, 145, 95, 1);
+    /* hex #708C54 */
+    --color-green-olive: rgba(87, 94, 51, 1);
+    /* hex #575E33 */
+    --disp-sans: 'Josefin Sans', sans-serif;
+    --disp-serif: 'Josefin Slab', sans-serif;
+    --para-type: 'Josefin Slab', serif;
+    --cassannet-reg: 'Cassannet Regular', 'Josefin Sans', 'Trirong', 'Lato', sans-serif;
+    --cassannet-outline: 'Cassannet Outline', 'Josefin Slab', 'Trirong', serif;
+}
+    
+    // Font-Size
+    $base-font-size: 1em;
+    // Line-Height
+    $base-line-height: 1.5;
+    $header-line-height: 1.25;
+
+    // Breakpoints
+    $bp-xsmall: 22em; // 352px
+    $bp-small: 48em; // 768px
+    $bp-medium: 64em; // 1024px
+    $bp-large: 85.375em; // 1366px
+    $bp-xlarge: 120em; // 1920px
+    $bp-xxlarge: 160em; // 2560px
+
+    // Media Queries
+    $mq-small: "(min-width: #{$bp-small})";
+    $mq-medium: "(min-width: #{$bp-medium})";
+    $mq-large: "(min-width: #{$bp-large})";
+    $mq-xlarge: "(min-width: #{$bp-xlarge})";
+    $mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+    $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";

@@ -1,25 +1,3 @@
-:root {
-  --color-bg-body: #fefefe;
-  --color-text-light: #E1E7DC;
-  --color-body-text-dark: #4C4C4C;
-  --color-link-text: #37ABB8;
-  --color-impact-dark: rgb(67, 108, 165);
-  /* hex #143D66 */
-  --color-impact-dim: rgba(59, 126, 194, 0.8);
-  /* hex #287acc */
-  --color-impact: rgba(40, 122, 204, 1);
-  /* hex #287acc */
-  --color-green-dark: rgba(70, 76, 53, 1);
-  --color-green-soft: rgba(130, 145, 95, 1);
-  /* hex #708C54 */
-  --color-green-olive: rgba(87, 94, 51, 1);
-  /* hex #575E33 */
-  --disp-sans: 'Josefin Sans', sans-serif;
-  --disp-serif: 'Josefin Slab', sans-serif;
-  --para-type: 'Josefin Slab', serif;
-  --cassannet-reg: 'Cassannet Regular', 'Josefin Sans', 'Trirong', 'Lato', sans-serif;
-  --cassannet-outline: 'Cassannet Outline', 'Josefin Slab', 'Trirong', serif;
-}
 
 @mixin size ($width, $height) {
   width: $width;
