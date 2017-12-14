@@ -1,3 +1,25 @@
+:root {
+  --color-bg-body: #fefefe;
+  --color-text-light: #E1E7DC;
+  --color-body-text-dark: #4C4C4C;
+  --color-link-text: #37ABB8;
+  --color-impact-dark: #436ca5;
+  /* hex #143D66 */
+  --color-impact-dim: rgba(59, 126, 194, 0.8);
+  /* hex #287acc */
+  --color-impact: #287acc;
+  /* hex #287acc */
+  --color-green-dark: #464c35;
+  --color-green-soft: #82915f;
+  /* hex #708C54 */
+  --color-green-olive: #575e33;
+  /* hex #575E33 */
+  --disp-sans: 'Josefin Sans', sans-serif;
+  --disp-serif: 'Josefin Slab', sans-serif;
+  --para-type: 'Josefin Slab', serif;
+  --cassannet-reg: 'Cassannet Regular', 'Josefin Sans', 'Trirong', 'Lato', sans-serif;
+  --cassannet-outline: 'Cassannet Outline', 'Josefin Slab', 'Trirong', serif; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
