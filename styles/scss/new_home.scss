@@ -566,7 +566,7 @@ body {
 					grid-template-columns: 2fr 3fr;
 					grid-gap: 6rem;
 					margin: 0 auto;
-					width: 88vw;
+					width: 84vw;
 
 					.contact_info {
 						.self {
@@ -611,7 +611,6 @@ body {
 			}
 		}
 	}
-
 	@media (min-width: 300px) and (max-width: 370px) {
 		main {
 			#intro {
@@ -632,4 +631,79 @@ body {
 			}
 		}
 	}
-} //   [[[ 'body' closing ]]]   //
+	@media screen and (min-width: 1382px) {
+		main {
+			#intro {
+				max-width: 84vw;
+				h1 {
+					font-size: 4.5rem;
+					line-height: 6rem;
+					padding: 6rem 0 3rem 4rem;
+				}
+			}
+
+			#work {
+				max-width: 80vw;
+			}
+
+			#info {
+				.info-container {
+					max-width: 80vw;
+				}
+			}
+		}
+	} 
+	@media screen and (min-width: 1558px) {
+		main {
+			#intro {
+				max-width: 74vw;
+			}
+
+			#work {
+				max-width: 70vw;
+			}
+
+			#info {
+				.info-container {
+					max-width: 70vw;
+				}
+			}
+		}
+	} 
+
+	@media screen and (min-width: 1782px) {
+		main {
+			#intro {
+				max-width: 60vw;
+			}
+
+			#work {
+				max-width: 56vw;
+			}
+
+			#info {
+				.info-container {
+					max-width: 56vw;
+				}
+			}
+		}
+	} 
+
+	@media screen and (min-width: 2220px) {
+		main {
+			#intro {
+				max-width: 56vw;
+			}
+
+			#work {
+				max-width: 48vw;
+			}
+
+			#info {
+				.info-container {
+					max-width: 50vw;
+				}
+			}
+		}
+	} 
+}

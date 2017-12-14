@@ -439,7 +439,7 @@ body {
         grid-template-columns: 2fr 3fr;
         grid-gap: 6rem;
         margin: 0 auto;
-        width: 88vw; }
+        width: 84vw; }
         body main #info .info-container .contact_info .self {
           display: flex;
           width: 100%; }
@@ -470,5 +470,37 @@ body {
     body main #intro h1 {
       font-size: 3.4rem;
       line-height: 4rem; } }
+  @media screen and (min-width: 1382px) {
+    body main #intro {
+      max-width: 84vw; }
+      body main #intro h1 {
+        font-size: 4.5rem;
+        line-height: 6rem;
+        padding: 6rem 0 3rem 4rem; }
+    body main #work {
+      max-width: 80vw; }
+    body main #info .info-container {
+      max-width: 80vw; } }
+  @media screen and (min-width: 1558px) {
+    body main #intro {
+      max-width: 74vw; }
+    body main #work {
+      max-width: 70vw; }
+    body main #info .info-container {
+      max-width: 70vw; } }
+  @media screen and (min-width: 1782px) {
+    body main #intro {
+      max-width: 60vw; }
+    body main #work {
+      max-width: 56vw; }
+    body main #info .info-container {
+      max-width: 56vw; } }
+  @media screen and (min-width: 2220px) {
+    body main #intro {
+      max-width: 56vw; }
+    body main #work {
+      max-width: 48vw; }
+    body main #info .info-container {
+      max-width: 50vw; } }
 
 /*# sourceMappingURL=new_home.css.map */
