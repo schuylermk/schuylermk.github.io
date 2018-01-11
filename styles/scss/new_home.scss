@@ -42,9 +42,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,200,200i,300,300i,400,400i|Josefin+Slab:200,200i,300,300i,400,400i|Lato:200,200i,300,300i,400,400i|Source+Sans+Pro:200,200i,300,300i,400,400i|Trirong:200,200i,300,300i,400,400i|Unica+One');
 
+@import 'app.scss';
 @import 'base/mixins.scss';
 @import 'base/variables';
-@import 'base/reset.scss';
+// @import 'base/reset.scss';
 
 
 /* ------------------------------------------- */
@@ -73,19 +74,12 @@
 body {
 	color: var(--color-body-text-dark);
 	background: var(--color-bg-body);
-	font-size: 16px;
-	// width: 100%;
-	position: absolute;
+	font-size: 18px;
+	line-height: $base-line-height;
 	overflow-x: hidden;
-
-	// font-size: $base-font-size;
-	// line-height: $base-line-height;
-	@media #{$mq-medium} {
-		font-size: $base-font-size*1.2;
-		line-height: $base-line-height*1.2;
-	}
+	
 	@media #{$mq-large} {
-		font-size: $base-font-size*1.3;
+		font-size: $base-font-size*1.2;
 	}
 	@media #{$mq-xlarge} {
 		font-size: $base-font-size*1.4;
@@ -115,28 +109,32 @@ body {
 	p {
 		font-family: var(--disp-sans);
 		font-weight: 300;
-		line-height: 1.5rem;
 	}
 	a {
 		cursor: pointer;
 		color: var(--color-body-text-dark);
 		text-decoration: none;
+		&:focus {
+			outline: thin dotted;
+		}
 	}
 
-	// img {
-	// 	max-width: 100%;
+	img {
+		max-width: 100%;
 	// 	height: auto;
 	// 	display: block;
-	// }
+	}
+
 	/* ------------------------------------------- */
 	/*	3. Page Layout
 /* ------------------------------------------- */
 	// MAIN Section  //
+	
 	main {
 		display: grid;
 		grid-template-rows: repeat(auto-fill, minmax(5vh, 1fr));
 		// justify-content: center;
-		// max-width: $bp-xsmall;
+		max-width: $bp-xsmall;
 		margin: 0 auto;
 
 		//  HELLO Section  //
@@ -144,12 +142,13 @@ body {
 			display: flex;
 			grid-row: 2;
 			flex-direction: column;
-			margin: 0 auto;
+			// margin: 0 auto;
 			max-width: 88vw;
 			h1 {
 				font-size: 2.8rem;
 				line-height: 4rem;
-			
+				max-width: 90%;
+
 				a {
 					color: var(--color-impact-dark);
 				} 
@@ -248,7 +247,7 @@ body {
 					display: inline-block;
 					font-family: var(--disp-sans);
 					transition: ease-in .2s;
-					line-height: 1rem;
+					// line-height: 1rem;
 					&:hover {
 						color: var(--color-impact);
 						transition: linear .2s;
@@ -354,7 +353,7 @@ body {
 			background-color: #222;
 			grid-row: 5;
 			margin-top: 10vw;
-			width: 100vw; // border: 3px solid red;
+			width: 100%; // border: 3px solid red;
 			.info-container {
 				align-items: center;
 				display: flex;
@@ -444,7 +443,6 @@ body {
 					}
 					p {
 						font-family: var(--disp-sans);
-						font-size: 1.1rem;
 						font-weight: 300;
 						margin: 1rem 0;
 					}
@@ -477,12 +475,15 @@ body {
 
 	} //  [[ 'main' closing ]]  //
 
+
 	//  Media Queries  //	
 	@media screen and (min-width: 650px) {
 		main {
+			max-width: $bp-small;
+			margin: 0 auto;
 
 			#intro {
-				max-width: 84vw;
+				max-width: 84%;
 				grid-row: 2;
 				h1 {
 					font-size: 4rem;
@@ -506,7 +507,7 @@ body {
 			
 			#work {
 				grid-gap: 6rem;
-				max-width: 84vw;
+				// max-width: 84vw;
 				margin-bottom: 6rem;
 				.tile { 
 					// margin: 0;
