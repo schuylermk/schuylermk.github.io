@@ -23,49 +23,6 @@ body {
     padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-address,
-big,
-cite,
-code,
-em,
-font,
-img,
-small,
-strike,
-sub,
-sup,
-li,
-ol,
-ul,
-fieldset,
-form,
-label,
-legend,
-button,
-table,
-caption,
-tr,
-th,
-td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 100%;
-    line-height: 1;
-    font-family: inherit;
-    text-align: left;
-}
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -82,7 +39,8 @@ blockquote:after {
 }
 
 a {
-    outline: none;
+    text-decoration: none;
+    font-family: inherit;
 }
 
 input[type=search] {
@@ -97,70 +55,11 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
-
-/* ------------------------------------------- */
-
-
-/*	1. Document setup
-/* ------------------------------------------- */
-
-body {
-    margin: 0;
-    padding: 0;
-    border: none;
-    color: #4C4C4C;
-    background: #fff;
-    font-family: 'Josefin Sans', serif;
-    font-size: 18px;
-    -webkit-font-smoothing: subpixel-antialiased;
-}
-
-body a {
-    color: #517ACC;
-    text-decoration: none;
-}
-
-body a:hover {
-    color: #A4B359;
-    text-decoration: none;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.hidden {
-    display: none;
-}
-
-.clear {
-    clear: both;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-::selection {
-    background: #333;
-    color: lime;
-}
-
-::-webkit-input-placeholder {
-    color: #A9A9A9;
-}
-
-:-ms-input-placeholder {
-    color: #A9A9A9;
+input[type="button" i],
+input[type="submit" i],
+input[type="reset" i],
+input[type="file" i]::-webkit-file-upload-button,
+button {
+    border: 0;
+    outline: 0;
 }

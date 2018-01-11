@@ -62,14 +62,10 @@
 /*	2. Document setup
 /* ------------------------------------------- */
 
-//       CSS Variables        //
+//       CSS Variables in base/variables.scss       //
 	
-	// in base/mixins.scss //
 
 ///////////////////////////////////////////////////////////	
-* {
-	box-sizing: border-box;
-}
 
 body {
 	color: var(--color-body-text-dark);
@@ -131,23 +127,21 @@ body {
 	// MAIN Section  //
 	
 	main {
-		display: grid;
-		grid-template-rows: repeat(auto-fill, minmax(5vh, 1fr));
-		// justify-content: center;
-		max-width: $bp-xsmall;
-		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
 		//  HELLO Section  //
 		#intro {
 			display: flex;
-			grid-row: 2;
+			margin-top: 10vh;
 			flex-direction: column;
-			// margin: 0 auto;
-			max-width: 88vw;
+			align-items: center;
 			h1 {
 				font-size: 2.8rem;
 				line-height: 4rem;
-				max-width: 90%;
+				margin: 0;
+				max-width: 90vw;
 
 				a {
 					color: var(--color-impact-dark);
@@ -164,10 +158,9 @@ body {
 				}
 			}
 			.chevron {
-				// width: 2rem;
-				margin: 0rem auto 5vw;
+				margin: 3vh;
 				img { 
-					height: 3rem;
+					height: 10vh;
 				}
 			}
 			.hop {
@@ -194,7 +187,6 @@ body {
 		//  WORK Section  //  mobile-first up to 649px  //
 		#work {
 			display: grid;
-			grid-row: 4;
 			grid-gap: 6rem;
 			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 			margin: 8rem auto 0;
@@ -351,15 +343,13 @@ body {
 		//  ABOUT Section  //
 		#info {
 			background-color: #222;
-			grid-row: 5;
+			grid-row: 4;
 			margin-top: 10vw;
 			width: 100%; // border: 3px solid red;
 			.info-container {
 				align-items: center;
 				display: flex;
 				flex-direction: column-reverse;
-
-				grid-row: 5;
 				padding: 2rem 1rem;
 				a,
 				h1,
@@ -461,7 +451,7 @@ body {
 			align-items: center;
 			display: flex;
 			flex-direction: column;
-			grid-row: 6;
+			grid-row: 5;
 			a {
 				color: var(--color-impact-dark);
 				font-family: var(--disp-sans), sans-serif;
@@ -479,16 +469,14 @@ body {
 	//  Media Queries  //	
 	@media screen and (min-width: 650px) {
 		main {
-			max-width: $bp-small;
-			margin: 0 auto;
-
+			margin: 10vw 0 0;
 			#intro {
-				max-width: 84%;
-				grid-row: 2;
+				align-items: center;
+				margin: 0 0 10vw;
 				h1 {
 					font-size: 4rem;
 					line-height: 5rem;
-					padding: 3rem 0 3rem 1rem;
+					max-width: 80vw;
 					.period img {
 						background-size: .2rem;
 					}
@@ -498,7 +486,7 @@ body {
 
 				}
 				.chevron {
-					margin: 10vw auto;
+					padding-top: 10vh; 
 					img {
 						height: 5rem;
 					}
@@ -506,11 +494,12 @@ body {
 			}
 			
 			#work {
+				align-self: center;
 				grid-gap: 6rem;
-				// max-width: 84vw;
-				margin-bottom: 6rem;
+				margin: 0 0 15vw;
+				max-width: 80vw;
 				.tile { 
-					// margin: 0;
+
 					.project {
 
 						.card {
@@ -559,15 +548,18 @@ body {
 				}	
 			}
 			#info {
-				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+				margin: 0;
 				width: 100vw;
 				.info-container {
 					align-items: flex-start;
+					align-self: center; 
 					display: grid;
 					grid-template-columns: 2fr 3fr;
 					grid-gap: 6rem;
-					margin: 0 auto;
-					width: 84vw;
+					padding: 4vw 0;
+					max-width: 82vw;
 
 					.contact_info {
 						.self {
@@ -639,7 +631,6 @@ body {
 				h1 {
 					font-size: 4.5rem;
 					line-height: 6rem;
-					padding: 6rem 0 3rem 4rem;
 				}
 			}
 
