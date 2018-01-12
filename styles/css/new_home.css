@@ -504,6 +504,7 @@ body {
             width: 72vw;
             margin: 0 auto; }
           body main #work .modal-overlay .bxslider .btn-close {
+            border: none;
             background: none;
             cursor: pointer;
             font-family: var(--disp-sans);
@@ -511,12 +512,11 @@ body {
             position: fixed;
             right: 10vw;
             top: 5vh;
-            z-index: 2; }
+            z-index: 999; }
             body main #work .modal-overlay .bxslider .btn-close:hover {
               color: #df0029; }
             body main #work .modal-overlay .bxslider .btn-close:focus {
-              outline: 1px dotted;
-              border-radius: 50%; }
+              border: none; }
       body main #work .modal-overlay[aria-hidden="true"] {
         opacity: 0;
         visibility: hidden; }
