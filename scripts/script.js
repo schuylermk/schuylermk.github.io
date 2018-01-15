@@ -67,3 +67,75 @@ function swap() {
     document.addEventListener('keydown', modalClose);
 
 })();
+
+///////////////////////////////////////////////
+
+var m2 = document.getElementById('lightbox2'),
+    p2 = document.getElementById('page2');
+
+function swap() {
+    p2.parentNode.insertBefore(m2, p2);
+}
+
+// swap();
+
+// modal window
+(function () {
+
+    'use strict';
+
+    var mOverlay2 = getId('lightbox2'),
+        mOpen2 = getId('modal_open2'),
+        mClose2 = getId('modal_close2'),
+        modal2 = getId('modal_holder2'),
+        allNodes = document.querySelectorAll("*"),
+        modalOpen2 = false,
+        lastFocus,
+        i;
+
+    function getId(id) {
+        return document.getElementById(id);
+    }
+
+    function modalShow2() {
+        lastFocus = document.activeElement;
+        mOverlay2.setAttribute('aria-hidden', 'false');
+        modalOpen2 = true;
+        modal2.setAttribute('tabindex', '0');
+        // modal.setAttribute('tabindex', '0');
+        // modal.focus();
+    }
+
+    function modalClose2(event) {
+        if (modalOpen2 && (!event.keyCode || event.keyCode === 27)) {
+            mOverlay2.setAttribute('aria-hidden', 'true');
+            modal2.setAttribute('tabindex', '-1');
+            modalOpen2 = false;
+            lastFocus.focus();
+        }
+    }
+
+    function focusRestrict(event) {
+        if (modalOpen2 && !modal2.contains(event.target)) {
+            event.stopPropagation();
+            modal2.focus();
+        }
+    }
+
+    mOverlay2.addEventListener('click', function (e) {
+        if (e.target == modal2.parentNode) {
+            modalClose2(e);
+        }
+    }, false);
+
+
+    // open modal by btn click/hit
+    mOpen2.addEventListener('click', modalShow2);
+
+    // close modal by btn click/hit
+    mClose2.addEventListener('click', modalClose2);
+
+    // close modal by keydown, but only if modal is open
+    document.addEventListener('keydown', modalClose2);
+
+})();
