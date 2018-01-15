@@ -434,6 +434,8 @@ body {
           height: 3rem;
           max-width: 96%;
           transition: .25s; }
+        body main #work .tile .project .axure {
+          background-image: url("../../img/regular_axure.svg"); }
         body main #work .tile .project .beer {
           background-image: url("../../img/regular_beerocracy.svg"); }
         body main #work .tile .project .seagle {
@@ -442,8 +444,8 @@ body {
           background-image: url("../../img/regular_ironvice.svg"); }
         body main #work .tile .project .pylon {
           background-image: url("../../img/regular_pylon.svg"); }
-        body main #work .tile .project .axure {
-          background-image: url("../../img/regular_axure.svg"); }
+        body main #work .tile .project .wireframe {
+          background-image: url("../../img/regular_wireframe.svg"); }
         body main #work .tile .project .desc {
           margin-top: 0; }
       body main #work .tile .link {
@@ -688,6 +690,8 @@ body {
           background-image: url("../../img/outline_pylon.svg"); }
         body main #work .tile .project:hover .axure {
           background-image: url("../../img/outline_axure.svg"); }
+        body main #work .tile .project:hover .wireframe {
+          background-image: url("../../img/outline_wireframe.svg"); }
       body main #info {
         display: flex;
         justify-content: center;

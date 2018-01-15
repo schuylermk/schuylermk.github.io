@@ -213,6 +213,9 @@ body {
 						transition: .25s;
 					}
 
+					.axure {
+						background-image: url('../../img/regular_axure.svg');
+					}
 					.beer {
 						background-image: url('../../img/regular_beerocracy.svg');
 					}
@@ -225,8 +228,8 @@ body {
 					.pylon {
 						background-image: url('../../img/regular_pylon.svg');
 					}
-					.axure {
-						background-image: url('../../img/regular_axure.svg');
+					.wireframe {
+						background-image: url('../../img/regular_wireframe.svg');
 					}
 
 					.desc {
@@ -537,6 +540,10 @@ body {
 
 						&:hover .axure {
 							background-image: url('../../img/outline_axure.svg');
+						}
+						
+						&:hover .wireframe {
+							background-image: url('../../img/outline_wireframe.svg');
 						}
 
 						.desc {
