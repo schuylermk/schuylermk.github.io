@@ -2891,6 +2891,7 @@ $axure.internal(function($ax) {
 
 
     */
+    
     $ax.public.navigate = $ax.navigate = function(to) { //url, includeVariables, type) {
         var targetUrl;
         if(typeof (to) === 'object') {
