@@ -445,7 +445,7 @@ body {
         body main #work .tile .project .pylon {
           background-image: url("../../img/regular_pylon.svg"); }
         body main #work .tile .project .wireframe {
-          background-image: url("../../img/regular_wireframe.svg"); }
+          background-image: url("../../img/bookit_reg.svg"); }
         body main #work .tile .project .desc {
           margin-top: 0; }
       body main #work .tile .link {
@@ -691,7 +691,7 @@ body {
         body main #work .tile .project:hover .axure {
           background-image: url("../../img/outline_axure.svg"); }
         body main #work .tile .project:hover .wireframe {
-          background-image: url("../../img/outline_wireframe.svg"); }
+          background-image: url("../../img/bookit_outline.svg"); }
       body main #info {
         display: flex;
         justify-content: center;
