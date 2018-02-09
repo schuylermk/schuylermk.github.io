@@ -367,10 +367,16 @@ body {
     font-weight: 300; }
   body a {
     cursor: pointer;
-    color: var(--color-body-text-dark);
-    text-decoration: none; }
+    text-decoration: none;
+    color: var(--color-body-text-dark); }
     body a:focus {
       outline: thin dotted; }
+  body abbr {
+    cursor: help;
+    color: var(--color-impact-dark);
+    text-decoration: none; }
+    body abbr:hover {
+      outline: thin dotted var(--color-green-olive); }
   body img {
     max-width: 100%; }
   body main {
@@ -648,14 +654,15 @@ body {
           color: var(--color-impact); }
   @media screen and (min-width: 650px) {
     body main {
-      margin: 10vw 0 0; }
+      margin: 10vw auto 0;
+      max-width: 80vw; }
       body main #intro {
         align-items: center;
-        margin: 0 0 10vw; }
+        margin: 0 0 10vw;
+        max-width: 80vw; }
         body main #intro h1 {
           font-size: 4rem;
-          line-height: 5rem;
-          max-width: 80vw; }
+          line-height: 5rem; }
           body main #intro h1 .period img {
             background-size: .2rem; }
           body main #intro h1 #dot {
@@ -736,35 +743,43 @@ body {
       font-size: 3.4rem;
       line-height: 4rem; } }
   @media screen and (min-width: 1382px) {
-    body main #intro {
-      max-width: 84vw; }
-      body main #intro h1 {
-        font-size: 4.5rem;
-        line-height: 6rem; }
-    body main #work {
-      max-width: 80vw; }
-    body main #info .info-container {
-      max-width: 80vw; } }
+    body main {
+      align-items: center; }
+      body main #intro {
+        max-width: 84vw; }
+        body main #intro h1 {
+          font-size: 4.3rem;
+          line-height: 5.5rem; }
+      body main #work {
+        max-width: 80vw; }
+      body main #info .info-container {
+        max-width: 80vw; } }
   @media screen and (min-width: 1558px) {
-    body main #intro {
-      max-width: 74vw; }
-    body main #work {
-      max-width: 70vw; }
-    body main #info .info-container {
-      max-width: 70vw; } }
+    body main {
+      max-width: 80vw; }
+      body main #intro {
+        max-width: 74vw; }
+      body main #work {
+        max-width: 70vw; }
+      body main #info .info-container {
+        max-width: 70vw; } }
   @media screen and (min-width: 1782px) {
-    body main #intro {
-      max-width: 60vw; }
-    body main #work {
-      max-width: 56vw; }
-    body main #info .info-container {
-      max-width: 56vw; } }
+    body main {
+      max-width: 80vw; }
+      body main #intro {
+        max-width: 60vw; }
+      body main #work {
+        max-width: 56vw; }
+      body main #info .info-container {
+        max-width: 56vw; } }
   @media screen and (min-width: 2220px) {
-    body main #intro {
-      max-width: 56vw; }
-    body main #work {
-      max-width: 48vw; }
-    body main #info .info-container {
-      max-width: 50vw; } }
+    body main {
+      max-width: 80vw; }
+      body main #intro {
+        max-width: 56vw; }
+      body main #work {
+        max-width: 48vw; }
+      body main #info .info-container {
+        max-width: 50vw; } }
 
 /*# sourceMappingURL=new_home.css.map */

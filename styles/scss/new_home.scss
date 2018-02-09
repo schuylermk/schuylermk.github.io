@@ -108,11 +108,19 @@ body {
 	}
 	a {
 		cursor: pointer;
-		color: var(--color-body-text-dark);
 		text-decoration: none;
+		color: var(--color-body-text-dark);
 		&:focus {
 			outline: thin dotted;
 		}
+	}
+	abbr {
+		cursor: help;
+		color: var(--color-impact-dark);
+		&:hover {
+			outline: thin dotted var(--color-green-olive);
+		}
+		text-decoration: none;
 	}
 
 	img {
@@ -471,14 +479,15 @@ body {
 	//  Media Queries  //	
 	@media screen and (min-width: 650px) {
 		main {
-			margin: 10vw 0 0;
+			margin: 10vw auto 0;
+			max-width: 80vw;
 			#intro {
 				align-items: center;
 				margin: 0 0 10vw;
+				max-width: 80vw;
 				h1 {
 					font-size: 4rem;
 					line-height: 5rem;
-					max-width: 80vw;
 					.period img {
 						background-size: .2rem;
 					}
@@ -632,14 +641,14 @@ body {
 	}
 	@media screen and (min-width: 1382px) {
 		main {
+			align-items: center;
 			#intro {
 				max-width: 84vw;
 				h1 {
-					font-size: 4.5rem;
-					line-height: 6rem;
+					font-size: 4.3rem;
+					line-height: 5.5rem;
 				}
 			}
-
 			#work {
 				max-width: 80vw;
 			}
@@ -653,6 +662,7 @@ body {
 	} 
 	@media screen and (min-width: 1558px) {
 		main {
+			max-width: 80vw;
 			#intro {
 				max-width: 74vw;
 			}
@@ -671,6 +681,7 @@ body {
 
 	@media screen and (min-width: 1782px) {
 		main {
+			max-width: 80vw;
 			#intro {
 				max-width: 60vw;
 			}
@@ -689,6 +700,7 @@ body {
 
 	@media screen and (min-width: 2220px) {
 		main {
+			max-width: 80vw;
 			#intro {
 				max-width: 56vw;
 			}
