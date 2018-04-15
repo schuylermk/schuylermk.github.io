@@ -125,8 +125,6 @@ body {
 
 	img {
 		max-width: 100%;
-	// 	height: auto;
-	// 	display: block;
 	}
 
 	/* ------------------------------------------- */
@@ -195,13 +193,9 @@ body {
 
 		//  WORK Section  //  mobile-first up to 649px  //
 		#work {
-			display: grid;
-			grid-gap: 6rem;
-			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-			margin: 8rem auto 0;
 			max-width: 88vw;
-			
 			.tile {
+				margin-top: 6rem;
 				.project {
 					display: flex;
 					flex-direction: column;
@@ -355,7 +349,6 @@ body {
 		//  ABOUT Section  //
 		#info {
 			background-color: #222;
-			grid-row: 4;
 			margin-top: 10vw;
 			width: 100%; // border: 3px solid red;
 			.info-container {
@@ -456,7 +449,7 @@ body {
 				}
 			}	
 		} // ['info' closing] //
-
+	
 		//  FOOTER  //
 		footer {
 			align-items: center;
@@ -506,11 +499,14 @@ body {
 			}
 			
 			#work {
-				align-self: center;
-				grid-gap: 6rem;
-				margin: 0 0 15vw;
+				display: flex;
+				flex-flow: wrap;
+				justify-content: space-between;
 				max-width: 80vw;
+
 				.tile { 
+					margin-top: 6rem;
+					width: 290px;
 
 					.project {
 
@@ -557,11 +553,24 @@ body {
 					}
 				}	
 			}
+			@supports (display: grid) {
+				#work {
+					display: grid;
+					grid-column-gap: 6rem;
+					grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+				
+					.tile {
+						width: auto;
+					}
+				}
+			}
+
 			#info {
 				display: flex;
 				justify-content: center;
-				margin: 0;
+				margin-top: 10rem;
 				width: 100vw;
+
 				.info-container {
 					align-items: flex-start;
 					align-self: center; 
